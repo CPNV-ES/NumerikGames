@@ -1,8 +1,8 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-NumerikGames Laravel app
+# NumerikGames Laravel app
 
-# Installation
+## Installation
 
 1. Clone the repository
 2. Use `composer install`
