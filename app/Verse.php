@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @author Nicolas Henry
  * @package App
  */
-class Verses extends Model
+class Verse extends Model
 {
     protected $fillable = [
         'content',
@@ -19,4 +19,8 @@ class Verses extends Model
         'prose_id',
     ];
     
+    public function prose()
+    {
+        return $this->belongsTo('App\Prose', 'prose_id');
+    }
 }

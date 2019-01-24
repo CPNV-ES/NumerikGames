@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Verses;
 use Illuminate\Http\Request;
+use App\Prose;
+use App\Theme;
+use App\Verse;
 
 /**
  * VerseController
@@ -11,7 +13,7 @@ use Illuminate\Http\Request;
  * @author Nicolas Henry
  * @package App\Http\Controllers\Verse
  */
-class VersesController extends Controller
+class VerseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -48,10 +50,10 @@ class VersesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Verses  $verses
+     * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function show(Verses $verses)
+    public function show(Verse $verse)
     {
         //
     }
@@ -59,10 +61,10 @@ class VersesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Verses  $verses
+     * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function edit(Verses $verses)
+    public function edit(Verse $verse)
     {
         //
     }
@@ -71,10 +73,10 @@ class VersesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Verses  $verses
+     * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Verses $verses)
+    public function update(Request $request, Verse $verse)
     {
         //
     }
@@ -82,10 +84,10 @@ class VersesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Verses  $verses
+     * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Verses $verses)
+    public function destroy(Verse $verse)
     {
         //
     }

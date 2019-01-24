@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::get('/themes', 'ThemeController@index');
 Route::get('/proses', 'ProseController@index');
+Route::get('/verses', 'VerseController@index');

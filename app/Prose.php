@@ -22,5 +22,10 @@ class Prose extends Model
     {
         return $this->belongsTo('App\Theme', 'theme_id');
     }
-    
+
+    public function verse()
+    {
+        return $this->hasMany('App\Verse');
+    }
+
 }

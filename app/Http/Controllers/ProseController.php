@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Prose;
 use App\Theme;
+use App\Verse;
 
 /**
  * ProseController
