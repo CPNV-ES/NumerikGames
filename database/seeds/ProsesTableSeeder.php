@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Theme;
 use App\Prose;
+use App\Theme;
 
 /**
  * ProsesTableSeeder
