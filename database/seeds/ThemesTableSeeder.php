@@ -18,39 +18,22 @@ class ThemesTableSeeder extends Seeder
      */
     public function run()
     {
-        $amour = Theme::create([
-            'name' => 'amour',
-        ]);
-        $amour->save();
 
-        $nature = Theme::create([
-            'name' => 'nature',
-        ]);
-        $nature->save();
+        $themes = [
+            'amour',
+            'nature',
+            'robots',
+            'imaginaire',
+            'humour',
+            'mer',
+            'guerre',
+        ];
 
-        $robot = Theme::create([
-            'name' => 'robots',
-        ]);
-        $robot->save();
-
-        $imaginaire = Theme::create([
-            'name' => 'imaginaire',
-        ]);
-        $imaginaire->save();
-
-        $humour = Theme::create([
-            'name' => 'humour',
-        ]);
-        $humour->save();
-
-        $mer = Theme::create([
-            'name' => 'mer',
-        ]);
-        $mer->save();
-
-        $guerre = Theme::create([
-            'name' => 'guerre',
-        ]);
-        $guerre->save();
+        foreach ($themes as $value) {
+            $theme = Theme::create([
+                'name' => $value,
+            ]);
+            $theme->save();
+        }
     }
 }
