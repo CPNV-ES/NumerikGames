@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Prose;
 use Illuminate\Http\Request;
+use App\Prose;
+use App\Theme;
 
 /**
  * ProseController

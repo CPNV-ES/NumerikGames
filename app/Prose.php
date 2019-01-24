@@ -13,5 +13,14 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Prose extends Model
 {
-    //
+    protected $fillable = [
+        'title',
+        'theme_id',
+    ];
+
+    public function theme()
+    {
+        return $this->belongsTo('App\Theme', 'theme_id');
+    }
+    
 }

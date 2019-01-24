@@ -17,6 +17,9 @@ class Theme extends Model
         'name',
     ];
 
+    public function prose()
+    {
+        return $this->hasMany('App\Prose');
+    }
     
-    //
 }
