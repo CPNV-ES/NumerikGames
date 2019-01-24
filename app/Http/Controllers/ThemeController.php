@@ -5,14 +5,21 @@ namespace App\Http\Controllers;
 use App\Theme;
 use Illuminate\Http\Request;
 
+/**
+ * ThemeController
+ *
+ * @author Nicolas Henry
+ * @package App\Http\Controllers\Theme
+ */
 class ThemeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
     }
