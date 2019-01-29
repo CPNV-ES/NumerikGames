@@ -69,7 +69,7 @@ class ProseController extends Controller
      */
     public function edit(Prose $prose)
     {
-        //
+        return view('proses.edit')->with(compact('prose'));
     }
 
     /**
@@ -81,7 +81,9 @@ class ProseController extends Controller
      */
     public function update(Request $request, Prose $prose)
     {
-        //
+        $prose->fill($request->all());
+        $prose->save();
+        return redirect()->route('proses.index');
     }
 
     /**
