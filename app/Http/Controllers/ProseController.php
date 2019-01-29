@@ -45,7 +45,9 @@ class ProseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $prose = new Prose($request->all());
+        $prose->save();
+        return redirect()->route('proses.index');
     }
 
     /**

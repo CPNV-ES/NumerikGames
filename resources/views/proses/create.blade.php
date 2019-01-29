@@ -6,16 +6,16 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="POST" action="{{ route('proses.index') }}">
+            <form method="POST" action="{{ route('proses.store') }}">
                 {{csrf_field()}}
                 <div class="form-group">
                     <label for="title">Titre de la prose</label>
-                    <input class="form-control" type="text" placeholder="Le robot en balade" id="title">
+                    <input class="form-control" type="text" placeholder="Le robot en balade" id="title" name="title">
                     <small id="titleHelp" class="form-text text-muted">Le titre de votre prose.</small>
                 </div>
                 <div class="form-group">
                     <label for="theme">Selectionnez un thème</label>
-                    <select class="custom-select custom-select-sm" id="theme">
+                    <select class="custom-select custom-select-sm" id="theme" name="theme_id">
                         <option selected>Selectionnez un thème</option>
                         <option value="1">One</option>
                     </select>
