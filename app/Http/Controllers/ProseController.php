@@ -53,9 +53,9 @@ class ProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function show(Prose $prose)
+    public function show(Prose $prose, Request $request)
     {
-        //
+        return view('proses.show');
     }
 
     /**
