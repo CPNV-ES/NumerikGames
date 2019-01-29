@@ -59,14 +59,14 @@ class ProseController extends Controller
         $verses = Verse::all()
         ->where('prose_id',$prose->id)
         ->sortByDesc('created_at')
-        ->take(2);
+        ->take(4);
         $verses = $verses->reverse();
 
         foreach ($verses as $key => $verse) {
             $versesArray[$verse->id] = $verse->content;
         }
-        
-        return view('proses.show')->with('verses',$versesArray);
+
+        return view('proses.show')->with('verses',$versesArray)->with('proseId',$prose->id);
     }
 
     /**
