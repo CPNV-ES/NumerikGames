@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/themes', 'ThemeController@index');
-Route::get('/proses', 'ProseController@index');
-Route::get('/verses', 'VerseController@index');
+Route::resource('themes', 'ThemeController');
+Route::resource('proses', 'ProseController');
+Route::resource('verses', 'VerseController');
+
+
