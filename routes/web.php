@@ -18,5 +18,6 @@ Route::get('/', function () {
 Route::resource('themes', 'ThemeController');
 Route::resource('proses', 'ProseController');
 Route::resource('verses', 'VerseController');
+Route::delete('/proses/{id}/delete', 'ProseController@destroy');
 
 

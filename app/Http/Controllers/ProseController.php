@@ -34,7 +34,8 @@ class ProseController extends Controller
      */
     public function create()
     {
-        return view('proses.create');
+        $themes = Theme::all();
+        return view('proses.create')->with(compact('themes'));
     }
 
     /**
@@ -69,7 +70,8 @@ class ProseController extends Controller
      */
     public function edit(Prose $prose)
     {
-        return view('proses.edit')->with(compact('prose'));
+        $themes = Theme::all();
+        return view('proses.edit')->with(compact('prose', 'themes'));
     }
 
     /**
@@ -94,6 +96,6 @@ class ProseController extends Controller
      */
     public function destroy(Prose $prose)
     {
-        //
+        dd($prose);
     }
 }

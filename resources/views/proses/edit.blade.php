@@ -17,8 +17,9 @@
                 <div class="form-group">
                     <label for="theme">Selectionnez un thème</label>
                     <select class="custom-select custom-select-sm" id="theme" name="theme_id">
-                        <option selected>{{$prose->theme_id}}</option>
-                        <option value="1">One</option>
+                        @foreach ($themes as $theme)
+                            <option {{$prose->theme_id == $theme->id ? 'selected' : ''}} value="{{$theme->id}}">{{$theme->name}}</option>
+                        @endforeach
                     </select>
                     <small id="themeHelp" class="form-text text-muted">Pour la changer de thème.</small>
                 </div>

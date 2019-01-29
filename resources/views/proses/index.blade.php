@@ -27,7 +27,7 @@
                                             <div class="btn-group btn-group-toggle">
                                                 <a class="btn btn-primary" href="{{ route('proses.edit', ['prose' => $prose->id]) }}" role="button">Editer</a>
                                                 <a class="btn btn-warning" href="{{ route('proses.show', ['prose' => $prose->id]) }}" role="button">Afficher</a>
-                                                <a class="btn btn-danger" href="#" role="button">Supprimer</a>
+                                                <a class="btn btn-danger disabled" href="" role="button">Supprimer</a>
                                             </div>
                                         </td>
                                     </tr>   
