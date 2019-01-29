@@ -56,7 +56,17 @@ class ProseController extends Controller
      */
     public function show(Prose $prose, Request $request)
     {
-        return view('proses.show');
+        $verses = Verse::all()
+        ->where('prose_id',$prose->id)
+        ->sortByDesc('created_at')
+        ->take(2);
+        $verses = $verses->reverse();
+
+        foreach ($verses as $key => $verse) {
+            $versesArray[$verse->id] = $verse->content;
+        }
+        
+        return view('proses.show')->with('verses',$versesArray);
     }
 
     /**
