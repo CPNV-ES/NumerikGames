@@ -23,7 +23,8 @@ class ProseController extends Controller
      */
     public function index(Request $request)
     {
-        //
+        $proses = Prose::all();
+        return view('proses.index')->with(compact('proses'));
     }
 
     /**
@@ -33,7 +34,7 @@ class ProseController extends Controller
      */
     public function create()
     {
-        //
+        return view('proses.create');
     }
 
     /**

@@ -10,9 +10,9 @@
                 <div class="links">
                     <a href="https://laravel.com/docs" target="_blank">Documentation</a>
                     <a href="https://github.com/CPNV-ES/NumerikGames" target="_blank">GitHub</a>
-                    <a href="{{url('/themes')}}" target="_blank">Themes</a>
-                    <a href="{{url('/proses')}}" target="_blank">Proses</a>
-                    <a href="{{url('/verses')}}" target="_blank">Verses</a>
+                    <a href="{{url('/themes')}}">Themes</a>
+                    <a href="{{url('/proses')}}">Proses</a>
+                    <a href="{{url('/verses')}}">Verses</a>
                 </div>
             </div>
         </div>
