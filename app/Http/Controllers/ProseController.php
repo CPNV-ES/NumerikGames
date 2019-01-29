@@ -59,7 +59,8 @@ class ProseController extends Controller
      */
     public function show(Prose $prose, Request $request)
     {
-        return view('proses.show')->with(compact('prose'));
+        $verses = Verse::where('prose_id', $prose->id)->where('status', 1)->get();
+        return view('proses.show')->with(compact('prose', 'verses'));
     }
 
     /**
