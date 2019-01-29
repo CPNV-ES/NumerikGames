@@ -58,7 +58,7 @@ class ProseController extends Controller
      */
     public function show(Prose $prose, Request $request)
     {
-        return view('proses.show');
+        return view('proses.show')->with(compact('prose'));
     }
 
     /**

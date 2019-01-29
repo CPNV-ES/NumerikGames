@@ -4,7 +4,7 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Proses
+                <h2>Proses page</h2>
             </div>
             <div class="container">
                 <div class="row">
@@ -26,7 +26,7 @@
                                         <td>
                                             <div class="btn-group btn-group-toggle">
                                                 <a class="btn btn-primary" href="#" role="button">Editer</a>
-                                                <a class="btn btn-warning" href="#" role="button">Afficher</a>
+                                                <a class="btn btn-warning" href="{{ route('proses.show', ['prose' => $prose->id]) }}" role="button">Afficher</a>
                                                 <a class="btn btn-danger" href="#" role="button">Supprimer</a>
                                             </div>
                                         </td>

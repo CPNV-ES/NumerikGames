@@ -19,6 +19,14 @@
             <div class="title m-b-md">
                 Numerik Games
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{$prose->title}}
+                        {{$prose->created_at}}
+                    </div>
+                </div>
+            </div>
 
             <div class="links">
                 <a href="{{url('/')}}" target="_blank">Accueil</a>
