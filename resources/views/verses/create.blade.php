@@ -23,13 +23,13 @@
                     <small id="proseHelp" class="form-text text-muted">Pour lier à un thème.</small>
                 </div>
                 <div class="form-group">
-                        <label for="status">Selectionnez un status</label>
-                        <select class="custom-select custom-select-sm" id="status" name="status">
-                            <option value="1">Actif</option>
-                            <option value="0">Inactif</option>
-                        </select>
-                        <small id="statusHelp" class="form-text text-muted">Statut de votre vers.</small>
-                    </div>
+                    <label for="status">Selectionnez un status</label>
+                    <select class="custom-select custom-select-sm" id="status" name="status">
+                        <option value="1">Actif</option>
+                        <option value="0">Inactif</option>
+                    </select>
+                    <small id="statusHelp" class="form-text text-muted">Statut de votre vers.</small>
+                </div>
                 <button type="submit" class="btn btn-primary">Créer un vers</button>
             </form>
         </div>

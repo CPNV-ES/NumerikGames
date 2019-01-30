@@ -29,7 +29,9 @@
                                   @foreach ($verses as $verse)
                                       <tr>
                                           <th scope="row">{{$verse->id}}</th>
-                                          <td>{{$verse->content}}</td>
+                                          <td>
+                                                <p>{{$verse->content}}</p>
+                                            </td>
                                           <td>
                                               <div class="btn-group btn-group-toggle">
                                                   <a class="btn btn-primary" href="{{ route('verses.edit', ['verse' => $verse->id]) }}" role="button">Editer</a>

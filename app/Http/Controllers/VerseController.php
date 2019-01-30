@@ -59,7 +59,12 @@ class VerseController extends Controller
      */
     public function show(Verse $verse)
     {
-        //
+        if ($verse->status == 1) {
+            $verse->status = 'actif';
+        } else {
+            $verse->status = 'inactif';
+        }
+        return view('verses.show')->with(compact('verse'));
     }
 
     /**
@@ -70,7 +75,8 @@ class VerseController extends Controller
      */
     public function edit(Verse $verse)
     {
-        //
+        $proses = Prose::all();
+        return view('verses.edit')->with(compact('verse', 'proses'));
     }
 
     /**
@@ -82,7 +88,9 @@ class VerseController extends Controller
      */
     public function update(Request $request, Verse $verse)
     {
-        //
+        $verse->fill($request->all());
+        $verse->save();
+        return redirect()->route('verses.index');
     }
 
     /**
