@@ -23,7 +23,8 @@ class VerseController extends Controller
      */
     public function index(Request $request)
     {
-        //
+        $verses = Verse::all();
+        return view('verses.index')->with(compact('verses'));
     }
 
     /**
@@ -31,9 +32,10 @@ class VerseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request,$id)
+    public function create()
     {
-
+        $proses = Prose::all();
+        return view('verses.create')->with(compact('proses'));
     }
 
     /**
@@ -44,13 +46,9 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-
-        $verse = new Verse();
-           $verse->content = $request->verse;
-           $verse->status = 1;
-           $verse->prose_id = $request->proseId;
-           $verse->save();
-        return redirect()->back()->withInput();
+        $verse = new Verse($request->all());
+        $verse->save();
+        return redirect()->route('verses.index');
     }
 
     /**
