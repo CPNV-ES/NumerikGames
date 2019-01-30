@@ -22,6 +22,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Titre</th>
                                     <th scope="col">Actions</th>
+                                    <th scope="col">Selectionnez</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,10 +37,12 @@
                                                 <a class="btn btn-danger disabled" href="" role="button">Supprimer</a>
                                             </div>
                                         </td>
+                                        <td><input type="checkbox" name="{{$prose->id}}" id="prose-{{$prose->id}}"></td>
                                     </tr>   
                                 @endforeach
                             </tbody>
                         </table>
+                        <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                     </div>
                 </div>
             </div>

@@ -53,14 +53,19 @@ class ProseController extends Controller
 
     /**
      * Display the specified resource.
+     * Get all verse where id is same than prose.
+     * Seperate the active and inactive verse.
      *
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
     public function show(Prose $prose, Request $request)
     {
-        $verses = Verse::where('prose_id', $prose->id)->where('status', 1)->get();
-        return view('proses.show')->with(compact('prose', 'verses'));
+        $verses = Verse::where('prose_id', $prose->id)->get();
+        $inactivateVerses = $verses->where('status', 0);
+        $verses = $verses->where('status', 1);
+        
+        return view('proses.show')->with(compact('prose', 'verses', 'inactivateVerses'));
     }
 
     /**
