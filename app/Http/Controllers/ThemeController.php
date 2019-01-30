@@ -34,7 +34,7 @@ class ThemeController extends Controller
      */
     public function create()
     {
-        //
+        return view('themes.create');
     }
 
     /**
@@ -45,7 +45,9 @@ class ThemeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $theme = new Theme($request->all());
+        $theme->save();
+        return redirect()->route('themes.index');
     }
 
     /**
