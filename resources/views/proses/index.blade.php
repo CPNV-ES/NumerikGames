@@ -1,3 +1,9 @@
+{{--
+  -- Index
+  -- Layout for proses index page
+  --
+  -- @author Nicolas Henry
+  --}}
 @extends('layouts.app')
 @section('content')
     <div class="flex-center position-ref full-height">
