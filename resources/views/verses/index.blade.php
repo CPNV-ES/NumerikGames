@@ -36,7 +36,17 @@
                                               <div class="btn-group btn-group-toggle">
                                                   <a class="btn btn-primary" href="{{ route('verses.edit', ['verse' => $verse->id]) }}" role="button">Editer</a>
                                                   <a class="btn btn-warning" href="{{ route('verses.show', ['verse' => $verse->id]) }}" role="button">Afficher</a>
-                                                  <a class="btn btn-danger disabled" href="" role="button">Supprimer</a>
+                                                    <form id="delete-vers-form"
+                                                        action="{{ route('verses.destroy', ['verse' => $verse->id]) }}"
+                                                        method="POST" style="display: none;">
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('DELETE') }}
+                                                    </form>
+                                                    <button onclick="event.preventDefault();
+                                                        document.getElementById('delete-vers-form').submit();"
+                                                        class="btn btn-danger">
+                                                        Supprimer
+                                                    </button>
                                               </div>
                                           </td>
                                           <td><input type="checkbox" name="verses[]" id="verse-{{$verse->id}}"></td>

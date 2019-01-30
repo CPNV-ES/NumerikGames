@@ -101,6 +101,7 @@ class VerseController extends Controller
      */
     public function destroy(Verse $verse)
     {
-        //
+        $verse->delete();
+        return redirect()->route('verses.index');
     }
 }
