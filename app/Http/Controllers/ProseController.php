@@ -63,9 +63,11 @@ class ProseController extends Controller
     {
         $verses = Verse::where('prose_id', $prose->id)->get();
         $inactivateVerses = $verses->where('status', 0);
+        $versesLast = $verses->sortByDesc('created_at')->take(4);
         $verses = $verses->where('status', 1);
+        $versesLast = $versesLast->reverse();
         
-        return view('proses.show')->with(compact('prose', 'verses', 'inactivateVerses'));
+        return view('proses.show')->with(compact('prose', 'verses', 'inactivateVerses', 'versesLast'));
     }
 
     /**

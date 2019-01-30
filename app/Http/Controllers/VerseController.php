@@ -31,9 +31,9 @@ class VerseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request,$id)
     {
-        //
+
     }
 
     /**
@@ -44,7 +44,13 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $verse = new Verse();
+           $verse->content = $request->verse;
+           $verse->status = 1;
+           $verse->prose_id = $request->proseId;
+           $verse->save();
+        return redirect()->back()->withInput();
     }
 
     /**
