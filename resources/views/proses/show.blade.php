@@ -20,9 +20,9 @@
                 @endforeach
                 <form method="post" action={{ route('verses.store') }}>
                     @csrf
-                    <input type="text" name="verse" id="verse">
+                    <input type="text" name="content" id="verse">
                     <input type="submit" name="addVerse" id="addVerse">
-                    <input type="hidden" name="proseId" id="proseId" value="{{$prose->id}}">
+                    <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
                 </form>
             </div>
 <div class="container">
