@@ -6,3 +6,4 @@
  */
 
 require('./bootstrap');
+require('./scripts/tutu');

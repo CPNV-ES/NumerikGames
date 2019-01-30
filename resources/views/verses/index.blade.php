@@ -39,12 +39,12 @@
                                                   <a class="btn btn-danger disabled" href="" role="button">Supprimer</a>
                                               </div>
                                           </td>
-                                          <td><input type="checkbox" name="{{$verse->id}}" id="verse-{{$verse->id}}"></td>
+                                          <td><input type="checkbox" name="verses[]" id="verse-{{$verse->id}}"></td>
                                       </tr>   
                                   @endforeach
                               </tbody>
                           </table>
-                          <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
+                          <a id="unactive" class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                       </div>
                   </div>
               </div>

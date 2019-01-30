@@ -36391,6 +36391,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./scripts/tutu */ "./resources/js/scripts/tutu.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -36448,6 +36450,26 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/scripts/tutu.js":
+/*!**************************************!*\
+  !*** ./resources/js/scripts/tutu.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $('#unactive').css('display', 'none');
+  $('input').on('click', function () {
+    if ($('input').is(':checked')) {
+      $('#unactive').css('display', 'inline-block');
+    } else {
+      $('#unactive').css('display', 'none');
+    }
+  });
+});
 
 /***/ }),
 
