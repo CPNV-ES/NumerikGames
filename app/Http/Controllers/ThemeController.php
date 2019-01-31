@@ -92,8 +92,15 @@ class ThemeController extends Controller
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Theme $theme)
+    public function destroy(Theme $theme, Request $request)
     {
-        //
+        $prose = Prose::where('theme_id', $theme->id)->first();
+        if ($prose) {
+            $request->session()->flash('bug', 'Ce thème contient des proses, supprimez les proses avant de recommencer.');
+        } else {
+            $theme->delete();
+            $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
+        }
+        return redirect()->route('themes.index');
     }
 }
