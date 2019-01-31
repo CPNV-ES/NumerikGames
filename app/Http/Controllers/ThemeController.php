@@ -58,7 +58,7 @@ class ThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        //
+        return view('themes.show')->with(compact('theme'));
     }
 
     /**
@@ -69,7 +69,7 @@ class ThemeController extends Controller
      */
     public function edit(Theme $theme)
     {
-        //
+        return view('themes.edit')->with(compact('theme'));
     }
 
     /**
@@ -81,7 +81,9 @@ class ThemeController extends Controller
      */
     public function update(Request $request, Theme $theme)
     {
-        //
+        $theme->fill($request->all());
+        $theme->save();
+        return redirect()->route('themes.index');
     }
 
     /**

@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>{{$verse->content}}</h2>
+                    <h2>{{$theme->name}}</h2>
                 </div>
             </div>{{-- .row --}}
             <div class="row">
@@ -23,15 +23,13 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Vers</th>
-                                <th scope="col">Status</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">{{$verse->id}}</th>
-                                <td>{{$verse->content}}</td>
-                                <td>{{$verse->status}}</td>
+                                <th scope="row">{{$theme->id}}</th>
+                                <td>{{$theme->name}}</td>
                                 <td>
                                     <div class="btn-group btn-group-toggle">
                                         <a class="btn btn-danger disabled" href="" role="button">Désactiver</a>
