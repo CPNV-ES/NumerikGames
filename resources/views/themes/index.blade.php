@@ -46,6 +46,7 @@
                                             <div class="btn-group btn-group-toggle">
                                                 <a class="btn btn-primary" href="{{ route('themes.edit', ['theme' => $theme->id]) }}" role="button">Editer</a>
                                                 <a class="btn btn-warning" href="{{ route('themes.show', ['theme' => $theme->id]) }}" role="button">Afficher</a>
+                                                
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="exampleModal-{{$theme->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
