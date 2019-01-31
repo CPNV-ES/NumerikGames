@@ -92,7 +92,7 @@ class ThemeController extends Controller
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Theme $theme, Request $request)
+    public function destroy( Request $request, Theme $theme)
     {
         $prose = Prose::where('theme_id', $theme->id)->first();
         if ($prose) {
