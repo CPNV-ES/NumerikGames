@@ -102,8 +102,15 @@ class ProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prose $prose)
+    public function destroy(Request $request, Prose $prose)
     {
-        dd($prose);
+        $verse = Verse::where('prose_id', $prose->id)->first();
+        if ($verse) {
+            $request->session()->flash('bug', 'Cette prose contient des vers, supprimez les vers avant de recommencer.');
+        } else {
+            $prose->delete();
+            $request->session()->flash('success', 'Vous avez bien supprimez '.$prose->title);
+        }
+        return redirect()->route('proses.index');
     }
 }

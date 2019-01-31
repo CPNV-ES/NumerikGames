@@ -23,7 +23,8 @@ class ThemeController extends Controller
      */
     public function index(Request $request)
     {
-        //
+        $themes = Theme::all();
+        return view('themes.index')->with(compact('themes'));
     }
 
     /**
@@ -33,7 +34,7 @@ class ThemeController extends Controller
      */
     public function create()
     {
-        //
+        return view('themes.create');
     }
 
     /**
@@ -44,7 +45,9 @@ class ThemeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $theme = new Theme($request->all());
+        $theme->save();
+        return redirect()->route('themes.index');
     }
 
     /**
@@ -55,7 +58,7 @@ class ThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        //
+        return view('themes.show')->with(compact('theme'));
     }
 
     /**
@@ -66,7 +69,7 @@ class ThemeController extends Controller
      */
     public function edit(Theme $theme)
     {
-        //
+        return view('themes.edit')->with(compact('theme'));
     }
 
     /**
@@ -78,7 +81,9 @@ class ThemeController extends Controller
      */
     public function update(Request $request, Theme $theme)
     {
-        //
+        $theme->fill($request->all());
+        $theme->save();
+        return redirect()->route('themes.index');
     }
 
     /**
@@ -87,8 +92,15 @@ class ThemeController extends Controller
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Theme $theme)
+    public function destroy( Request $request, Theme $theme)
     {
-        //
+        $prose = Prose::where('theme_id', $theme->id)->first();
+        if ($prose) {
+            $request->session()->flash('bug', 'Ce thème contient des proses, supprimez les proses avant de recommencer.');
+        } else {
+            $theme->delete();
+            $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
+        }
+        return redirect()->route('themes.index');
     }
 }
