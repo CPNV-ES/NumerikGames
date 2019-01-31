@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::resource('themes', 'ThemeController');
 Route::resource('proses', 'ProseController');
 Route::resource('verses', 'VerseController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
