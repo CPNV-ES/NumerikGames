@@ -1,19 +1,19 @@
 @extends('layouts.app')
 @section('content')
-        <div class="flex-center position-ref full-height">
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Numerik Games
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs" target="_blank">Documentation</a>
-                    <a href="https://github.com/CPNV-ES/NumerikGames" target="_blank">GitHub</a>
-                    <a href="{{url('/themes')}}">Themes</a>
-                    <a href="{{url('/proses')}}">Proses</a>
-                    <a href="{{url('/verses')}}">Verses</a>
+    <div class="flex-center position-ref full-height">
+        <div class="content">
+            <div class="title m-b-md">
+                <h2>Themes page</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        @foreach ($themes as $theme)
+                            {{$theme->name}}
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 @endsection

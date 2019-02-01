@@ -33,9 +33,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('themes.index') }}">Thèmes</a>
-                    </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">Register</a>

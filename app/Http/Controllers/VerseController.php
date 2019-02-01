@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Prose;
 use App\Theme;
 use App\Verse;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * VerseController
@@ -35,7 +36,10 @@ class VerseController extends Controller
     public function create()
     {
         $proses = Prose::all();
-        return view('verses.create')->with(compact('proses'));
+        if (Auth::check()) {
+            return view('verses.create')->with(compact('proses'));
+        }
+        return view('game.index');
     }
 
     /**
