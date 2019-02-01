@@ -11,6 +11,24 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('themes.index') }}">Thèmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('proses.index') }}">Proses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('verses.index') }}">Vers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
@@ -22,15 +40,6 @@
                     @endif
                 @endauth
             @endif
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('themes.index') }}">Thèmes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('proses.index') }}">Proses</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('verses.index') }}">Vers</a>
-            </li>
         </ul>
     </div>
 </nav>

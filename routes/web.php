@@ -15,9 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('themes', 'ThemeController');
-Route::resource('proses', 'ProseController');
-Route::resource('verses', 'VerseController');
+Route::middleware(['auth'])->group(function () {
+    Route::resource('themes', 'ThemeController');
+    Route::resource('proses', 'ProseController');
+    Route::resource('verses', 'VerseController');
+});
+
+
 
 Auth::routes();
 
