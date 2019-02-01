@@ -8,9 +8,6 @@
         <ul class="navbar-nav mr-auto">
             @if (Route::has('login'))
                 @auth
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/') }}">Home</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('themes.index') }}">Thèmes</a>
                     </li>

@@ -50,9 +50,13 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-        $verse = new Verse($request->all());
-        $verse->save();
-        return redirect()->route('verses.index');
+        
+        if (Auth::check()) {
+            $verse = new Verse($request->all());
+            $verse->save();
+            return redirect()->route('verses.index');
+        }
+        dd('store method');
     }
 
     /**
