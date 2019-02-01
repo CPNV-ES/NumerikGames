@@ -16,10 +16,13 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('themes', 'ThemeController');
     Route::resource('proses', 'ProseController');
     Route::resource('verses', 'VerseController');
+    Route::resource('themes', 'ThemeController');
 });
+Route::resource('themes', 'ThemeController', ['only' => ['index']]);
+Route::resource('verses', 'VerseController', ['only' => ['create']]);
+
 
 
 
