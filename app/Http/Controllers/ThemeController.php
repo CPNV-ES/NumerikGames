@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Prose;
 use App\Theme;
 use App\Verse;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * ThemeController
@@ -24,7 +25,11 @@ class ThemeController extends Controller
     public function index(Request $request)
     {
         $themes = Theme::all();
-        return view('themes.index')->with(compact('themes'));
+        if (Auth::check()) {
+            return view('themes.index')->with(compact('themes'));
+        }
+        return view('welcome')->with(compact('themes'));
+        
     }
 
     /**
@@ -102,5 +107,11 @@ class ThemeController extends Controller
             $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
         }
         return redirect()->route('themes.index');
+    }
+
+    public function themes()
+    {
+        $themes = Theme::all();
+        return view('welcome')->with(compact('themes'));
     }
 }

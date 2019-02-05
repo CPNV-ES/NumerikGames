@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Prose;
 use App\Theme;
 use App\Verse;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * VerseController
@@ -35,7 +36,13 @@ class VerseController extends Controller
     public function create()
     {
         $proses = Prose::all();
-        return view('verses.create')->with(compact('proses'));
+        if (Auth::check()) {
+            return view('verses.create')->with(compact('proses'));
+        }
+        /* Get all verse from correct prose */
+        
+        $verses = Verse::all();
+        return view('game.index')->with(compact('verses'));
     }
 
     /**
@@ -46,9 +53,13 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-        $verse = new Verse($request->all());
-        $verse->save();
-        return redirect()->route('verses.index');
+        
+        if (Auth::check()) {
+            $verse = new Verse($request->all());
+            $verse->save();
+            return redirect()->route('verses.index');
+        }
+        dd('store method');
     }
 
     /**

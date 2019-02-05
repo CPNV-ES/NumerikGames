@@ -6,27 +6,36 @@
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ route('themes.index') }}">Thèmes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('proses.index') }}">Proses</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('verses.index') }}">Vers</a>
-            </li>
             @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('themes.index') }}">Thèmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('proses.index') }}">Proses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('verses.index') }}">Vers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
+                    @endif
+                @endauth
             @endif
         </ul>
     </div>
