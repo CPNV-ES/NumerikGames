@@ -23,13 +23,14 @@ Route::middleware(['guest'])->group(function () {
     /* Home link to theme */
     Route::get('game', 'VerseController@create')->name('game.verse.create');
     Route::post('game', 'VerseController@store')->name('game.verse.store');
-
+    
 });
 /* Home link to theme */
 Route::get('/', 'ThemeController@index');
 
 /* Routes for standard user */
 Route::resource('verses', 'VerseController', ['only' => ['create']]);
+Route::resource('proses', 'ProseController', ['only' => ['show']]);
 
 /* Auth routes */
 Auth::routes();
