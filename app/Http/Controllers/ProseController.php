@@ -113,4 +113,15 @@ class ProseController extends Controller
         }
         return redirect()->route('proses.index');
     }
+    
+    /**
+     * Get value from origin
+     *
+     * @param  \App\Prose  $prose
+     * @return \Illuminate\Http\Response
+     */
+    public function result(Request $request, Prose $prose)
+    {
+        return view('result.index');
+    }
 }
