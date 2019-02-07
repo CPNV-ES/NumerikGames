@@ -24,6 +24,7 @@
                     <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
                 </form>
             </div>
+            @auth
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -102,6 +103,7 @@
                     </div> {{-- .col-md-12 --}}
                 </div> {{-- .row --}}
             </div> {{-- .container --}}
+            @endauth
         </div> {{-- .content --}}
     </div> {{-- .flex-center --}}
 @endsection

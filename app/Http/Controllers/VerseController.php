@@ -40,7 +40,7 @@ class VerseController extends Controller
             return view('verses.create')->with(compact('proses'));
         }
         /* Get all verse from correct prose */
-        
+
         $verses = Verse::all();
         return view('game.index')->with(compact('verses'));
     }
@@ -53,13 +53,10 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-        
-        if (Auth::check()) {
-            $verse = new Verse($request->all());
-            $verse->save();
-            return redirect()->route('verses.index');
-        }
-        dd('store method');
+          $verse = new Verse($request->all());
+          $verse->save();
+          return redirect()->back()->withInput();
+
     }
 
     /**
