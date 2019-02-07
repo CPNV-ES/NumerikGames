@@ -1,5 +1,5 @@
-<?php
 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +31,8 @@ Route::get('/', 'ThemeController@index');
 /* Routes for standard user */
 Route::resource('verses', 'VerseController', ['only' => ['create']]);
 Route::resource('proses', 'ProseController', ['only' => ['show']]);
+Route::resource('themes', 'ThemeController', ['only' => ['show']]);
 
 /* Auth routes */
 Auth::routes();
+

@@ -14,7 +14,7 @@
                                     <rect fill="#868e96" width="100%" height="100%"></rect>
                                     <text fill="#dee2e6" dy=".3em" x="50%" y="50%">{{$theme->name}}</text>
                             </svg>
-                            <a href="{{ route('proses.index', $theme->id) }}">
+                            <a href="{{ route('themes.show', $theme->id) }}">
                                     <button type="submit" class="btn btn-primary">Voir le contenu</button>
                             </a>
                             <a href="{{ route('proses.show', $theme->id) }}">
