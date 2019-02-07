@@ -27,7 +27,7 @@ Route::middleware(['guest'])->group(function () {
 
 });
 
-Route::get('/result', 'ProseController@result')->name('result.index');
+Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
 
 /* Home link to theme */
 Route::get('/', 'ThemeController@index');

@@ -13,6 +13,13 @@
                 <h2>tutu</h2>
             </div>
             <div class="container">
+                @foreach ($proses as $prose)
+                    <h2>{{$prose->title}}</h2><br>
+                    @foreach ($verses as $vers)
+                        {{$vers->content}}<br>
+                    @endforeach
+                    <br>
+                @endforeach
             </div>
         </div>
     </div>

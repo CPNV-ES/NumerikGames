@@ -120,8 +120,24 @@ class ProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function result(Request $request, Prose $prose)
+    public function projector()
     {
-        return view('result.index');
+        $proses = Prose::all();
+        $verses = Verse::all();
+        
+        $levels = array('low', 'medium', 'high');
+        $attributes = array('fat', 'quantity', 'ratio', 'label');
+
+        foreach ($levels as $key => $level):
+            foreach ($attributes as $k =>$attribute):
+                    $variables[$level][] = $attribute . '_' . $level; // changed $variables[] to $variables[$level][]
+            endforeach;
+        endforeach;
+
+        echo '<pre>' . print_r($levels,1) . '</pre>';   
+        echo '<pre>' . print_r($variables,1) . '</pre>';  
+        die();
+
+        return view('result.index')->with(compact('proses', 'verses'));
     }
 }
