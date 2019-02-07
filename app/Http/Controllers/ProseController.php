@@ -122,9 +122,15 @@ class ProseController extends Controller
      */
     public function projector()
     {
+        $proses_to_show = array();
+        
+        foreach (Verse::all()->where('status', 1) as $value) {
+            array_push($proses_to_show, $value->prose_id);
+        }
+
         $proses = Prose::with(['verse' => function ($query) {
             $query->where('status', 1);
-        }])->get();
+        }])->whereIn('id', $proses_to_show)->get();
 
         return view('projectors.index')->with(compact('proses'));
     }
