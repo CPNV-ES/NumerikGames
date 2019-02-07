@@ -49,10 +49,11 @@
     <div class="container">
         <div class="row">
             @foreach ($proses as $key => $prose)
-            <div class="col-sm-3">
+            <div class="col-sm-6">
                 <h3>{{$prose->title}}</h3>
-                <p>{{$prose->verse[$key]->content}}</p>
-                <p>Créé le : {{$prose->verse[$key]->created_at->format('d.m.Y')}}</p>
+                @foreach ($prose->verse as $verse)
+                    <p>{{$verse->content}}</p>
+                @endforeach
             </div>
             @endforeach
         </div>

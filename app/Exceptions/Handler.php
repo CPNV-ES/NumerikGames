@@ -29,7 +29,7 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Exception  $exception
+     * @param  \Exception  $exceptionxception
      * @return void
      */
     public function report(Exception $exception)
@@ -46,6 +46,29 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        if($exception instanceof HttpResponseException)
+        {
+            switch ($exception->getResponse()) 
+                {
+                // not found
+
+                case 404:
+                return redirect()->guest('home');
+                break;
+
+                // internal error
+                case '500':
+                return redirect()->guest('home');
+                break;
+
+                default:
+                    return $this->renderHttpException($exception);
+                break;
+            }
+        }
+        else
+        {
+                return parent::render($request, $exception);
+        }
     }
 }
