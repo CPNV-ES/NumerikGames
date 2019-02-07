@@ -8,9 +8,7 @@
 @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <div class="title m-b-md">
-                Last 2 Verses of a specific prose
-            </div> {{-- .title --}}
+
 
             <div style="padding-top:50px">
                 @foreach ($versesLast as $verse)
@@ -20,7 +18,7 @@
                 <form method="post" action={{ route('verses.store') }}>
                     @csrf
                     <input type="text" name="content" id="verse">
-                    <input type="submit" name="addVerse" id="addVerse">
+                    <input class="btn btn-primary" type="submit" name="addVerse" id="addVerse">
                     <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
                 </form>
             </div>
