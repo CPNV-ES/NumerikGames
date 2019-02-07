@@ -10,15 +10,14 @@
         
         <div class="content">
             <div class="title m-b-md">
-                <h2>tutu</h2>
+                <h2>projectors</h2>
             </div>
             <div class="container">
                 @foreach ($proses as $prose)
-                    <h2>{{$prose->title}}</h2><br>
-                    @foreach ($verses as $vers)
-                        {{$vers->content}}<br>
+                    <h3>{{$prose->title}}</h3>
+                    @foreach ($prose->verse as $value)
+                        <p>{{$value->content}}</p>
                     @endforeach
-                    <br>
                 @endforeach
             </div>
         </div>

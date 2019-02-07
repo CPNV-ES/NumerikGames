@@ -122,22 +122,10 @@ class ProseController extends Controller
      */
     public function projector()
     {
-        $proses = Prose::all();
-        $verses = Verse::all();
-        
-        $levels = array('low', 'medium', 'high');
-        $attributes = array('fat', 'quantity', 'ratio', 'label');
+        $proses = Prose::with(['verse' => function ($query) {
+            $query->where('status', 1);
+        }])->get();
 
-        foreach ($levels as $key => $level):
-            foreach ($attributes as $k =>$attribute):
-                    $variables[$level][] = $attribute . '_' . $level; // changed $variables[] to $variables[$level][]
-            endforeach;
-        endforeach;
-
-        echo '<pre>' . print_r($levels,1) . '</pre>';   
-        echo '<pre>' . print_r($variables,1) . '</pre>';  
-        die();
-
-        return view('result.index')->with(compact('proses', 'verses'));
+        return view('projectors.index')->with(compact('proses'));
     }
 }
