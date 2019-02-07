@@ -14,10 +14,13 @@
             </div>
             <div class="container">
                 @foreach ($proses as $prose)
-                    <h3>{{$prose->title}}</h3>
-                    @foreach ($prose->verse as $value)
-                        <p>{{$value->content}}</p>
-                    @endforeach
+                    @if ($prose->verse != '[]') 
+                        <h3>{{$prose->title}}</h3>
+                        @foreach ($prose->verse as $value)
+                            <p>{{$value->content}}</p>
+                        @endforeach
+                    @else
+                    @endif
                 @endforeach
             </div>
         </div>
