@@ -10,16 +10,16 @@
         <div class="content">
 
 
-            <div style="padding-top:50px">
+            <div class="col-md-12 text-center" >
                 @foreach ($versesLast as $verse)
 
-                    {{$verse->content}}<br>
+                    <div style="font-size:30px">{{$verse->content}}</div>
                 @endforeach
                 <form method="post" action={{ route('verses.store') }}>
                     @csrf
-                    <input type="text" name="content" id="verse">
-                    <input class="btn btn-primary" type="submit" name="addVerse" id="addVerse">
-                    <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
+                    <input style="width: 600px;font-size:30px;" type="text" name="content" id="verse">
+                      <div><input class="btn btn-primary" type="submit" name="addVerse" id="addVerse"></div>
+                  <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
                 </form>
             </div>
             @auth
