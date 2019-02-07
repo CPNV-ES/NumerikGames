@@ -13,7 +13,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /* Add for log the sql on /storage/logs/ */
+        /* \DB::listen(function($query) {
+            \Log::info(
+                $query->sql,
+                $query->bindings,
+                $query->time
+            );
+        }); */
     }
 
     /**
