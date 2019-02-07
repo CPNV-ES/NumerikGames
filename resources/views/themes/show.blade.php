@@ -52,7 +52,7 @@
             <div class="col-sm-3">
                 <h3>{{$prose->title}}</h3>
                 <p>{{$prose->verse[$key]->content}}</p>
-                <p>{{$prose->verse[$key]->created_at}}</p>
+                <p>Créé le : {{$prose->verse[$key]->created_at->format('d.m.Y')}}</p>
             </div>
             @endforeach
         </div>
