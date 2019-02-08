@@ -1,5 +1,5 @@
-<?php
 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,11 +26,13 @@ Route::middleware(['guest'])->group(function () {
     
 });
 /* Home link to theme */
-Route::get('/', 'ThemeController@index');
+Route::get('/', 'ThemeController@index')->name('home');
 
 /* Routes for standard user */
 Route::resource('verses', 'VerseController', ['only' => ['create']]);
 Route::resource('proses', 'ProseController', ['only' => ['show']]);
+Route::resource('themes', 'ThemeController', ['only' => ['show']]);
 
 /* Auth routes */
 Auth::routes();
+
