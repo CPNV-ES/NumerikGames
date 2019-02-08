@@ -63,7 +63,16 @@ class ThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        return view('themes.show')->with(compact('theme'));
+        if (Auth::check()) {
+            return view('themes.show')->with(compact('theme'));
+        }
+
+        $proses = Prose::with(['verse' => function ($query) {
+            $query->where('status', 1);     
+        }])->where('theme_id', $theme->id)->get();
+            
+        return view('themes.show')->with('proses', $proses);
+
     }
 
     /**

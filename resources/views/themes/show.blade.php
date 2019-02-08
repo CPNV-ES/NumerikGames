@@ -6,6 +6,7 @@
 --}}
 @extends('layouts.app')
 @section('content')
+@auth
     <div class="flex-center position-ref full-height">
         <div class="container">
             <div class="row">
@@ -43,5 +44,20 @@
             </div>{{-- .row --}}
         </div>{{-- .container --}}
     </div>{{-- .flex-center position-ref --}}
+@endauth
+<div class="flex-center position-ref full-height">
+    <div class="container">
+        <div class="row">
+            @foreach ($proses as $key => $prose)
+            <div class="col-sm-6">
+                <h3>{{$prose->title}}</h3>
+                @foreach ($prose->verse as $verse)
+                    <p>{{$verse->content}}</p>
+                @endforeach
+            </div>
+            @endforeach
+        </div>
+    </div>
+
 @endsection
   
