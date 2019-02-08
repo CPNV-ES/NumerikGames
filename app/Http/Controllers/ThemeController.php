@@ -67,9 +67,11 @@ class ThemeController extends Controller
             return view('themes.show')->with(compact('theme'));
         }
 
-            $proses = Prose::with('verse')->where('theme_id', $theme->id)->get();
+        $proses = Prose::with(['verse' => function ($query) {
+            $query->where('status', 1);     
+        }])->where('theme_id', $theme->id)->get();
             
-            return view('themes.show')->with('proses', $proses);
+        return view('themes.show')->with('proses', $proses);
 
     }
 

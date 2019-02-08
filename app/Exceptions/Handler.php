@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundException;
+use Illuminate\Support\Facades\Redirect;
 
 class Handler extends ExceptionHandler
 {
@@ -46,29 +48,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if($exception instanceof HttpResponseException)
-        {
-            switch ($exception->getResponse()) 
-                {
-                // not found
-
-                case 404:
-                return redirect()->guest('home');
-                break;
-
-                // internal error
-                case '500':
-                return redirect()->guest('home');
-                break;
-
-                default:
-                    return $this->renderHttpException($exception);
-                break;
-            }
+        //Check if model exist, return home if model not found
+        if ($exception instanceof ModelNotFoundException) {
+            return redirect()->route('home');
         }
-        else
-        {
-                return parent::render($request, $exception);
-        }
+        return parent::render($request, $exception);
     }
 }
+
