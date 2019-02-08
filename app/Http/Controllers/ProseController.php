@@ -113,4 +113,21 @@ class ProseController extends Controller
         }
         return redirect()->route('proses.index');
     }
+    
+    /**
+     * Get value from origin
+     * The verse_count column is creater by Laravel in the eloquent query, you can see the log to see the query in App\Providers\AppServiceProvider
+     * @param  \App\Prose  $prose
+     * @return \Illuminate\Http\Response
+     */
+    public function projector()
+    {
+        $proses = Prose::with(['verse' => function ($query) {
+            $query->where('status', 1);
+        }])->withCount(['verse' => function ($query) {
+            $query->where('status', 1);
+        }])->having('verse_count', '>', 0)->get();
+
+        return view('projectors.index')->with(compact('proses'));
+    }
 }
