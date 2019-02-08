@@ -55,7 +55,8 @@ class VerseController extends Controller
     {
           $verse = new Verse($request->all());
           $verse->save();
-          return redirect()->back()->withInput();
+          $themes = Theme::all();
+          return view('welcome')->with(compact('themes'));
 
     }
 
