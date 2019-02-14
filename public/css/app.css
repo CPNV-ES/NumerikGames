@@ -93,6 +93,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 p {
@@ -10495,4 +10496,3 @@ a.text-dark:focus {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-
