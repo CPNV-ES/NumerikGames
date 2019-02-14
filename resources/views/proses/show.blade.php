@@ -18,8 +18,8 @@
                 <form method="post" action={{ route('verses.store') }}>
                     @csrf
                     <input style="width: 600px;font-size:30px;" type="text" name="content" id="verse">
-                      <div><input class="btn btn-primary" type="submit" name="addVerse" id="addVerse"></div>
-                  <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
+                        <div><input class="btn btn-primary" type="submit" name="addVerse" id="addVerse"></div>
+                        <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
                 </form>
             </div>
             @auth

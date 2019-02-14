@@ -10496,3 +10496,34 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+h1 {
+  padding: 15px 0px;
+}
+
+/**
+*
+* Import for the project
+*/
+
+#projectors-index h1 {
+  font-size: 52px;
+}
+
+#projectors-index .proses {
+  margin-bottom: 80px;
+}
+
+#projectors-index .proses h2 {
+  padding: 15px 0px;
+  font-size: 42px;
+}
+
+#projectors-index .proses p {
+  margin-bottom: 5px;
+  font-size: 29px;
+}
+
+/**
+* Admin 
+*/
+
