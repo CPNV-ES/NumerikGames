@@ -36391,7 +36391,7 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./scripts/tutu */ "./resources/js/scripts/tutu.js");
+__webpack_require__(/*! ./scripts/main */ "./resources/js/scripts/main.js");
 
 /***/ }),
 
@@ -36453,9 +36453,9 @@ if (token) {
 
 /***/ }),
 
-/***/ "./resources/js/scripts/tutu.js":
+/***/ "./resources/js/scripts/main.js":
 /*!**************************************!*\
-  !*** ./resources/js/scripts/tutu.js ***!
+  !*** ./resources/js/scripts/main.js ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -36491,8 +36491,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\NumerikGames\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\NumerikGames\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Anel.MUMINOVIC\PhpstormProjects\NumerikGames\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Anel.MUMINOVIC\PhpstormProjects\NumerikGames\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

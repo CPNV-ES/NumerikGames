@@ -1,7 +1,10 @@
-svg {
-  width: 100%;
-  transition: all .2s ease-in-out;
-}
-svg:hover {
-  transform: scale(1.1);
+#home {
+    svg {
+        width: 100%;
+        transition: all .2s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }

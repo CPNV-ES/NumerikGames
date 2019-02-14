@@ -93,7 +93,6 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 
 p {
@@ -10492,7 +10491,18 @@ a.text-dark:focus {
   }
 }
 
+#home svg {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+#home svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
