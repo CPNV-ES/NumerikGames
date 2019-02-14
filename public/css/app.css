@@ -10496,11 +10496,3 @@ a.text-dark:focus {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-
-svg {
-  width: 100%;
-  transition: all .2s ease-in-out;
-}
-svg:hover {
-  transform: scale(1.1);
-}

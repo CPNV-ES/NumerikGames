@@ -4,12 +4,17 @@
         <div class="container">
             <div class="col-sm-12">
                 <div class="row">
-                    <h1 style="text-align:center;">Themes page</h1>
+                    <h1>Themes page</h1>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <h4>Vous devez choisir l'un de nos thèmes ci-dessous pour commencer à écrire votre magnifique vers.</h4>
                 </div>
             </div>
                 <div class="row">                   
                     @foreach ($themes as $theme)       
-                        <div class="col-sm-3">                
+                        <div class="col-sm">                
                             <div class="card-group">
                                 <div class="card">
                                     <svg class="bd-placeholder-img figure-img img-fluid rounded" width="300" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
