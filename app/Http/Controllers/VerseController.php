@@ -36,13 +36,7 @@ class VerseController extends Controller
     public function create()
     {
         $proses = Prose::all();
-        if (Auth::check()) {
-            return view('verses.create')->with(compact('proses'));
-        }
-        /* Get all verse from correct prose */
-
-        $verses = Verse::all();
-        return view('game.index')->with(compact('verses'));
+        return view('verses.create')->with(compact('proses'));
     }
 
     /**

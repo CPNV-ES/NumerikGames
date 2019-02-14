@@ -25,8 +25,8 @@ class ThemesTableSeeder extends Seeder
             'robots',
             'imaginaire',
             'humour',
-            'mer',
-            'guerre',
+            /* 'mer',
+            'guerre', */
         ];
 
         foreach ($themes as $value) {
