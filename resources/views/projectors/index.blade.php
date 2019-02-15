@@ -13,14 +13,17 @@
                 <h2>projectors</h2>
             </div>
             <div class="container">
-                @foreach ($proses as $prose)
-                    <h3>{{$prose->title}}</h3>
-                    @foreach ($prose->verse as $value)
-                        <p>{{$value->content}}</p>
-                    @endforeach
-                @endforeach
+                <div class="prose">
+                    <div class="scroll">
+                        @foreach ($proses as $prose)                        
+                            <h3>{{$prose->title}}</h3>
+                                @foreach ($prose->verse as $value)
+                                    <p>{{$value->content}}</p>
+                                @endforeach                        
+                        @endforeach 
+                    </div>    
+                </div>     
             </div>
         </div>
     </div>
 @endsection
-    

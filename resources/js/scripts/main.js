@@ -11,4 +11,11 @@ $(document).ready(function(){
         }
     });
 
+    var body = $("body").offset();
+    var div = $('.container').offset();
+
+    $(".prose").fadeIn()
+        .css({top:800,position:'absolute'})        
+        .animate({top: div.top}, 25000)
+
  });

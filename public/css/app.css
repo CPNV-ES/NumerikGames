@@ -10491,6 +10491,11 @@ a.text-dark:focus {
   }
 }
 
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
 #home svg {
   width: 100%;
   transition: all 0.2s ease-in-out;
@@ -10499,10 +10504,5 @@ a.text-dark:focus {
 #home svg:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
