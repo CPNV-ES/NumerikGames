@@ -63,13 +63,13 @@ class ThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        if (Auth::check()) {
-            return view('themes.show')->with(compact('theme'));
-        }
-
         $proses = Prose::with(['verse' => function ($query) {
             $query->where('status', 1);     
         }])->where('theme_id', $theme->id)->get();
+
+        if (Auth::check()) {
+            return view('themes.show')->with(compact('theme', 'proses'));
+        }
             
         return view('themes.show')->with('proses', $proses);
 
@@ -116,11 +116,5 @@ class ThemeController extends Controller
             $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
         }
         return redirect()->route('themes.index');
-    }
-
-    public function themes()
-    {
-        $themes = Theme::all();
-        return view('welcome')->with(compact('themes'));
     }
 }
