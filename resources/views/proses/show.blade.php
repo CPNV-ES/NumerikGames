@@ -6,22 +6,43 @@
   --}}
 @extends('layouts.app')
 @section('content')
+    <div id="prose-id">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">Rajoutez une prose</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @foreach ($versesLast as $verse)
+                        <div>
+                            <p class="text-center">{{$verse->content}}</p>
+                        </div>
+                    @endforeach
+                    <form method="post" action={{ route('verses.store') }}>
+                        @csrf
+
+                        <div class="form-group">
+                            <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
+                        </div>
+
+                        <div>
+                            <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="addVerse" id="addVerse">Block level button</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="flex-center position-ref full-height">
         <div class="content">
-
-
-            <div class="col-md-12 text-center" >
-                @foreach ($versesLast as $verse)
-
-                    <div style="font-size:30px">{{$verse->content}}</div>
-                @endforeach
-                <form method="post" action={{ route('verses.store') }}>
-                    @csrf
-                    <input style="width: 600px;font-size:30px;" type="text" name="content" id="verse">
-                        <div><input class="btn btn-primary" type="submit" name="addVerse" id="addVerse"></div>
-                        <input type="hidden" name="prose_id" id="prose_id" value="{{$prose->id}}">
-                </form>
-            </div>
             @auth
             <div class="container">
                 <div class="row">
