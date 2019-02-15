@@ -11,6 +11,8 @@ set :repo_url, "https://github.com/CPNV-ES/NumerikGames.git"
 set :deploy_to, '/var/www/laravel-capistrano'
 set :laravel_dotenv_file, '/var/www/secrets/.env'
 set :keep_releases, 5
+set :default_env, { path: "/usr/local/bin:$PATH" }
+SSHKit.config.command_map[:composer] = "/usr/local/bin/composer"
 append :linked_dirs,
     'storage/app',
     'storage/framework/cache',
