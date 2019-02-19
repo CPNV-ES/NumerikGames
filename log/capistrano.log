@@ -972,3 +972,29 @@
   INFO [524eb581] Running /usr/local/bin/composer install --no-dev --quiet --prefer-dist --optimize-autoloader as cpnv@172.17.101.219
  DEBUG [524eb581] Command: cd /var/www/laravel-capistrano/releases/20190215111432 && ( export PATH="/usr/local/bin:$PATH" ; /usr/local/bin/composer install --no-dev --quiet --prefer-dist --optimize-autoloader )
  DEBUG [831b98ba] 	Your requirements could not be resolved to an installable set of packages.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 15:29:40 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5b3431a7] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [5b3431a7] Command: ( export PATH="/usr/local/bin:$PATH" ; /usr/bin/env mkdir -p /tmp )
+  INFO [90c4c254] Finished in 7.124 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [5f3d0436] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [5f3d0436] Command: ( export PATH="/usr/local/bin:$PATH" ; /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh )
+  INFO [b962e19e] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [eeba3e40] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [eeba3e40] Command: ( export PATH="/usr/local/bin:$PATH" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 15:39:17 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [40dc09f3] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [40dc09f3] Command: ( export PATH="/usr/local/bin:$PATH" ; /usr/bin/env mkdir -p /tmp )
+  INFO [8918ff53] Finished in 12.252 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [3100b153] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [3100b153] Command: ( export PATH="/usr/local/bin:$PATH" ; /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh )
+  INFO [c4fce405] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [69b57719] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [69b57719] Command: ( export PATH="/usr/local/bin:$PATH" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
