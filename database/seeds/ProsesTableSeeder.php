@@ -78,8 +78,9 @@ class ProsesTableSeeder extends Seeder
         $robot          = Theme::where('name', 'robots')->first();
         $imaginaire     = Theme::where('name', 'imaginaire')->first();
         $humour         = Theme::where('name', 'humour')->first();
-        $mer            = Theme::where('name', 'mer')->first();
-        $guerre         = Theme::where('name', 'guerre')->first();
+
+        /* $mer            = Theme::where('name', 'mer')->first();
+        $guerre         = Theme::where('name', 'guerre')->first(); */
 
         /* Insert data into the DB */
         foreach($amourArray as $value) {
@@ -122,7 +123,7 @@ class ProsesTableSeeder extends Seeder
             $prose->save();
         }
 
-        foreach($merArray as $value) {
+        /* foreach($merArray as $value) {
             $prose = Prose::create([
                 'title' => $value,
             ]);
@@ -136,7 +137,7 @@ class ProsesTableSeeder extends Seeder
             ]);
             $prose->theme()->associate($guerre);
             $prose->save();
-        }
+        } */
 
     }
 }

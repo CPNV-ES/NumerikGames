@@ -6,23 +6,23 @@
   --}}
 @extends('layouts.app')
 @section('content')
-    <div class="flex-center position-ref full-height">
-        
-        <div class="content">
-            <div class="title m-b-md">
-                <h2>projectors</h2>
-            </div>
-            <div class="container">
-                <div class="prose">
-                    <div class="scroll">
-                        @foreach ($proses as $prose)                        
-                            <h3>{{$prose->title}}</h3>
-                                @foreach ($prose->verse as $value)
-                                    <p>{{$value->content}}</p>
-                                @endforeach                        
-                        @endforeach 
-                    </div>    
-                </div>     
+    <div id="projectors-index">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">Numerik' Games</h1>
+                    <hr>
+                </div>
+                <div class="row">
+                    @foreach ($proses as $prose)
+                        <div class="col-md-12 text-center proses">
+                            <h2 class="text-dark">{{$prose->title}}</h2>
+                            @foreach ($prose->verse as $value)
+                                <p class="text-secondary">{{$value->content}}</p>
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

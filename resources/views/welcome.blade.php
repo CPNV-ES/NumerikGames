@@ -23,7 +23,7 @@
                             </a>
                         </svg>
                         <div class="card-body">
-                            <h5 class="card-title">{{$theme->name}}</h5>
+                            <h5 class="card-title text-center">{{$theme->name}}</h5>
                         </div>
                     </div>
                 </div>

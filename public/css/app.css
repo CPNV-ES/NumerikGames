@@ -10506,3 +10506,43 @@ a.text-dark:focus {
           transform: scale(1.1);
 }
 
+#prose-id h1 {
+  font-size: 52px;
+}
+
+#prose-id p {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+h1 {
+  padding: 15px 0px;
+}
+
+/**
+*
+* Import for the project
+*/
+
+#projectors-index h1 {
+  font-size: 52px;
+}
+
+#projectors-index .proses {
+  margin-bottom: 80px;
+}
+
+#projectors-index .proses h2 {
+  padding: 15px 0px;
+  font-size: 42px;
+}
+
+#projectors-index .proses p {
+  margin-bottom: 5px;
+  font-size: 29px;
+}
+
+/**
+* Admin 
+*/
+
