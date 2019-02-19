@@ -10496,25 +10496,6 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-#home svg {
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-}
-
-#home svg:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-#prose-id h1 {
-  font-size: 52px;
-}
-
-#prose-id p {
-  font-size: 36px;
-  margin-bottom: 5px;
-}
-
 h1 {
   padding: 15px 0px;
 }
@@ -10540,6 +10521,25 @@ h1 {
 #projectors-index .proses p {
   margin-bottom: 5px;
   font-size: 29px;
+}
+
+#home svg {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+#home svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#prose-id h1 {
+  font-size: 52px;
+}
+
+#prose-id p {
+  font-size: 36px;
+  margin-bottom: 5px;
 }
 
 /**

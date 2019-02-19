@@ -13,7 +13,7 @@
                     <h1 class="text-center">Numerik' Games</h1>
                     <hr>
                 </div>
-                <div class="row">
+                <div class="prose">
                     @foreach ($proses as $prose)
                         <div class="col-md-12 text-center proses">
                             <h2 class="text-dark">{{$prose->title}}</h2>

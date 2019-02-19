@@ -36478,16 +36478,15 @@ $(document).ready(function () {
       $('#unactive').css('display', 'none');
     }
   });
-  var $body = $('.container');
-  var div = $('.container').height();
-  var h_prose = $('.prose').height();
+  var $body = $('body');
+  var h_prose = $('.row').height();
   var bottom = $body.position().top + $body.offset().top + $body.outerHeight(true);
   console.log(bottom);
-  $(".prose").fadeIn().css({
+  $(".row").fadeIn().css({
     top: 960,
     position: 'fixed'
   }).animate({
-    top: h_prose.top
+    top: h_prose
   }, 70000);
 });
 
@@ -36511,8 +36510,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/nawakine/Documents/Ecole/MAW/numerikGames/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/nawakine/Documents/Ecole/MAW/numerikGames/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Anel.MUMINOVIC\PhpstormProjects\NumerikGames\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Anel.MUMINOVIC\PhpstormProjects\NumerikGames\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
