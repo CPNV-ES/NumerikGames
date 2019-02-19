@@ -36478,16 +36478,17 @@ $(document).ready(function () {
       $('#unactive').css('display', 'none');
     }
   });
-  var body = $("body").offset();
-  var div = $('.container').offset();
+  var $body = $('.container');
+  var div = $('.container').height();
   var h_prose = $('.prose').height();
-  console.log(h_prose);
+  var bottom = $body.position().top + $body.offset().top + $body.outerHeight(true);
+  console.log(bottom);
   $(".prose").fadeIn().css({
-    top: 950,
+    top: 960,
     position: 'fixed'
   }).animate({
-    top: -3998.03
-  }, 55000);
+    top: h_prose.top
+  }, 70000);
 });
 
 /***/ }),

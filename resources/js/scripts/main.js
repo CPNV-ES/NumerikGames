@@ -11,14 +11,16 @@ $(document).ready(function(){
         }
     });
 
-    var body = $("body").offset();
-    var div = $('.container').offset();
+    var $body = $('body');
     var h_prose = $('.prose').height();
 
-    console.log(h_prose);
+    var bottom = $body.position().top + $body.offset().top + $body.outerHeight(true);
+
+    console.log(bottom);
+
 
     $(".prose").fadeIn()
-        .css({top:950,position:'fixed'})        
-        .animate({bottom: -3998.03}, 55000)
+        .css({top:960,position:'fixed'})        
+        .animate({top: h_prose}, 70000)
 
  });
