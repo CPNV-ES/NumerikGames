@@ -14,7 +14,6 @@
 
 /* Routes for admin only */
 Route::middleware(['auth'])->group(function () {
-    Route::resource('proses', 'ProseController');
     Route::resource('verses', 'VerseController');
     Route::resource('themes', 'ThemeController');
 });
@@ -23,8 +22,8 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/', 'ThemeController@index')->name('home');
 Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
 Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
-Route::resource('proses', 'ProseController', ['only' => ['show']]);
 Route::resource('themes', 'ThemeController', ['only' => ['show']]);
+Route::resource('proses', 'ProseController');
 
 /* Auth routes */
 Auth::routes();
