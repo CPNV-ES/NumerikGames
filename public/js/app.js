@@ -36480,12 +36480,14 @@ $(document).ready(function () {
   });
   var body = $("body").offset();
   var div = $('.container').offset();
+  var h_prose = $('.prose').height();
+  console.log(h_prose);
   $(".prose").fadeIn().css({
-    top: 800,
-    position: 'absolute'
+    top: 950,
+    position: 'fixed'
   }).animate({
-    top: div.top
-  }, 25000);
+    top: -3998.03
+  }, 55000);
 });
 
 /***/ }),
