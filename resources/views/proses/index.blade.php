@@ -9,10 +9,13 @@
     <div class="flex-center position-ref full-height">
 
         <div class="content">
-            <div class="title m-b-md">
-                <h2>Liste des proses</h2>
-            </div>
             <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Liste des proses</h1>
+                        <hr>
+                    </div>
+                </div>
                 <div class="row">
                     @foreach ($proses as $prose)
                         <div class="col-md-3">
