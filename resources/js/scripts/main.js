@@ -10,7 +10,7 @@ $(document).ready(function(){
             $('#unactive').css('display', 'none');
         }
     });
-    
+
     // Calls the function only for the projectors page
     if($('div').has('#projectors-index')) {
        projectorsLoop(); 
@@ -22,7 +22,7 @@ $(document).ready(function(){
         var h_prose = $('.prose').height();
         $(".prose")
             .css({top:930,position:'fixed'})        
-            .animate({top: '-'+h_prose}, 70000,
+            .animate({top: '-'+h_prose}, 70000, 'linear',
             function () {
                 projectorsLoop()
             });

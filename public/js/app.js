@@ -36492,7 +36492,7 @@ $(document).ready(function () {
       position: 'fixed'
     }).animate({
       top: '-' + h_prose
-    }, 70000, function () {
+    }, 70000, 'linear', function () {
       projectorsLoop();
     });
   }
