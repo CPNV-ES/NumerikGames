@@ -10,17 +10,21 @@ $(document).ready(function(){
             $('#unactive').css('display', 'none');
         }
     });
-
-    var $body = $('body');
-    var h_prose = $('.prose').height();
-
-    var bottom = $body.position().top + $body.offset().top + $body.outerHeight(true);
-
-    console.log(bottom);
-
-
-    $(".prose").fadeIn()
-        .css({top:960,position:'fixed'})        
-        .animate({top: h_prose}, 70000)
-
+    
+    // Calls the function only for the projectors page
+    if($('div').has('#projectors-index')) {
+       projectorsLoop(); 
+    }
+    
+    // Function that move the proses and verses from bottom to top with an infinite loop
+    function projectorsLoop() {
+        $('nav').css('z-index', 99999);
+        var h_prose = $('.prose').height();
+        $(".prose")
+            .css({top:930,position:'fixed'})        
+            .animate({top: '-'+h_prose}, 70000,
+            function () {
+                projectorsLoop()
+            });
+        }
  });
