@@ -20,9 +20,10 @@ $(document).ready(function(){
     function projectorsLoop() {
         $('nav').css('z-index', 99999);
         var h_prose = $('.prose').height();
+        console.log(h_prose)
         $(".prose")
-            .css({top:930,position:'fixed'})        
-            .animate({top: '-'+h_prose}, 70000, 'linear',
+            .css({top:879,position:'fixed'})        
+            .animate({top: '-'+h_prose}, 130000, 'swing',
             function () {
                 projectorsLoop()
             });

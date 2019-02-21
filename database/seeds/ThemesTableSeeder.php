@@ -32,6 +32,7 @@ class ThemesTableSeeder extends Seeder
         foreach ($themes as $value) {
             $theme = Theme::create([
                 'name' => $value,
+                'path' => ''
             ]);
             $theme->save();
         }

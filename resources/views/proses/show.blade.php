@@ -33,7 +33,7 @@
                         </div>
 
                         <div>
-                            <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="addVerse" id="addVerse">Block level button</button>
+                            <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="addVerse" id="addVerse">Ajouter mon texte</button>
                         </div>
                     </form>
                 </div>
