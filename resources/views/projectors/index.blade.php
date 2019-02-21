@@ -9,11 +9,11 @@
     <div id="projectors-index">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div id="title-projectors" class="col-md-12">
                     <h1 class="text-center">Numerik' Games</h1>
                     <hr>
                 </div>
-                <div class="row">
+                <div class="prose">
                     @foreach ($proses as $prose)
                         <div class="col-md-12 text-center proses">
                             <h2 class="text-dark">{{$prose->title}}</h2>
