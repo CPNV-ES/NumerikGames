@@ -28,9 +28,8 @@ class ThemeController extends Controller
         if (Auth::check()) {
             return view('themes.index')->with(compact('themes'));
         }
-        $files = Storage::files('public/pictures/themes');
 
-        dd($files);
+        
 
         return view('welcome')->with(compact('themes'));
         
