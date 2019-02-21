@@ -10505,7 +10505,17 @@ h1 {
 * Import for the project
 */
 
-#projectors-index h1 {
+#projectors-index #title-projectors {
+  height: auto;
+  width: 100%;
+  opacity: 1;
+  display: block;
+  overflow: hidden;
+  background: #f8fafc;
+  z-index: 99999;
+}
+
+#projectors-index #title-projectors h1 {
   font-size: 52px;
 }
 

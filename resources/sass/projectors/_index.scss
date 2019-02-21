@@ -1,6 +1,15 @@
 #projectors-index {
-    h1 {
-        font-size: 52px;
+    #title-projectors {
+        height: auto;
+        width: 100%;
+        opacity: 1;
+        display: block;
+        overflow: hidden;
+        background: #f8fafc;
+        z-index: 99999;
+        h1 {
+            font-size: 52px;
+        }
     }
 
     .proses {
