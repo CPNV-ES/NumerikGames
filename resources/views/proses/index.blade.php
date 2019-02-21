@@ -21,9 +21,10 @@
                         <div class="col-md-3">
                             <div class="card border-dark mb-3" style="max-width: 18rem;">
                                 <div class="card-header">
-                                    {{$prose->title}}
+                                    Thème de la prose : <u>{{$prose->theme->name}}</u>
                                 </div>
                                 <div class="card-body text-dark">
+                                    <h5>Prose : <u>{{$prose->title}}</u></h5>
                                     <ul class="card-text list-unstyled">
                                         @foreach ($prose->verse as $item)
                                             <li class="badge badge-light">{{substr($item->content, 0, 25)}}...</li>
