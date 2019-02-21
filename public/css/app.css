@@ -10496,6 +10496,43 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+h1 {
+  padding: 15px 0px;
+}
+
+/**
+*
+* Import for the project
+*/
+
+#projectors-index #title-projectors {
+  height: auto;
+  width: 100%;
+  opacity: 1;
+  display: block;
+  overflow: hidden;
+  background: #f8fafc;
+  z-index: 99999999;
+}
+
+#projectors-index #title-projectors h1 {
+  font-size: 52px;
+}
+
+#projectors-index .proses {
+  margin-bottom: 80px;
+}
+
+#projectors-index .proses h2 {
+  padding: 15px 0px;
+  font-size: 42px;
+}
+
+#projectors-index .proses p {
+  margin-bottom: 5px;
+  font-size: 29px;
+}
+
 #home svg {
   width: 100%;
   transition: all 0.2s ease-in-out;
@@ -10513,33 +10550,6 @@ a.text-dark:focus {
 #prose-id p {
   font-size: 36px;
   margin-bottom: 5px;
-}
-
-h1 {
-  padding: 15px 0px;
-}
-
-/**
-*
-* Import for the project
-*/
-
-#projectors-index h1 {
-  font-size: 52px;
-}
-
-#projectors-index .proses {
-  margin-bottom: 80px;
-}
-
-#projectors-index .proses h2 {
-  padding: 15px 0px;
-  font-size: 42px;
-}
-
-#projectors-index .proses p {
-  margin-bottom: 5px;
-  font-size: 29px;
 }
 
 /**
