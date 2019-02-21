@@ -27,5 +27,4 @@ class Prose extends Model
     {
         return $this->hasMany('App\Verse');
     }
-
 }
