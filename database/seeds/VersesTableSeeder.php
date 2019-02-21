@@ -36,7 +36,5 @@ class VersesTableSeeder extends Seeder
             $verse->prose()->associate(rand(1,$allProseCounted));
             $verse->save();
         }
-
-
     }
 }
