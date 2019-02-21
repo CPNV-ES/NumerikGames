@@ -20,13 +20,11 @@ class ThemesTableSeeder extends Seeder
     {
 
         $themes = [
-            'amour',
-            'nature',
-            'robots',
-            'imaginaire',
-            'humour',
-            /* 'mer',
-            'guerre', */
+            'Amour',
+            'Amitié',
+            'La mort',
+            'La tristesse',
+            'Le bonheur',
         ];
 
         foreach ($themes as $value) {

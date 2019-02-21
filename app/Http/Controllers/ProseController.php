@@ -21,13 +21,14 @@ class ProseController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, Verse $verse)
+    public function index(Verse $verse)
     {
         $proses = Prose::with(['verse' => function ($query) {
             $query->where('status', 1);
         }])->withCount(['verse' => function ($query) {
             $query->where('status', 1);
         }])->having('verse_count', '>', 0)->get();
+
         return view('proses.index')->with(compact('proses', 'verse'));
     }
 
