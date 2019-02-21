@@ -10543,6 +10543,10 @@ h1 {
           transform: scale(1.1);
 }
 
+#home #link-all-proses {
+  padding-top: 20px;
+}
+
 #prose-id h1 {
   font-size: 52px;
 }

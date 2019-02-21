@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>Themes page</h1>
+                    <h1>Meet Kadaversky's bot !</h1>
                 </div>
             </div> <!-- .row -->
             <div class="row">
@@ -31,7 +31,7 @@
                 @endforeach                   
             </div> <!-- .row -->
             
-            <div class="row">
+            <div id="link-all-proses" class="row">
                 <div class="col-md-12">
                     <a href="{{route('proses.index')}}" class="btn btn-outline-dark" role="button" aria-pressed="true">Voir toutes les proses</a>
                 </div>
