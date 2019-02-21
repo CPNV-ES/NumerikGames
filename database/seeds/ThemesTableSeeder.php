@@ -27,11 +27,13 @@ class ThemesTableSeeder extends Seeder
             'Le bonheur',
         ];
 
+
         foreach ($themes as $value) {
-            $theme = Theme::create([
-                'name' => $value,
-                'path' => ''
-            ]);
+                $theme = Theme::create([
+                    'name' => $value,
+                    'path' => 'pictures/themes/'.mb_strtolower(str_replace(' ', '_', $value), 'UTF-8').'.jpg',
+                    
+                ]);
             $theme->save();
         }
     }

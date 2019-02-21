@@ -1,7 +1,10 @@
 #home {
-    svg {
+    a > img {
         width: 100%;
+        height:100%;
         transition: all .2s ease-in-out;
+        cursor: pointer;
+        max-height: 125px;
         
         &:hover {
             transform: scale(1.1);

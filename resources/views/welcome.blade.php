@@ -17,11 +17,9 @@
                     <div class="col-sm">                
                         <div class="card-group">
                             <div class="card">
-                                <svg class="bd-placeholder-img figure-img img-fluid rounded" width="300" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-                                    <a xlink:href="{{ route('proses.show', $theme->id) }}">
-                                        <rect fill="#868e96" width="100%" height="100%"></rect>
-                                    </a>
-                                </svg>
+                                <a href="{{ route('proses.show', $theme->id) }}">
+                                    <img class="thumbnail" src="{{ asset('storage/'. $theme->path) }}"/>
+                                </a>
                                 <div class="card-body">
                                     <h5 class="card-title text-center">{{$theme->name}}</h5>
                                 </div>

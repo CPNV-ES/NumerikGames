@@ -28,6 +28,9 @@ class ThemeController extends Controller
         if (Auth::check()) {
             return view('themes.index')->with(compact('themes'));
         }
+
+        
+
         return view('welcome')->with(compact('themes'));
         
     }

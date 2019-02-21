@@ -36477,7 +36477,8 @@ $(document).ready(function () {
     } else {
       $('#unactive').css('display', 'none');
     }
-  }); // Calls the function only for the projectors page
+  });
+  console.log($(document).height() - $(window).height()); // Calls the function only for the projectors page
 
   if ($('div').has('#projectors-index')) {
     projectorsLoop();
@@ -36487,9 +36488,8 @@ $(document).ready(function () {
   function projectorsLoop() {
     $('nav').css('z-index', 99999);
     var h_prose = $('.prose').height();
-    console.log(h_prose);
     $(".prose").css({
-      top: 879,
+      top: 920,
       position: 'fixed'
     }).animate({
       top: '-' + h_prose

@@ -10533,12 +10533,15 @@ h1 {
   font-size: 29px;
 }
 
-#home svg {
+#home a > img {
   width: 100%;
+  height: 100%;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  max-height: 125px;
 }
 
-#home svg:hover {
+#home a > img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
