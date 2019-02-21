@@ -2,48 +2,28 @@
 lock "~> 3.11.0"
 
 set :application, "NumerikGames"
-set :repo_url, "https://github.com/CPNV-ES/NumerikGames.git"
+set :repo_url, "git@github.com:CPNV-ES/NumerikGames.git"
 
+set :deploy_to, '/var/www/numerikgames/deploy'
+
+components_dir = '/var/www/numerikgames/components'
+set :components_dir, components_dir
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/laravel-capistrano'
-set :laravel_dotenv_file, '/var/www/secrets/.env'
-set :keep_releases, 5
-append :linked_dirs,
-    'storage/app',
-    'storage/framework/cache',
-    'storage/framework/sessions',
-    'storage/framework/views',
-    'storage/logs'
-namespace :composer do
-    desc "Running Composer Install"
-    task :install do
-        on roles(:composer) do
-            within release_path do
-                execute "composer", "install","-o"
-            end
-        end
+
+# Devops commands
+namespace :ops do
+
+  desc 'Copy non-git files to servers.'
+  task :put_components do
+    on roles(:app), in: :sequence, wait: 1 do
+      system("tar -zcf build/vendor.tar.gz vendor ")
+      upload! 'build/vendor.tar.gz', "#{components_dir}", :recursive => true
+      execute "cd #{components_dir}
+      tar -zxf /var/www/numerikgames/components/vendor.tar.gz"
     end
-end
-namespace :laravel do
-    task :fix_permission do
-        on roles(:laravel) do
-            execute :chmod, "-R ug+rwx #{shared_path}/storage/ #{release_path}/bootstrap/cache/"
-            execute :chgrp, "-R www-data #{shared_path}/storage/ #{release_path}/bootstrap/cache/"
-        end
-    end
-    task :configure_dot_env do
-    dotenv_file = fetch(:laravel_dotenv_file)
-        on roles (:laravel) do
-        execute :cp, "#{dotenv_file} #{release_path}/.env"
-        end
-    end
-end
-namespace :deploy do
-    after :publishing, "composer:install"
-    after :publishing, "laravel:fix_permission"
-    after :publishing, "laravel:configure_dot_env"
-    after :publishing, "laravel:optimize"
+  end
+
 end
