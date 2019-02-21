@@ -1,94 +1,40 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+@extends('layouts.app')
+@section('content')
+    <div id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Meet Kadaversky's bot !</h1>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Numerik Games
+            </div> <!-- .row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Vous devez choisir l'un de nos thèmes ci-dessous pour commencer à écrire votre magnifique vers.</h4>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs" target="_blank">Documentation</a>
-                    <a href="https://github.com/CPNV-ES/NumerikGames" target="_blank">GitHub</a>
+            </div> <!-- .row -->
+            <div class="row">                   
+                @foreach ($themes as $theme)       
+                    <div class="col-sm">                
+                        <div class="card-group">
+                            <div class="card">
+                                <a href="{{ route('proses.show', $theme->id) }}">
+                                    <img class="thumbnail" src="{{ asset('storage/'. $theme->path) }}"/>
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">{{$theme->name}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach                   
+            </div> <!-- .row -->
+            
+            <div id="link-all-proses" class="row">
+                <div class="col-md-12">
+                    <a href="{{route('proses.index')}}" class="btn btn-outline-dark" role="button" aria-pressed="true">Voir toutes les proses</a>
                 </div>
-            </div>
+            </div> <!-- .row -->
         </div>
-    </body>
-</html>
+    </div>
+@endsection
+    
