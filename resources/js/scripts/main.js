@@ -22,7 +22,7 @@ $(document).ready(function(){
         var h_prose = $('.prose').height();
         $(".prose")
             .css({top:879,position:'fixed'})        
-            .animate({top: '-'+h_prose}, 130000, 'swing',
+            .animate({top: '-'+h_prose}, 130000, 'linear',
             function () {
                 projectorsLoop()
             });
