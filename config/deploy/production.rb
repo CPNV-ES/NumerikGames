@@ -4,9 +4,41 @@
 # You can define all roles on a single server, or split them:
 
 server '172.17.101.219', user: 'cpnv', roles: %w{web app laravel composer}
+
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
+role :app, %w{172.17.101.219}
 
+#require custom config
+require './config/config.rb'
+
+
+namespace :deploy do
+
+  desc 'Get stuff ready prior to symlinking'
+  task :compile_assets do
+    on roles(:app), in: :sequence, wait: 1 do
+      execute "cp #{deploy_to}/../components/.env #{release_path}"
+      execute "cp -r #{deploy_to}/../components/vendor #{release_path}"
+    end
+  end
+
+  after :updated, :compile_assets
+
+end
+
+
+# Devops commands
+namespace :ops do
+
+  desc 'Copy non-git ENV specific files to servers.'
+  task :put_env_components do
+    on roles(:app), in: :sequence, wait: 1 do
+      upload! './.env', "#{deploy_to}/../components/.env"
+    end
+  end
+
+end
 
 
 # role-based syntax

@@ -1024,3 +1024,1216 @@
   INFO [03b9f468] Finished in 0.062 seconds with exit status 0 (successful).
   INFO [fb507d54] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
  DEBUG [fb507d54] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 15:47:45 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [15409dfc] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [15409dfc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a1236013] Finished in 5.424 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [54b3fbd0] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [54b3fbd0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [94413dfa] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [6fdbdbf2] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [6fdbdbf2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [e2564bab] 	fatal: unable to access 'https://github.com/CPNV-ES/NumerikGames.git/': Failed to connect to github.com port 443: Connexion terminée par expiration du délai d'attente
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 15:52:53 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ef46561a] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [ef46561a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0c42776c] Finished in 14.154 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [566f802a] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [566f802a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [89da2bd3] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [28e089c1] Running /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [28e089c1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 15:59:01 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cc9ffab4] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [cc9ffab4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0134d5b3] Finished in 4.596 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [ab61c796] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [ab61c796] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [052e6d9d] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [bf0097e6] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [bf0097e6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [39afeae9] 	fatal: unable to access 'https://github.com/CPNV-ES/NumerikGames.git/': Failed to connect to github.com port 443: Connexion terminée par expiration du délai d'attente
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 16:05:47 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4656d2e6] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [4656d2e6] Command: /usr/bin/env mkdir -p /tmp
+  INFO [84442ff8] Finished in 29.599 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [8624703e] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [8624703e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [312ac145] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [e7af1980] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [e7af1980] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [577e74a3] 	fatal: unable to access 'https://github.com/CPNV-ES/NumerikGames.git/': Failed to connect to github.com port 443: Connexion terminée par expiration du délai d'attente
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 16:12:02 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2b589f06] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [2b589f06] Command: /usr/bin/env mkdir -p /tmp
+  INFO [547c720b] Finished in 7.759 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [41b2b350] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [41b2b350] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [5551a16a] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [52e0c9b8] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [52e0c9b8] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 16:18:54 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b0f4e2a9] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [b0f4e2a9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e6ce4680] Finished in 13.797 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [013a0d51] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [013a0d51] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [28e71afd] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [6d82c300] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [6d82c300] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 16:22:27 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6d0ff123] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [6d0ff123] Command: /usr/bin/env mkdir -p /tmp
+  INFO [12a7d2e3] Finished in 17.289 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [c37ba446] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [c37ba446] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [04fe2adb] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [cb8a64fc] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [cb8a64fc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [ee5d1908] 	fatal: unable to access 'https://github.com/CPNV-ES/NumerikGames.git/': Failed to connect to github.com port 443: Connexion terminée par expiration du délai d'attente
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 16:27:46 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [de2d7813] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [de2d7813] Command: /usr/bin/env mkdir -p /tmp
+  INFO [197589d8] Finished in 3.805 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [a0707348] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [a0707348] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [b0ec328c] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [a3889e23] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [a3889e23] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [ef4c4183] 	fatal: unable to access 'https://github.com/CPNV-ES/NumerikGames.git/': Failed to connect to github.com port 443: Connexion terminée par expiration du délai d'attente
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 16:44:55 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [09ace8a0] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [09ace8a0] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-19 16:47:07 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a09182c4] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [a09182c4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f5ef0adb] Finished in 6.026 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [698c59aa] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [698c59aa] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [eee17e22] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [2a51d12c] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [2a51d12c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 13:35:04 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0fc4c121] Running /usr/bin/env mkdir -p /tmp as cpnv@172.17.101.219
+ DEBUG [0fc4c121] Command: /usr/bin/env mkdir -p /tmp
+  INFO [506a0022] Finished in 0.181 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [6fa6d1ef] Running /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [6fa6d1ef] Command: /usr/bin/env chmod 700 /tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [96ab3dad] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [f7bcd5c7] Running /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [f7bcd5c7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote https://github.com/CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 13:53:50 +0100 cap production ops:put_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 13:55:22 +0100 cap production ops:put_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 13:56:01 +0100 cap production ops:put_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 13:59:03 +0100 cap production ops:put_components
+  INFO ---------------------------------------------------------------------------
+ DEBUG Uploading build/vendor.tar.gz 0.0%
+ DEBUG Uploading build/vendor.tar.gz 0.23%
+ DEBUG Uploading build/vendor.tar.gz 0.45%
+ DEBUG Uploading build/vendor.tar.gz 0.68%
+ DEBUG Uploading build/vendor.tar.gz 0.91%
+ DEBUG Uploading build/vendor.tar.gz 1.13%
+ DEBUG Uploading build/vendor.tar.gz 1.36%
+ DEBUG Uploading build/vendor.tar.gz 1.59%
+ DEBUG Uploading build/vendor.tar.gz 1.82%
+ DEBUG Uploading build/vendor.tar.gz 2.04%
+ DEBUG Uploading build/vendor.tar.gz 2.27%
+ DEBUG Uploading build/vendor.tar.gz 2.5%
+ DEBUG Uploading build/vendor.tar.gz 2.72%
+ DEBUG Uploading build/vendor.tar.gz 2.95%
+ DEBUG Uploading build/vendor.tar.gz 3.18%
+ DEBUG Uploading build/vendor.tar.gz 3.4%
+ DEBUG Uploading build/vendor.tar.gz 3.63%
+ DEBUG Uploading build/vendor.tar.gz 3.86%
+ DEBUG Uploading build/vendor.tar.gz 4.08%
+ DEBUG Uploading build/vendor.tar.gz 4.31%
+ DEBUG Uploading build/vendor.tar.gz 4.54%
+ DEBUG Uploading build/vendor.tar.gz 4.77%
+ DEBUG Uploading build/vendor.tar.gz 4.99%
+ DEBUG Uploading build/vendor.tar.gz 5.22%
+ DEBUG Uploading build/vendor.tar.gz 5.45%
+ DEBUG Uploading build/vendor.tar.gz 5.67%
+ DEBUG Uploading build/vendor.tar.gz 5.9%
+ DEBUG Uploading build/vendor.tar.gz 6.13%
+ DEBUG Uploading build/vendor.tar.gz 6.35%
+ DEBUG Uploading build/vendor.tar.gz 6.58%
+ DEBUG Uploading build/vendor.tar.gz 6.81%
+ DEBUG Uploading build/vendor.tar.gz 7.04%
+ DEBUG Uploading build/vendor.tar.gz 7.26%
+ DEBUG Uploading build/vendor.tar.gz 7.49%
+ DEBUG Uploading build/vendor.tar.gz 7.72%
+ DEBUG Uploading build/vendor.tar.gz 7.94%
+ DEBUG Uploading build/vendor.tar.gz 8.17%
+ DEBUG Uploading build/vendor.tar.gz 8.4%
+ DEBUG Uploading build/vendor.tar.gz 8.62%
+ DEBUG Uploading build/vendor.tar.gz 8.85%
+ DEBUG Uploading build/vendor.tar.gz 9.08%
+ DEBUG Uploading build/vendor.tar.gz 9.3%
+ DEBUG Uploading build/vendor.tar.gz 9.53%
+ DEBUG Uploading build/vendor.tar.gz 9.76%
+ DEBUG Uploading build/vendor.tar.gz 9.99%
+  INFO Uploading build/vendor.tar.gz 10.21%
+ DEBUG Uploading build/vendor.tar.gz 10.44%
+ DEBUG Uploading build/vendor.tar.gz 10.67%
+ DEBUG Uploading build/vendor.tar.gz 10.89%
+ DEBUG Uploading build/vendor.tar.gz 11.12%
+ DEBUG Uploading build/vendor.tar.gz 11.35%
+ DEBUG Uploading build/vendor.tar.gz 11.57%
+ DEBUG Uploading build/vendor.tar.gz 11.8%
+ DEBUG Uploading build/vendor.tar.gz 12.03%
+ DEBUG Uploading build/vendor.tar.gz 12.25%
+ DEBUG Uploading build/vendor.tar.gz 12.48%
+ DEBUG Uploading build/vendor.tar.gz 12.71%
+ DEBUG Uploading build/vendor.tar.gz 12.94%
+ DEBUG Uploading build/vendor.tar.gz 13.16%
+ DEBUG Uploading build/vendor.tar.gz 13.39%
+ DEBUG Uploading build/vendor.tar.gz 13.62%
+ DEBUG Uploading build/vendor.tar.gz 13.84%
+ DEBUG Uploading build/vendor.tar.gz 14.07%
+ DEBUG Uploading build/vendor.tar.gz 14.3%
+ DEBUG Uploading build/vendor.tar.gz 14.52%
+ DEBUG Uploading build/vendor.tar.gz 14.75%
+ DEBUG Uploading build/vendor.tar.gz 14.98%
+ DEBUG Uploading build/vendor.tar.gz 15.2%
+ DEBUG Uploading build/vendor.tar.gz 15.43%
+ DEBUG Uploading build/vendor.tar.gz 15.66%
+ DEBUG Uploading build/vendor.tar.gz 15.89%
+ DEBUG Uploading build/vendor.tar.gz 16.11%
+ DEBUG Uploading build/vendor.tar.gz 16.34%
+ DEBUG Uploading build/vendor.tar.gz 16.57%
+ DEBUG Uploading build/vendor.tar.gz 16.79%
+ DEBUG Uploading build/vendor.tar.gz 17.02%
+ DEBUG Uploading build/vendor.tar.gz 17.25%
+ DEBUG Uploading build/vendor.tar.gz 17.47%
+ DEBUG Uploading build/vendor.tar.gz 17.7%
+ DEBUG Uploading build/vendor.tar.gz 17.93%
+ DEBUG Uploading build/vendor.tar.gz 18.16%
+ DEBUG Uploading build/vendor.tar.gz 18.38%
+ DEBUG Uploading build/vendor.tar.gz 18.61%
+ DEBUG Uploading build/vendor.tar.gz 18.84%
+ DEBUG Uploading build/vendor.tar.gz 19.06%
+ DEBUG Uploading build/vendor.tar.gz 19.29%
+ DEBUG Uploading build/vendor.tar.gz 19.52%
+ DEBUG Uploading build/vendor.tar.gz 19.74%
+ DEBUG Uploading build/vendor.tar.gz 19.97%
+  INFO Uploading build/vendor.tar.gz 20.2%
+ DEBUG Uploading build/vendor.tar.gz 20.42%
+ DEBUG Uploading build/vendor.tar.gz 20.65%
+ DEBUG Uploading build/vendor.tar.gz 20.88%
+ DEBUG Uploading build/vendor.tar.gz 21.11%
+ DEBUG Uploading build/vendor.tar.gz 21.33%
+ DEBUG Uploading build/vendor.tar.gz 21.56%
+ DEBUG Uploading build/vendor.tar.gz 21.79%
+ DEBUG Uploading build/vendor.tar.gz 22.01%
+ DEBUG Uploading build/vendor.tar.gz 22.24%
+ DEBUG Uploading build/vendor.tar.gz 22.47%
+ DEBUG Uploading build/vendor.tar.gz 22.69%
+ DEBUG Uploading build/vendor.tar.gz 22.92%
+ DEBUG Uploading build/vendor.tar.gz 23.15%
+ DEBUG Uploading build/vendor.tar.gz 23.37%
+ DEBUG Uploading build/vendor.tar.gz 23.6%
+ DEBUG Uploading build/vendor.tar.gz 23.83%
+ DEBUG Uploading build/vendor.tar.gz 24.06%
+ DEBUG Uploading build/vendor.tar.gz 24.28%
+ DEBUG Uploading build/vendor.tar.gz 24.51%
+ DEBUG Uploading build/vendor.tar.gz 24.74%
+ DEBUG Uploading build/vendor.tar.gz 24.96%
+ DEBUG Uploading build/vendor.tar.gz 25.19%
+ DEBUG Uploading build/vendor.tar.gz 25.42%
+ DEBUG Uploading build/vendor.tar.gz 25.64%
+ DEBUG Uploading build/vendor.tar.gz 25.87%
+ DEBUG Uploading build/vendor.tar.gz 26.1%
+ DEBUG Uploading build/vendor.tar.gz 26.32%
+ DEBUG Uploading build/vendor.tar.gz 26.55%
+ DEBUG Uploading build/vendor.tar.gz 26.78%
+ DEBUG Uploading build/vendor.tar.gz 27.01%
+ DEBUG Uploading build/vendor.tar.gz 27.23%
+ DEBUG Uploading build/vendor.tar.gz 27.46%
+ DEBUG Uploading build/vendor.tar.gz 27.69%
+ DEBUG Uploading build/vendor.tar.gz 27.91%
+ DEBUG Uploading build/vendor.tar.gz 28.14%
+ DEBUG Uploading build/vendor.tar.gz 28.37%
+ DEBUG Uploading build/vendor.tar.gz 28.59%
+ DEBUG Uploading build/vendor.tar.gz 28.82%
+ DEBUG Uploading build/vendor.tar.gz 29.05%
+ DEBUG Uploading build/vendor.tar.gz 29.28%
+ DEBUG Uploading build/vendor.tar.gz 29.5%
+ DEBUG Uploading build/vendor.tar.gz 29.73%
+ DEBUG Uploading build/vendor.tar.gz 29.96%
+  INFO Uploading build/vendor.tar.gz 30.18%
+ DEBUG Uploading build/vendor.tar.gz 30.41%
+ DEBUG Uploading build/vendor.tar.gz 30.64%
+ DEBUG Uploading build/vendor.tar.gz 30.86%
+ DEBUG Uploading build/vendor.tar.gz 31.09%
+ DEBUG Uploading build/vendor.tar.gz 31.32%
+ DEBUG Uploading build/vendor.tar.gz 31.54%
+ DEBUG Uploading build/vendor.tar.gz 31.77%
+ DEBUG Uploading build/vendor.tar.gz 32.0%
+ DEBUG Uploading build/vendor.tar.gz 32.23%
+ DEBUG Uploading build/vendor.tar.gz 32.45%
+ DEBUG Uploading build/vendor.tar.gz 32.68%
+ DEBUG Uploading build/vendor.tar.gz 32.91%
+ DEBUG Uploading build/vendor.tar.gz 33.13%
+ DEBUG Uploading build/vendor.tar.gz 33.36%
+ DEBUG Uploading build/vendor.tar.gz 33.59%
+ DEBUG Uploading build/vendor.tar.gz 33.81%
+ DEBUG Uploading build/vendor.tar.gz 34.04%
+ DEBUG Uploading build/vendor.tar.gz 34.27%
+ DEBUG Uploading build/vendor.tar.gz 34.49%
+ DEBUG Uploading build/vendor.tar.gz 34.72%
+ DEBUG Uploading build/vendor.tar.gz 34.95%
+ DEBUG Uploading build/vendor.tar.gz 35.18%
+ DEBUG Uploading build/vendor.tar.gz 35.4%
+ DEBUG Uploading build/vendor.tar.gz 35.63%
+ DEBUG Uploading build/vendor.tar.gz 35.86%
+ DEBUG Uploading build/vendor.tar.gz 36.08%
+ DEBUG Uploading build/vendor.tar.gz 36.31%
+ DEBUG Uploading build/vendor.tar.gz 36.54%
+ DEBUG Uploading build/vendor.tar.gz 36.76%
+ DEBUG Uploading build/vendor.tar.gz 36.99%
+ DEBUG Uploading build/vendor.tar.gz 37.22%
+ DEBUG Uploading build/vendor.tar.gz 37.44%
+ DEBUG Uploading build/vendor.tar.gz 37.67%
+ DEBUG Uploading build/vendor.tar.gz 37.9%
+ DEBUG Uploading build/vendor.tar.gz 38.13%
+ DEBUG Uploading build/vendor.tar.gz 38.35%
+ DEBUG Uploading build/vendor.tar.gz 38.58%
+ DEBUG Uploading build/vendor.tar.gz 38.81%
+ DEBUG Uploading build/vendor.tar.gz 39.03%
+ DEBUG Uploading build/vendor.tar.gz 39.26%
+ DEBUG Uploading build/vendor.tar.gz 39.49%
+ DEBUG Uploading build/vendor.tar.gz 39.71%
+ DEBUG Uploading build/vendor.tar.gz 39.94%
+  INFO Uploading build/vendor.tar.gz 40.17%
+ DEBUG Uploading build/vendor.tar.gz 40.4%
+ DEBUG Uploading build/vendor.tar.gz 40.62%
+ DEBUG Uploading build/vendor.tar.gz 40.85%
+ DEBUG Uploading build/vendor.tar.gz 41.08%
+ DEBUG Uploading build/vendor.tar.gz 41.3%
+ DEBUG Uploading build/vendor.tar.gz 41.53%
+ DEBUG Uploading build/vendor.tar.gz 41.76%
+ DEBUG Uploading build/vendor.tar.gz 41.98%
+ DEBUG Uploading build/vendor.tar.gz 42.21%
+ DEBUG Uploading build/vendor.tar.gz 42.44%
+ DEBUG Uploading build/vendor.tar.gz 42.66%
+ DEBUG Uploading build/vendor.tar.gz 42.89%
+ DEBUG Uploading build/vendor.tar.gz 43.12%
+ DEBUG Uploading build/vendor.tar.gz 43.35%
+ DEBUG Uploading build/vendor.tar.gz 43.57%
+ DEBUG Uploading build/vendor.tar.gz 43.8%
+ DEBUG Uploading build/vendor.tar.gz 44.03%
+ DEBUG Uploading build/vendor.tar.gz 44.25%
+ DEBUG Uploading build/vendor.tar.gz 44.48%
+ DEBUG Uploading build/vendor.tar.gz 44.71%
+ DEBUG Uploading build/vendor.tar.gz 44.93%
+ DEBUG Uploading build/vendor.tar.gz 45.16%
+ DEBUG Uploading build/vendor.tar.gz 45.39%
+ DEBUG Uploading build/vendor.tar.gz 45.61%
+ DEBUG Uploading build/vendor.tar.gz 45.84%
+ DEBUG Uploading build/vendor.tar.gz 46.07%
+ DEBUG Uploading build/vendor.tar.gz 46.3%
+ DEBUG Uploading build/vendor.tar.gz 46.52%
+ DEBUG Uploading build/vendor.tar.gz 46.75%
+ DEBUG Uploading build/vendor.tar.gz 46.98%
+ DEBUG Uploading build/vendor.tar.gz 47.2%
+ DEBUG Uploading build/vendor.tar.gz 47.43%
+ DEBUG Uploading build/vendor.tar.gz 47.66%
+ DEBUG Uploading build/vendor.tar.gz 47.88%
+ DEBUG Uploading build/vendor.tar.gz 48.11%
+ DEBUG Uploading build/vendor.tar.gz 48.34%
+ DEBUG Uploading build/vendor.tar.gz 48.56%
+ DEBUG Uploading build/vendor.tar.gz 48.79%
+ DEBUG Uploading build/vendor.tar.gz 49.02%
+ DEBUG Uploading build/vendor.tar.gz 49.25%
+ DEBUG Uploading build/vendor.tar.gz 49.47%
+ DEBUG Uploading build/vendor.tar.gz 49.7%
+ DEBUG Uploading build/vendor.tar.gz 49.93%
+  INFO Uploading build/vendor.tar.gz 50.15%
+ DEBUG Uploading build/vendor.tar.gz 50.38%
+ DEBUG Uploading build/vendor.tar.gz 50.61%
+ DEBUG Uploading build/vendor.tar.gz 50.83%
+ DEBUG Uploading build/vendor.tar.gz 51.06%
+ DEBUG Uploading build/vendor.tar.gz 51.29%
+ DEBUG Uploading build/vendor.tar.gz 51.52%
+ DEBUG Uploading build/vendor.tar.gz 51.74%
+ DEBUG Uploading build/vendor.tar.gz 51.97%
+ DEBUG Uploading build/vendor.tar.gz 52.2%
+ DEBUG Uploading build/vendor.tar.gz 52.42%
+ DEBUG Uploading build/vendor.tar.gz 52.65%
+ DEBUG Uploading build/vendor.tar.gz 52.88%
+ DEBUG Uploading build/vendor.tar.gz 53.1%
+ DEBUG Uploading build/vendor.tar.gz 53.33%
+ DEBUG Uploading build/vendor.tar.gz 53.56%
+ DEBUG Uploading build/vendor.tar.gz 53.78%
+ DEBUG Uploading build/vendor.tar.gz 54.01%
+ DEBUG Uploading build/vendor.tar.gz 54.24%
+ DEBUG Uploading build/vendor.tar.gz 54.47%
+ DEBUG Uploading build/vendor.tar.gz 54.69%
+ DEBUG Uploading build/vendor.tar.gz 54.92%
+ DEBUG Uploading build/vendor.tar.gz 55.15%
+ DEBUG Uploading build/vendor.tar.gz 55.37%
+ DEBUG Uploading build/vendor.tar.gz 55.6%
+ DEBUG Uploading build/vendor.tar.gz 55.83%
+ DEBUG Uploading build/vendor.tar.gz 56.05%
+ DEBUG Uploading build/vendor.tar.gz 56.28%
+ DEBUG Uploading build/vendor.tar.gz 56.51%
+ DEBUG Uploading build/vendor.tar.gz 56.73%
+ DEBUG Uploading build/vendor.tar.gz 56.96%
+ DEBUG Uploading build/vendor.tar.gz 57.19%
+ DEBUG Uploading build/vendor.tar.gz 57.42%
+ DEBUG Uploading build/vendor.tar.gz 57.64%
+ DEBUG Uploading build/vendor.tar.gz 57.87%
+ DEBUG Uploading build/vendor.tar.gz 58.1%
+ DEBUG Uploading build/vendor.tar.gz 58.32%
+ DEBUG Uploading build/vendor.tar.gz 58.55%
+ DEBUG Uploading build/vendor.tar.gz 58.78%
+ DEBUG Uploading build/vendor.tar.gz 59.0%
+ DEBUG Uploading build/vendor.tar.gz 59.23%
+ DEBUG Uploading build/vendor.tar.gz 59.46%
+ DEBUG Uploading build/vendor.tar.gz 59.68%
+ DEBUG Uploading build/vendor.tar.gz 59.91%
+  INFO Uploading build/vendor.tar.gz 60.14%
+ DEBUG Uploading build/vendor.tar.gz 60.37%
+ DEBUG Uploading build/vendor.tar.gz 60.59%
+ DEBUG Uploading build/vendor.tar.gz 60.82%
+ DEBUG Uploading build/vendor.tar.gz 61.05%
+ DEBUG Uploading build/vendor.tar.gz 61.27%
+ DEBUG Uploading build/vendor.tar.gz 61.5%
+ DEBUG Uploading build/vendor.tar.gz 61.73%
+ DEBUG Uploading build/vendor.tar.gz 61.95%
+ DEBUG Uploading build/vendor.tar.gz 62.18%
+ DEBUG Uploading build/vendor.tar.gz 62.41%
+ DEBUG Uploading build/vendor.tar.gz 62.64%
+ DEBUG Uploading build/vendor.tar.gz 62.86%
+ DEBUG Uploading build/vendor.tar.gz 63.09%
+ DEBUG Uploading build/vendor.tar.gz 63.32%
+ DEBUG Uploading build/vendor.tar.gz 63.54%
+ DEBUG Uploading build/vendor.tar.gz 63.77%
+ DEBUG Uploading build/vendor.tar.gz 64.0%
+ DEBUG Uploading build/vendor.tar.gz 64.22%
+ DEBUG Uploading build/vendor.tar.gz 64.45%
+ DEBUG Uploading build/vendor.tar.gz 64.68%
+ DEBUG Uploading build/vendor.tar.gz 64.9%
+ DEBUG Uploading build/vendor.tar.gz 65.13%
+ DEBUG Uploading build/vendor.tar.gz 65.36%
+ DEBUG Uploading build/vendor.tar.gz 65.59%
+ DEBUG Uploading build/vendor.tar.gz 65.81%
+ DEBUG Uploading build/vendor.tar.gz 66.04%
+ DEBUG Uploading build/vendor.tar.gz 66.27%
+ DEBUG Uploading build/vendor.tar.gz 66.49%
+ DEBUG Uploading build/vendor.tar.gz 66.72%
+ DEBUG Uploading build/vendor.tar.gz 66.95%
+ DEBUG Uploading build/vendor.tar.gz 67.17%
+ DEBUG Uploading build/vendor.tar.gz 67.4%
+ DEBUG Uploading build/vendor.tar.gz 67.63%
+ DEBUG Uploading build/vendor.tar.gz 67.85%
+ DEBUG Uploading build/vendor.tar.gz 68.08%
+ DEBUG Uploading build/vendor.tar.gz 68.31%
+ DEBUG Uploading build/vendor.tar.gz 68.54%
+ DEBUG Uploading build/vendor.tar.gz 68.76%
+ DEBUG Uploading build/vendor.tar.gz 68.99%
+ DEBUG Uploading build/vendor.tar.gz 69.22%
+ DEBUG Uploading build/vendor.tar.gz 69.44%
+ DEBUG Uploading build/vendor.tar.gz 69.67%
+ DEBUG Uploading build/vendor.tar.gz 69.9%
+  INFO Uploading build/vendor.tar.gz 70.12%
+ DEBUG Uploading build/vendor.tar.gz 70.35%
+ DEBUG Uploading build/vendor.tar.gz 70.58%
+ DEBUG Uploading build/vendor.tar.gz 70.8%
+ DEBUG Uploading build/vendor.tar.gz 71.03%
+ DEBUG Uploading build/vendor.tar.gz 71.26%
+ DEBUG Uploading build/vendor.tar.gz 71.49%
+ DEBUG Uploading build/vendor.tar.gz 71.71%
+ DEBUG Uploading build/vendor.tar.gz 71.94%
+ DEBUG Uploading build/vendor.tar.gz 72.17%
+ DEBUG Uploading build/vendor.tar.gz 72.39%
+ DEBUG Uploading build/vendor.tar.gz 72.62%
+ DEBUG Uploading build/vendor.tar.gz 72.85%
+ DEBUG Uploading build/vendor.tar.gz 73.07%
+ DEBUG Uploading build/vendor.tar.gz 73.3%
+ DEBUG Uploading build/vendor.tar.gz 73.53%
+ DEBUG Uploading build/vendor.tar.gz 73.76%
+ DEBUG Uploading build/vendor.tar.gz 73.98%
+ DEBUG Uploading build/vendor.tar.gz 74.21%
+ DEBUG Uploading build/vendor.tar.gz 74.44%
+ DEBUG Uploading build/vendor.tar.gz 74.66%
+ DEBUG Uploading build/vendor.tar.gz 74.89%
+ DEBUG Uploading build/vendor.tar.gz 75.12%
+ DEBUG Uploading build/vendor.tar.gz 75.34%
+ DEBUG Uploading build/vendor.tar.gz 75.57%
+ DEBUG Uploading build/vendor.tar.gz 75.8%
+ DEBUG Uploading build/vendor.tar.gz 76.02%
+ DEBUG Uploading build/vendor.tar.gz 76.25%
+ DEBUG Uploading build/vendor.tar.gz 76.48%
+ DEBUG Uploading build/vendor.tar.gz 76.71%
+ DEBUG Uploading build/vendor.tar.gz 76.93%
+ DEBUG Uploading build/vendor.tar.gz 77.16%
+ DEBUG Uploading build/vendor.tar.gz 77.39%
+ DEBUG Uploading build/vendor.tar.gz 77.61%
+ DEBUG Uploading build/vendor.tar.gz 77.84%
+ DEBUG Uploading build/vendor.tar.gz 78.07%
+ DEBUG Uploading build/vendor.tar.gz 78.29%
+ DEBUG Uploading build/vendor.tar.gz 78.52%
+ DEBUG Uploading build/vendor.tar.gz 78.75%
+ DEBUG Uploading build/vendor.tar.gz 78.97%
+ DEBUG Uploading build/vendor.tar.gz 79.2%
+ DEBUG Uploading build/vendor.tar.gz 79.43%
+ DEBUG Uploading build/vendor.tar.gz 79.66%
+ DEBUG Uploading build/vendor.tar.gz 79.88%
+  INFO Uploading build/vendor.tar.gz 80.11%
+ DEBUG Uploading build/vendor.tar.gz 80.34%
+ DEBUG Uploading build/vendor.tar.gz 80.56%
+ DEBUG Uploading build/vendor.tar.gz 80.79%
+ DEBUG Uploading build/vendor.tar.gz 81.02%
+ DEBUG Uploading build/vendor.tar.gz 81.24%
+ DEBUG Uploading build/vendor.tar.gz 81.47%
+ DEBUG Uploading build/vendor.tar.gz 81.7%
+ DEBUG Uploading build/vendor.tar.gz 81.93%
+ DEBUG Uploading build/vendor.tar.gz 82.15%
+ DEBUG Uploading build/vendor.tar.gz 82.38%
+ DEBUG Uploading build/vendor.tar.gz 82.61%
+ DEBUG Uploading build/vendor.tar.gz 82.83%
+ DEBUG Uploading build/vendor.tar.gz 83.06%
+ DEBUG Uploading build/vendor.tar.gz 83.29%
+ DEBUG Uploading build/vendor.tar.gz 83.51%
+ DEBUG Uploading build/vendor.tar.gz 83.74%
+ DEBUG Uploading build/vendor.tar.gz 83.97%
+ DEBUG Uploading build/vendor.tar.gz 84.19%
+ DEBUG Uploading build/vendor.tar.gz 84.42%
+ DEBUG Uploading build/vendor.tar.gz 84.65%
+ DEBUG Uploading build/vendor.tar.gz 84.88%
+ DEBUG Uploading build/vendor.tar.gz 85.1%
+ DEBUG Uploading build/vendor.tar.gz 85.33%
+ DEBUG Uploading build/vendor.tar.gz 85.56%
+ DEBUG Uploading build/vendor.tar.gz 85.78%
+ DEBUG Uploading build/vendor.tar.gz 86.01%
+ DEBUG Uploading build/vendor.tar.gz 86.24%
+ DEBUG Uploading build/vendor.tar.gz 86.46%
+ DEBUG Uploading build/vendor.tar.gz 86.69%
+ DEBUG Uploading build/vendor.tar.gz 86.92%
+ DEBUG Uploading build/vendor.tar.gz 87.14%
+ DEBUG Uploading build/vendor.tar.gz 87.37%
+ DEBUG Uploading build/vendor.tar.gz 87.6%
+ DEBUG Uploading build/vendor.tar.gz 87.83%
+ DEBUG Uploading build/vendor.tar.gz 88.05%
+ DEBUG Uploading build/vendor.tar.gz 88.28%
+ DEBUG Uploading build/vendor.tar.gz 88.51%
+ DEBUG Uploading build/vendor.tar.gz 88.73%
+ DEBUG Uploading build/vendor.tar.gz 88.96%
+ DEBUG Uploading build/vendor.tar.gz 89.19%
+ DEBUG Uploading build/vendor.tar.gz 89.41%
+ DEBUG Uploading build/vendor.tar.gz 89.64%
+ DEBUG Uploading build/vendor.tar.gz 89.87%
+  INFO Uploading build/vendor.tar.gz 90.09%
+ DEBUG Uploading build/vendor.tar.gz 90.32%
+ DEBUG Uploading build/vendor.tar.gz 90.55%
+ DEBUG Uploading build/vendor.tar.gz 90.78%
+ DEBUG Uploading build/vendor.tar.gz 91.0%
+ DEBUG Uploading build/vendor.tar.gz 91.23%
+ DEBUG Uploading build/vendor.tar.gz 91.46%
+ DEBUG Uploading build/vendor.tar.gz 91.68%
+ DEBUG Uploading build/vendor.tar.gz 91.91%
+ DEBUG Uploading build/vendor.tar.gz 92.14%
+ DEBUG Uploading build/vendor.tar.gz 92.36%
+ DEBUG Uploading build/vendor.tar.gz 92.59%
+ DEBUG Uploading build/vendor.tar.gz 92.82%
+ DEBUG Uploading build/vendor.tar.gz 93.05%
+ DEBUG Uploading build/vendor.tar.gz 93.27%
+ DEBUG Uploading build/vendor.tar.gz 93.5%
+ DEBUG Uploading build/vendor.tar.gz 93.73%
+ DEBUG Uploading build/vendor.tar.gz 93.95%
+ DEBUG Uploading build/vendor.tar.gz 94.18%
+ DEBUG Uploading build/vendor.tar.gz 94.41%
+ DEBUG Uploading build/vendor.tar.gz 94.63%
+ DEBUG Uploading build/vendor.tar.gz 94.86%
+ DEBUG Uploading build/vendor.tar.gz 95.09%
+ DEBUG Uploading build/vendor.tar.gz 95.31%
+ DEBUG Uploading build/vendor.tar.gz 95.54%
+ DEBUG Uploading build/vendor.tar.gz 95.77%
+ DEBUG Uploading build/vendor.tar.gz 96.0%
+ DEBUG Uploading build/vendor.tar.gz 96.22%
+ DEBUG Uploading build/vendor.tar.gz 96.45%
+ DEBUG Uploading build/vendor.tar.gz 96.68%
+ DEBUG Uploading build/vendor.tar.gz 96.9%
+ DEBUG Uploading build/vendor.tar.gz 97.13%
+ DEBUG Uploading build/vendor.tar.gz 97.36%
+ DEBUG Uploading build/vendor.tar.gz 97.58%
+ DEBUG Uploading build/vendor.tar.gz 97.81%
+ DEBUG Uploading build/vendor.tar.gz 98.04%
+ DEBUG Uploading build/vendor.tar.gz 98.26%
+ DEBUG Uploading build/vendor.tar.gz 98.49%
+ DEBUG Uploading build/vendor.tar.gz 98.72%
+ DEBUG Uploading build/vendor.tar.gz 98.95%
+ DEBUG Uploading build/vendor.tar.gz 99.17%
+ DEBUG Uploading build/vendor.tar.gz 99.4%
+ DEBUG Uploading build/vendor.tar.gz 99.63%
+ DEBUG Uploading build/vendor.tar.gz 99.85%
+  INFO Uploading build/vendor.tar.gz 100.0%
+  INFO [611b0ddc] Running cd /var/www/numerikgames/components; tar -zxf /var/www/numerikgames/components/vendor.tar.gz as cpnv@172.17.101.219
+ DEBUG [611b0ddc] Command: cd /var/www/numerikgames/components; tar -zxf /var/www/numerikgames/components/vendor.tar.gz
+  INFO [7275d4d2] Finished in 0.794 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 13:59:55 +0100 cap production ops:put_components
+  INFO ---------------------------------------------------------------------------
+ DEBUG Uploading build/vendor.tar.gz 0.0%
+ DEBUG Uploading build/vendor.tar.gz 0.23%
+ DEBUG Uploading build/vendor.tar.gz 0.45%
+ DEBUG Uploading build/vendor.tar.gz 0.68%
+ DEBUG Uploading build/vendor.tar.gz 0.91%
+ DEBUG Uploading build/vendor.tar.gz 1.13%
+ DEBUG Uploading build/vendor.tar.gz 1.36%
+ DEBUG Uploading build/vendor.tar.gz 1.59%
+ DEBUG Uploading build/vendor.tar.gz 1.82%
+ DEBUG Uploading build/vendor.tar.gz 2.04%
+ DEBUG Uploading build/vendor.tar.gz 2.27%
+ DEBUG Uploading build/vendor.tar.gz 2.5%
+ DEBUG Uploading build/vendor.tar.gz 2.72%
+ DEBUG Uploading build/vendor.tar.gz 2.95%
+ DEBUG Uploading build/vendor.tar.gz 3.18%
+ DEBUG Uploading build/vendor.tar.gz 3.4%
+ DEBUG Uploading build/vendor.tar.gz 3.63%
+ DEBUG Uploading build/vendor.tar.gz 3.86%
+ DEBUG Uploading build/vendor.tar.gz 4.08%
+ DEBUG Uploading build/vendor.tar.gz 4.31%
+ DEBUG Uploading build/vendor.tar.gz 4.54%
+ DEBUG Uploading build/vendor.tar.gz 4.77%
+ DEBUG Uploading build/vendor.tar.gz 4.99%
+ DEBUG Uploading build/vendor.tar.gz 5.22%
+ DEBUG Uploading build/vendor.tar.gz 5.45%
+ DEBUG Uploading build/vendor.tar.gz 5.67%
+ DEBUG Uploading build/vendor.tar.gz 5.9%
+ DEBUG Uploading build/vendor.tar.gz 6.13%
+ DEBUG Uploading build/vendor.tar.gz 6.35%
+ DEBUG Uploading build/vendor.tar.gz 6.58%
+ DEBUG Uploading build/vendor.tar.gz 6.81%
+ DEBUG Uploading build/vendor.tar.gz 7.04%
+ DEBUG Uploading build/vendor.tar.gz 7.26%
+ DEBUG Uploading build/vendor.tar.gz 7.49%
+ DEBUG Uploading build/vendor.tar.gz 7.72%
+ DEBUG Uploading build/vendor.tar.gz 7.94%
+ DEBUG Uploading build/vendor.tar.gz 8.17%
+ DEBUG Uploading build/vendor.tar.gz 8.4%
+ DEBUG Uploading build/vendor.tar.gz 8.62%
+ DEBUG Uploading build/vendor.tar.gz 8.85%
+ DEBUG Uploading build/vendor.tar.gz 9.08%
+ DEBUG Uploading build/vendor.tar.gz 9.3%
+ DEBUG Uploading build/vendor.tar.gz 9.53%
+ DEBUG Uploading build/vendor.tar.gz 9.76%
+ DEBUG Uploading build/vendor.tar.gz 9.99%
+  INFO Uploading build/vendor.tar.gz 10.21%
+ DEBUG Uploading build/vendor.tar.gz 10.44%
+ DEBUG Uploading build/vendor.tar.gz 10.67%
+ DEBUG Uploading build/vendor.tar.gz 10.89%
+ DEBUG Uploading build/vendor.tar.gz 11.12%
+ DEBUG Uploading build/vendor.tar.gz 11.35%
+ DEBUG Uploading build/vendor.tar.gz 11.57%
+ DEBUG Uploading build/vendor.tar.gz 11.8%
+ DEBUG Uploading build/vendor.tar.gz 12.03%
+ DEBUG Uploading build/vendor.tar.gz 12.25%
+ DEBUG Uploading build/vendor.tar.gz 12.48%
+ DEBUG Uploading build/vendor.tar.gz 12.71%
+ DEBUG Uploading build/vendor.tar.gz 12.94%
+ DEBUG Uploading build/vendor.tar.gz 13.16%
+ DEBUG Uploading build/vendor.tar.gz 13.39%
+ DEBUG Uploading build/vendor.tar.gz 13.62%
+ DEBUG Uploading build/vendor.tar.gz 13.84%
+ DEBUG Uploading build/vendor.tar.gz 14.07%
+ DEBUG Uploading build/vendor.tar.gz 14.3%
+ DEBUG Uploading build/vendor.tar.gz 14.52%
+ DEBUG Uploading build/vendor.tar.gz 14.75%
+ DEBUG Uploading build/vendor.tar.gz 14.98%
+ DEBUG Uploading build/vendor.tar.gz 15.2%
+ DEBUG Uploading build/vendor.tar.gz 15.43%
+ DEBUG Uploading build/vendor.tar.gz 15.66%
+ DEBUG Uploading build/vendor.tar.gz 15.89%
+ DEBUG Uploading build/vendor.tar.gz 16.11%
+ DEBUG Uploading build/vendor.tar.gz 16.34%
+ DEBUG Uploading build/vendor.tar.gz 16.57%
+ DEBUG Uploading build/vendor.tar.gz 16.79%
+ DEBUG Uploading build/vendor.tar.gz 17.02%
+ DEBUG Uploading build/vendor.tar.gz 17.25%
+ DEBUG Uploading build/vendor.tar.gz 17.47%
+ DEBUG Uploading build/vendor.tar.gz 17.7%
+ DEBUG Uploading build/vendor.tar.gz 17.93%
+ DEBUG Uploading build/vendor.tar.gz 18.16%
+ DEBUG Uploading build/vendor.tar.gz 18.38%
+ DEBUG Uploading build/vendor.tar.gz 18.61%
+ DEBUG Uploading build/vendor.tar.gz 18.84%
+ DEBUG Uploading build/vendor.tar.gz 19.06%
+ DEBUG Uploading build/vendor.tar.gz 19.29%
+ DEBUG Uploading build/vendor.tar.gz 19.52%
+ DEBUG Uploading build/vendor.tar.gz 19.74%
+ DEBUG Uploading build/vendor.tar.gz 19.97%
+  INFO Uploading build/vendor.tar.gz 20.2%
+ DEBUG Uploading build/vendor.tar.gz 20.42%
+ DEBUG Uploading build/vendor.tar.gz 20.65%
+ DEBUG Uploading build/vendor.tar.gz 20.88%
+ DEBUG Uploading build/vendor.tar.gz 21.11%
+ DEBUG Uploading build/vendor.tar.gz 21.33%
+ DEBUG Uploading build/vendor.tar.gz 21.56%
+ DEBUG Uploading build/vendor.tar.gz 21.79%
+ DEBUG Uploading build/vendor.tar.gz 22.01%
+ DEBUG Uploading build/vendor.tar.gz 22.24%
+ DEBUG Uploading build/vendor.tar.gz 22.47%
+ DEBUG Uploading build/vendor.tar.gz 22.69%
+ DEBUG Uploading build/vendor.tar.gz 22.92%
+ DEBUG Uploading build/vendor.tar.gz 23.15%
+ DEBUG Uploading build/vendor.tar.gz 23.37%
+ DEBUG Uploading build/vendor.tar.gz 23.6%
+ DEBUG Uploading build/vendor.tar.gz 23.83%
+ DEBUG Uploading build/vendor.tar.gz 24.06%
+ DEBUG Uploading build/vendor.tar.gz 24.28%
+ DEBUG Uploading build/vendor.tar.gz 24.51%
+ DEBUG Uploading build/vendor.tar.gz 24.74%
+ DEBUG Uploading build/vendor.tar.gz 24.96%
+ DEBUG Uploading build/vendor.tar.gz 25.19%
+ DEBUG Uploading build/vendor.tar.gz 25.42%
+ DEBUG Uploading build/vendor.tar.gz 25.64%
+ DEBUG Uploading build/vendor.tar.gz 25.87%
+ DEBUG Uploading build/vendor.tar.gz 26.1%
+ DEBUG Uploading build/vendor.tar.gz 26.32%
+ DEBUG Uploading build/vendor.tar.gz 26.55%
+ DEBUG Uploading build/vendor.tar.gz 26.78%
+ DEBUG Uploading build/vendor.tar.gz 27.01%
+ DEBUG Uploading build/vendor.tar.gz 27.23%
+ DEBUG Uploading build/vendor.tar.gz 27.46%
+ DEBUG Uploading build/vendor.tar.gz 27.69%
+ DEBUG Uploading build/vendor.tar.gz 27.91%
+ DEBUG Uploading build/vendor.tar.gz 28.14%
+ DEBUG Uploading build/vendor.tar.gz 28.37%
+ DEBUG Uploading build/vendor.tar.gz 28.59%
+ DEBUG Uploading build/vendor.tar.gz 28.82%
+ DEBUG Uploading build/vendor.tar.gz 29.05%
+ DEBUG Uploading build/vendor.tar.gz 29.28%
+ DEBUG Uploading build/vendor.tar.gz 29.5%
+ DEBUG Uploading build/vendor.tar.gz 29.73%
+ DEBUG Uploading build/vendor.tar.gz 29.96%
+  INFO Uploading build/vendor.tar.gz 30.18%
+ DEBUG Uploading build/vendor.tar.gz 30.41%
+ DEBUG Uploading build/vendor.tar.gz 30.64%
+ DEBUG Uploading build/vendor.tar.gz 30.86%
+ DEBUG Uploading build/vendor.tar.gz 31.09%
+ DEBUG Uploading build/vendor.tar.gz 31.32%
+ DEBUG Uploading build/vendor.tar.gz 31.54%
+ DEBUG Uploading build/vendor.tar.gz 31.77%
+ DEBUG Uploading build/vendor.tar.gz 32.0%
+ DEBUG Uploading build/vendor.tar.gz 32.23%
+ DEBUG Uploading build/vendor.tar.gz 32.45%
+ DEBUG Uploading build/vendor.tar.gz 32.68%
+ DEBUG Uploading build/vendor.tar.gz 32.91%
+ DEBUG Uploading build/vendor.tar.gz 33.13%
+ DEBUG Uploading build/vendor.tar.gz 33.36%
+ DEBUG Uploading build/vendor.tar.gz 33.59%
+ DEBUG Uploading build/vendor.tar.gz 33.81%
+ DEBUG Uploading build/vendor.tar.gz 34.04%
+ DEBUG Uploading build/vendor.tar.gz 34.27%
+ DEBUG Uploading build/vendor.tar.gz 34.49%
+ DEBUG Uploading build/vendor.tar.gz 34.72%
+ DEBUG Uploading build/vendor.tar.gz 34.95%
+ DEBUG Uploading build/vendor.tar.gz 35.18%
+ DEBUG Uploading build/vendor.tar.gz 35.4%
+ DEBUG Uploading build/vendor.tar.gz 35.63%
+ DEBUG Uploading build/vendor.tar.gz 35.86%
+ DEBUG Uploading build/vendor.tar.gz 36.08%
+ DEBUG Uploading build/vendor.tar.gz 36.31%
+ DEBUG Uploading build/vendor.tar.gz 36.54%
+ DEBUG Uploading build/vendor.tar.gz 36.76%
+ DEBUG Uploading build/vendor.tar.gz 36.99%
+ DEBUG Uploading build/vendor.tar.gz 37.22%
+ DEBUG Uploading build/vendor.tar.gz 37.44%
+ DEBUG Uploading build/vendor.tar.gz 37.67%
+ DEBUG Uploading build/vendor.tar.gz 37.9%
+ DEBUG Uploading build/vendor.tar.gz 38.13%
+ DEBUG Uploading build/vendor.tar.gz 38.35%
+ DEBUG Uploading build/vendor.tar.gz 38.58%
+ DEBUG Uploading build/vendor.tar.gz 38.81%
+ DEBUG Uploading build/vendor.tar.gz 39.03%
+ DEBUG Uploading build/vendor.tar.gz 39.26%
+ DEBUG Uploading build/vendor.tar.gz 39.49%
+ DEBUG Uploading build/vendor.tar.gz 39.71%
+ DEBUG Uploading build/vendor.tar.gz 39.94%
+  INFO Uploading build/vendor.tar.gz 40.17%
+ DEBUG Uploading build/vendor.tar.gz 40.4%
+ DEBUG Uploading build/vendor.tar.gz 40.62%
+ DEBUG Uploading build/vendor.tar.gz 40.85%
+ DEBUG Uploading build/vendor.tar.gz 41.08%
+ DEBUG Uploading build/vendor.tar.gz 41.3%
+ DEBUG Uploading build/vendor.tar.gz 41.53%
+ DEBUG Uploading build/vendor.tar.gz 41.76%
+ DEBUG Uploading build/vendor.tar.gz 41.98%
+ DEBUG Uploading build/vendor.tar.gz 42.21%
+ DEBUG Uploading build/vendor.tar.gz 42.44%
+ DEBUG Uploading build/vendor.tar.gz 42.66%
+ DEBUG Uploading build/vendor.tar.gz 42.89%
+ DEBUG Uploading build/vendor.tar.gz 43.12%
+ DEBUG Uploading build/vendor.tar.gz 43.35%
+ DEBUG Uploading build/vendor.tar.gz 43.57%
+ DEBUG Uploading build/vendor.tar.gz 43.8%
+ DEBUG Uploading build/vendor.tar.gz 44.03%
+ DEBUG Uploading build/vendor.tar.gz 44.25%
+ DEBUG Uploading build/vendor.tar.gz 44.48%
+ DEBUG Uploading build/vendor.tar.gz 44.71%
+ DEBUG Uploading build/vendor.tar.gz 44.93%
+ DEBUG Uploading build/vendor.tar.gz 45.16%
+ DEBUG Uploading build/vendor.tar.gz 45.39%
+ DEBUG Uploading build/vendor.tar.gz 45.61%
+ DEBUG Uploading build/vendor.tar.gz 45.84%
+ DEBUG Uploading build/vendor.tar.gz 46.07%
+ DEBUG Uploading build/vendor.tar.gz 46.3%
+ DEBUG Uploading build/vendor.tar.gz 46.52%
+ DEBUG Uploading build/vendor.tar.gz 46.75%
+ DEBUG Uploading build/vendor.tar.gz 46.98%
+ DEBUG Uploading build/vendor.tar.gz 47.2%
+ DEBUG Uploading build/vendor.tar.gz 47.43%
+ DEBUG Uploading build/vendor.tar.gz 47.66%
+ DEBUG Uploading build/vendor.tar.gz 47.88%
+ DEBUG Uploading build/vendor.tar.gz 48.11%
+ DEBUG Uploading build/vendor.tar.gz 48.34%
+ DEBUG Uploading build/vendor.tar.gz 48.56%
+ DEBUG Uploading build/vendor.tar.gz 48.79%
+ DEBUG Uploading build/vendor.tar.gz 49.02%
+ DEBUG Uploading build/vendor.tar.gz 49.25%
+ DEBUG Uploading build/vendor.tar.gz 49.47%
+ DEBUG Uploading build/vendor.tar.gz 49.7%
+ DEBUG Uploading build/vendor.tar.gz 49.93%
+  INFO Uploading build/vendor.tar.gz 50.15%
+ DEBUG Uploading build/vendor.tar.gz 50.38%
+ DEBUG Uploading build/vendor.tar.gz 50.61%
+ DEBUG Uploading build/vendor.tar.gz 50.83%
+ DEBUG Uploading build/vendor.tar.gz 51.06%
+ DEBUG Uploading build/vendor.tar.gz 51.29%
+ DEBUG Uploading build/vendor.tar.gz 51.52%
+ DEBUG Uploading build/vendor.tar.gz 51.74%
+ DEBUG Uploading build/vendor.tar.gz 51.97%
+ DEBUG Uploading build/vendor.tar.gz 52.2%
+ DEBUG Uploading build/vendor.tar.gz 52.42%
+ DEBUG Uploading build/vendor.tar.gz 52.65%
+ DEBUG Uploading build/vendor.tar.gz 52.88%
+ DEBUG Uploading build/vendor.tar.gz 53.1%
+ DEBUG Uploading build/vendor.tar.gz 53.33%
+ DEBUG Uploading build/vendor.tar.gz 53.56%
+ DEBUG Uploading build/vendor.tar.gz 53.78%
+ DEBUG Uploading build/vendor.tar.gz 54.01%
+ DEBUG Uploading build/vendor.tar.gz 54.24%
+ DEBUG Uploading build/vendor.tar.gz 54.47%
+ DEBUG Uploading build/vendor.tar.gz 54.69%
+ DEBUG Uploading build/vendor.tar.gz 54.92%
+ DEBUG Uploading build/vendor.tar.gz 55.15%
+ DEBUG Uploading build/vendor.tar.gz 55.37%
+ DEBUG Uploading build/vendor.tar.gz 55.6%
+ DEBUG Uploading build/vendor.tar.gz 55.83%
+ DEBUG Uploading build/vendor.tar.gz 56.05%
+ DEBUG Uploading build/vendor.tar.gz 56.28%
+ DEBUG Uploading build/vendor.tar.gz 56.51%
+ DEBUG Uploading build/vendor.tar.gz 56.73%
+ DEBUG Uploading build/vendor.tar.gz 56.96%
+ DEBUG Uploading build/vendor.tar.gz 57.19%
+ DEBUG Uploading build/vendor.tar.gz 57.42%
+ DEBUG Uploading build/vendor.tar.gz 57.64%
+ DEBUG Uploading build/vendor.tar.gz 57.87%
+ DEBUG Uploading build/vendor.tar.gz 58.1%
+ DEBUG Uploading build/vendor.tar.gz 58.32%
+ DEBUG Uploading build/vendor.tar.gz 58.55%
+ DEBUG Uploading build/vendor.tar.gz 58.78%
+ DEBUG Uploading build/vendor.tar.gz 59.0%
+ DEBUG Uploading build/vendor.tar.gz 59.23%
+ DEBUG Uploading build/vendor.tar.gz 59.46%
+ DEBUG Uploading build/vendor.tar.gz 59.68%
+ DEBUG Uploading build/vendor.tar.gz 59.91%
+  INFO Uploading build/vendor.tar.gz 60.14%
+ DEBUG Uploading build/vendor.tar.gz 60.37%
+ DEBUG Uploading build/vendor.tar.gz 60.59%
+ DEBUG Uploading build/vendor.tar.gz 60.82%
+ DEBUG Uploading build/vendor.tar.gz 61.05%
+ DEBUG Uploading build/vendor.tar.gz 61.27%
+ DEBUG Uploading build/vendor.tar.gz 61.5%
+ DEBUG Uploading build/vendor.tar.gz 61.73%
+ DEBUG Uploading build/vendor.tar.gz 61.95%
+ DEBUG Uploading build/vendor.tar.gz 62.18%
+ DEBUG Uploading build/vendor.tar.gz 62.41%
+ DEBUG Uploading build/vendor.tar.gz 62.64%
+ DEBUG Uploading build/vendor.tar.gz 62.86%
+ DEBUG Uploading build/vendor.tar.gz 63.09%
+ DEBUG Uploading build/vendor.tar.gz 63.32%
+ DEBUG Uploading build/vendor.tar.gz 63.54%
+ DEBUG Uploading build/vendor.tar.gz 63.77%
+ DEBUG Uploading build/vendor.tar.gz 64.0%
+ DEBUG Uploading build/vendor.tar.gz 64.22%
+ DEBUG Uploading build/vendor.tar.gz 64.45%
+ DEBUG Uploading build/vendor.tar.gz 64.68%
+ DEBUG Uploading build/vendor.tar.gz 64.9%
+ DEBUG Uploading build/vendor.tar.gz 65.13%
+ DEBUG Uploading build/vendor.tar.gz 65.36%
+ DEBUG Uploading build/vendor.tar.gz 65.59%
+ DEBUG Uploading build/vendor.tar.gz 65.81%
+ DEBUG Uploading build/vendor.tar.gz 66.04%
+ DEBUG Uploading build/vendor.tar.gz 66.27%
+ DEBUG Uploading build/vendor.tar.gz 66.49%
+ DEBUG Uploading build/vendor.tar.gz 66.72%
+ DEBUG Uploading build/vendor.tar.gz 66.95%
+ DEBUG Uploading build/vendor.tar.gz 67.17%
+ DEBUG Uploading build/vendor.tar.gz 67.4%
+ DEBUG Uploading build/vendor.tar.gz 67.63%
+ DEBUG Uploading build/vendor.tar.gz 67.85%
+ DEBUG Uploading build/vendor.tar.gz 68.08%
+ DEBUG Uploading build/vendor.tar.gz 68.31%
+ DEBUG Uploading build/vendor.tar.gz 68.54%
+ DEBUG Uploading build/vendor.tar.gz 68.76%
+ DEBUG Uploading build/vendor.tar.gz 68.99%
+ DEBUG Uploading build/vendor.tar.gz 69.22%
+ DEBUG Uploading build/vendor.tar.gz 69.44%
+ DEBUG Uploading build/vendor.tar.gz 69.67%
+ DEBUG Uploading build/vendor.tar.gz 69.9%
+  INFO Uploading build/vendor.tar.gz 70.12%
+ DEBUG Uploading build/vendor.tar.gz 70.35%
+ DEBUG Uploading build/vendor.tar.gz 70.58%
+ DEBUG Uploading build/vendor.tar.gz 70.8%
+ DEBUG Uploading build/vendor.tar.gz 71.03%
+ DEBUG Uploading build/vendor.tar.gz 71.26%
+ DEBUG Uploading build/vendor.tar.gz 71.49%
+ DEBUG Uploading build/vendor.tar.gz 71.71%
+ DEBUG Uploading build/vendor.tar.gz 71.94%
+ DEBUG Uploading build/vendor.tar.gz 72.17%
+ DEBUG Uploading build/vendor.tar.gz 72.39%
+ DEBUG Uploading build/vendor.tar.gz 72.62%
+ DEBUG Uploading build/vendor.tar.gz 72.85%
+ DEBUG Uploading build/vendor.tar.gz 73.07%
+ DEBUG Uploading build/vendor.tar.gz 73.3%
+ DEBUG Uploading build/vendor.tar.gz 73.53%
+ DEBUG Uploading build/vendor.tar.gz 73.76%
+ DEBUG Uploading build/vendor.tar.gz 73.98%
+ DEBUG Uploading build/vendor.tar.gz 74.21%
+ DEBUG Uploading build/vendor.tar.gz 74.44%
+ DEBUG Uploading build/vendor.tar.gz 74.66%
+ DEBUG Uploading build/vendor.tar.gz 74.89%
+ DEBUG Uploading build/vendor.tar.gz 75.12%
+ DEBUG Uploading build/vendor.tar.gz 75.34%
+ DEBUG Uploading build/vendor.tar.gz 75.57%
+ DEBUG Uploading build/vendor.tar.gz 75.8%
+ DEBUG Uploading build/vendor.tar.gz 76.02%
+ DEBUG Uploading build/vendor.tar.gz 76.25%
+ DEBUG Uploading build/vendor.tar.gz 76.48%
+ DEBUG Uploading build/vendor.tar.gz 76.71%
+ DEBUG Uploading build/vendor.tar.gz 76.93%
+ DEBUG Uploading build/vendor.tar.gz 77.16%
+ DEBUG Uploading build/vendor.tar.gz 77.39%
+ DEBUG Uploading build/vendor.tar.gz 77.61%
+ DEBUG Uploading build/vendor.tar.gz 77.84%
+ DEBUG Uploading build/vendor.tar.gz 78.07%
+ DEBUG Uploading build/vendor.tar.gz 78.29%
+ DEBUG Uploading build/vendor.tar.gz 78.52%
+ DEBUG Uploading build/vendor.tar.gz 78.75%
+ DEBUG Uploading build/vendor.tar.gz 78.97%
+ DEBUG Uploading build/vendor.tar.gz 79.2%
+ DEBUG Uploading build/vendor.tar.gz 79.43%
+ DEBUG Uploading build/vendor.tar.gz 79.66%
+ DEBUG Uploading build/vendor.tar.gz 79.88%
+  INFO Uploading build/vendor.tar.gz 80.11%
+ DEBUG Uploading build/vendor.tar.gz 80.34%
+ DEBUG Uploading build/vendor.tar.gz 80.56%
+ DEBUG Uploading build/vendor.tar.gz 80.79%
+ DEBUG Uploading build/vendor.tar.gz 81.02%
+ DEBUG Uploading build/vendor.tar.gz 81.24%
+ DEBUG Uploading build/vendor.tar.gz 81.47%
+ DEBUG Uploading build/vendor.tar.gz 81.7%
+ DEBUG Uploading build/vendor.tar.gz 81.93%
+ DEBUG Uploading build/vendor.tar.gz 82.15%
+ DEBUG Uploading build/vendor.tar.gz 82.38%
+ DEBUG Uploading build/vendor.tar.gz 82.61%
+ DEBUG Uploading build/vendor.tar.gz 82.83%
+ DEBUG Uploading build/vendor.tar.gz 83.06%
+ DEBUG Uploading build/vendor.tar.gz 83.29%
+ DEBUG Uploading build/vendor.tar.gz 83.51%
+ DEBUG Uploading build/vendor.tar.gz 83.74%
+ DEBUG Uploading build/vendor.tar.gz 83.97%
+ DEBUG Uploading build/vendor.tar.gz 84.19%
+ DEBUG Uploading build/vendor.tar.gz 84.42%
+ DEBUG Uploading build/vendor.tar.gz 84.65%
+ DEBUG Uploading build/vendor.tar.gz 84.88%
+ DEBUG Uploading build/vendor.tar.gz 85.1%
+ DEBUG Uploading build/vendor.tar.gz 85.33%
+ DEBUG Uploading build/vendor.tar.gz 85.56%
+ DEBUG Uploading build/vendor.tar.gz 85.78%
+ DEBUG Uploading build/vendor.tar.gz 86.01%
+ DEBUG Uploading build/vendor.tar.gz 86.24%
+ DEBUG Uploading build/vendor.tar.gz 86.46%
+ DEBUG Uploading build/vendor.tar.gz 86.69%
+ DEBUG Uploading build/vendor.tar.gz 86.92%
+ DEBUG Uploading build/vendor.tar.gz 87.14%
+ DEBUG Uploading build/vendor.tar.gz 87.37%
+ DEBUG Uploading build/vendor.tar.gz 87.6%
+ DEBUG Uploading build/vendor.tar.gz 87.83%
+ DEBUG Uploading build/vendor.tar.gz 88.05%
+ DEBUG Uploading build/vendor.tar.gz 88.28%
+ DEBUG Uploading build/vendor.tar.gz 88.51%
+ DEBUG Uploading build/vendor.tar.gz 88.73%
+ DEBUG Uploading build/vendor.tar.gz 88.96%
+ DEBUG Uploading build/vendor.tar.gz 89.19%
+ DEBUG Uploading build/vendor.tar.gz 89.41%
+ DEBUG Uploading build/vendor.tar.gz 89.64%
+ DEBUG Uploading build/vendor.tar.gz 89.87%
+  INFO Uploading build/vendor.tar.gz 90.09%
+ DEBUG Uploading build/vendor.tar.gz 90.32%
+ DEBUG Uploading build/vendor.tar.gz 90.55%
+ DEBUG Uploading build/vendor.tar.gz 90.78%
+ DEBUG Uploading build/vendor.tar.gz 91.0%
+ DEBUG Uploading build/vendor.tar.gz 91.23%
+ DEBUG Uploading build/vendor.tar.gz 91.46%
+ DEBUG Uploading build/vendor.tar.gz 91.68%
+ DEBUG Uploading build/vendor.tar.gz 91.91%
+ DEBUG Uploading build/vendor.tar.gz 92.14%
+ DEBUG Uploading build/vendor.tar.gz 92.36%
+ DEBUG Uploading build/vendor.tar.gz 92.59%
+ DEBUG Uploading build/vendor.tar.gz 92.82%
+ DEBUG Uploading build/vendor.tar.gz 93.05%
+ DEBUG Uploading build/vendor.tar.gz 93.27%
+ DEBUG Uploading build/vendor.tar.gz 93.5%
+ DEBUG Uploading build/vendor.tar.gz 93.73%
+ DEBUG Uploading build/vendor.tar.gz 93.95%
+ DEBUG Uploading build/vendor.tar.gz 94.18%
+ DEBUG Uploading build/vendor.tar.gz 94.41%
+ DEBUG Uploading build/vendor.tar.gz 94.63%
+ DEBUG Uploading build/vendor.tar.gz 94.86%
+ DEBUG Uploading build/vendor.tar.gz 95.09%
+ DEBUG Uploading build/vendor.tar.gz 95.31%
+ DEBUG Uploading build/vendor.tar.gz 95.54%
+ DEBUG Uploading build/vendor.tar.gz 95.77%
+ DEBUG Uploading build/vendor.tar.gz 96.0%
+ DEBUG Uploading build/vendor.tar.gz 96.22%
+ DEBUG Uploading build/vendor.tar.gz 96.45%
+ DEBUG Uploading build/vendor.tar.gz 96.68%
+ DEBUG Uploading build/vendor.tar.gz 96.9%
+ DEBUG Uploading build/vendor.tar.gz 97.13%
+ DEBUG Uploading build/vendor.tar.gz 97.36%
+ DEBUG Uploading build/vendor.tar.gz 97.58%
+ DEBUG Uploading build/vendor.tar.gz 97.81%
+ DEBUG Uploading build/vendor.tar.gz 98.04%
+ DEBUG Uploading build/vendor.tar.gz 98.26%
+ DEBUG Uploading build/vendor.tar.gz 98.49%
+ DEBUG Uploading build/vendor.tar.gz 98.72%
+ DEBUG Uploading build/vendor.tar.gz 98.95%
+ DEBUG Uploading build/vendor.tar.gz 99.17%
+ DEBUG Uploading build/vendor.tar.gz 99.4%
+ DEBUG Uploading build/vendor.tar.gz 99.63%
+ DEBUG Uploading build/vendor.tar.gz 99.85%
+  INFO Uploading build/vendor.tar.gz 100.0%
+  INFO [b8a7828b] Running cd /var/www/numerikgames/components; tar -zxf /var/www/numerikgames/components/vendor.tar.gz as cpnv@172.17.101.219
+ DEBUG [b8a7828b] Command: cd /var/www/numerikgames/components; tar -zxf /var/www/numerikgames/components/vendor.tar.gz
+  INFO [90ac16c2] Finished in 0.816 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:00:35 +0100 cap production ops:put_env_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:03:29 +0100 cap production ops:put_env_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:03:48 +0100 cap production ops:put_env_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:04:05 +0100 cap production ops:put_env_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:04:14 +0100 cap production ops:put_env_components
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:06:14 +0100 cap production ops:put_env_components
+  INFO ---------------------------------------------------------------------------
+ DEBUG Uploading ./.env 0.0%
+  INFO Uploading ./.env 100.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:06:55 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1a138b22] Running /usr/bin/env mkdir -p /home/cpnv/tmp as cpnv@172.17.101.219
+ DEBUG [1a138b22] Command: /usr/bin/env mkdir -p /home/cpnv/tmp
+  INFO [0e6ad36a] Finished in 0.174 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [4cab2a5b] Running /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [4cab2a5b] Command: /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [0dd30c87] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [bfad61df] Running /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [bfad61df] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:10:01 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [68195c93] Running /usr/bin/env mkdir -p /home/cpnv/tmp as cpnv@172.17.101.219
+ DEBUG [68195c93] Command: /usr/bin/env mkdir -p /home/cpnv/tmp
+  INFO [c9340727] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [2a06acd9] Running /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [2a06acd9] Command: /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [996b6ec5] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [d2f1b9b4] Running /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [d2f1b9b4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:33:29 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [806a7fbc] Running /usr/bin/env mkdir -p /home/cpnv/tmp as cpnv@172.17.101.219
+ DEBUG [806a7fbc] Command: /usr/bin/env mkdir -p /home/cpnv/tmp
+  INFO [797cfe92] Finished in 7.245 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [e3f66d6c] Running /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [e3f66d6c] Command: /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [eebbace8] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [2521715b] Running /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [2521715b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [4bd0e752] 	Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+ DEBUG [4bd0e752] 	Permission denied (publickey).
+ DEBUG [4bd0e752] 	fatal: Impossilble de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 14:34:01 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [79cfe55a] Running /usr/bin/env mkdir -p /home/cpnv/tmp as cpnv@172.17.101.219
+ DEBUG [79cfe55a] Command: /usr/bin/env mkdir -p /home/cpnv/tmp
+  INFO [533148ba] Finished in 5.624 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [f2a2f8c3] Running /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [f2a2f8c3] Command: /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [681a856d] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [09dc195e] Running /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [09dc195e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [60391689] 	Permission denied (publickey).
+ DEBUG [60391689] 	fatal: Impossilble de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-21 15:02:02 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e0457c51] Running /usr/bin/env mkdir -p /home/cpnv/tmp as cpnv@172.17.101.219
+ DEBUG [e0457c51] Command: /usr/bin/env mkdir -p /home/cpnv/tmp
+  INFO [bd8ad0e8] Finished in 4.863 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [085d34f6] Running /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh as cpnv@172.17.101.219
+ DEBUG [085d34f6] Command: /usr/bin/env chmod 700 /home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh
+  INFO [4efde883] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [10d4581f] Running /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD as cpnv@172.17.101.219
+ DEBUG [10d4581f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [26327d60] 	3a4a21d60ae2fd92d44515a0e932f3a2b4146e22	HEAD
+  INFO [26327d60] Finished in 1.624 seconds with exit status 0 (successful).
+  INFO [6d4a06e8] Running /usr/bin/env mkdir -p /var/www/numerikgames/deploy/shared /var/www/numerikgames/deploy/releases as cpnv@172.17.101.219
+ DEBUG [6d4a06e8] Command: /usr/bin/env mkdir -p /var/www/numerikgames/deploy/shared /var/www/numerikgames/deploy/releases
+  INFO [260f9e8f] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [0a4ab0bd] Running [ -f /var/www/numerikgames/deploy/current/REVISION ] as cpnv@172.17.101.219
+ DEBUG [0a4ab0bd] Command: [ -f /var/www/numerikgames/deploy/current/REVISION ]
+ DEBUG [d803158b] Finished in 0.053 seconds with exit status 1 (failed).
+ DEBUG [e377c8d3] Running [ -f /var/www/numerikgames/deploy/repo/HEAD ] as cpnv@172.17.101.219
+ DEBUG [e377c8d3] Command: [ -f /var/www/numerikgames/deploy/repo/HEAD ]
+ DEBUG [141af231] Finished in 0.054 seconds with exit status 1 (failed).
+ DEBUG [86e2192c] Running if test ! -d /var/www/numerikgames/deploy; then echo "Directory does not exist '/var/www/numerikgames/deploy'" 1>&2; false; fi as cpnv@172.17.101.219
+ DEBUG [86e2192c] Command: if test ! -d /var/www/numerikgames/deploy; then echo "Directory does not exist '/var/www/numerikgames/deploy'" 1>&2; false; fi
+ DEBUG [8ea02030] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [cdd66abd] Running /usr/bin/env git clone --mirror git@github.com:CPNV-ES/NumerikGames.git /var/www/numerikgames/deploy/repo as cpnv@172.17.101.219
+ DEBUG [cdd66abd] Command: cd /var/www/numerikgames/deploy && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git clone --mirror git@github.com:CPNV-ES/NumerikGames.git /var/www/numerikgames/deploy/repo )
+ DEBUG [ff26784d] 	Clonage dans le dépôt nu '/var/www/numerikgames/deploy/repo'
+  INFO [ff26784d] Finished in 3.536 seconds with exit status 0 (successful).
+ DEBUG [5252fcd9] Running if test ! -d /var/www/numerikgames/deploy/repo; then echo "Directory does not exist '/var/www/numerikgames/deploy/repo'" 1>&2; false; fi as cpnv@172.17.101.219
+ DEBUG [5252fcd9] Command: if test ! -d /var/www/numerikgames/deploy/repo; then echo "Directory does not exist '/var/www/numerikgames/deploy/repo'" 1>&2; false; fi
+ DEBUG [053fa321] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [5116efc3] Running /usr/bin/env git remote set-url origin git@github.com:CPNV-ES/NumerikGames.git as cpnv@172.17.101.219
+ DEBUG [5116efc3] Command: cd /var/www/numerikgames/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git remote set-url origin git@github.com:CPNV-ES/NumerikGames.git )
+  INFO [cc94aef0] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [2c645529] Running /usr/bin/env git remote update --prune as cpnv@172.17.101.219
+ DEBUG [2c645529] Command: cd /var/www/numerikgames/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d9cfc0fc] 	Récupération de origin
+  INFO [d9cfc0fc] Finished in 1.412 seconds with exit status 0 (successful).
+ DEBUG [b99b08ba] Running if test ! -d /var/www/numerikgames/deploy/repo; then echo "Directory does not exist '/var/www/numerikgames/deploy/repo'" 1>&2; false; fi as cpnv@172.17.101.219
+ DEBUG [b99b08ba] Command: if test ! -d /var/www/numerikgames/deploy/repo; then echo "Directory does not exist '/var/www/numerikgames/deploy/repo'" 1>&2; false; fi
+ DEBUG [e00afe56] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [0460a624] Running /usr/bin/env mkdir -p /var/www/numerikgames/deploy/releases/20190221140209 as cpnv@172.17.101.219
+ DEBUG [0460a624] Command: cd /var/www/numerikgames/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env mkdir -p /var/www/numerikgames/deploy/releases/20190221140209 )
+  INFO [3ec3e71f] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [b7c332fd] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/numerikgames/deploy/releases/20190221140209 as cpnv@172.17.101.219
+ DEBUG [b7c332fd] Command: cd /var/www/numerikgames/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/numerikgames/deploy/releases/20190221140209 )
+  INFO [86009b6d] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [26a30e56] Running if test ! -d /var/www/numerikgames/deploy/repo; then echo "Directory does not exist '/var/www/numerikgames/deploy/repo'" 1>&2; false; fi as cpnv@172.17.101.219
+ DEBUG [26a30e56] Command: if test ! -d /var/www/numerikgames/deploy/repo; then echo "Directory does not exist '/var/www/numerikgames/deploy/repo'" 1>&2; false; fi
+ DEBUG [cb8d1bf5] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [eba39496] Running /usr/bin/env git rev-list --max-count=1 master as cpnv@172.17.101.219
+ DEBUG [eba39496] Command: cd /var/www/numerikgames/deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/home/cpnv/tmp/git-ssh-NumerikGames-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [0a6bee50] 	3a4a21d60ae2fd92d44515a0e932f3a2b4146e22
+ DEBUG [0a6bee50] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [700148b9] Running if test ! -d /var/www/numerikgames/deploy/releases/20190221140209; then echo "Directory does not exist '/var/www/numerikgames/deploy/releases/20190221140209'" 1>&2; false; fi as cpnv@172.17.101.219
+ DEBUG [700148b9] Command: if test ! -d /var/www/numerikgames/deploy/releases/20190221140209; then echo "Directory does not exist '/var/www/numerikgames/deploy/releases/20190221140209'" 1>&2; false; fi
+ DEBUG [07d44fdf] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [c4611ba0] Running /usr/bin/env echo "3a4a21d60ae2fd92d44515a0e932f3a2b4146e22" > REVISION as cpnv@172.17.101.219
+ DEBUG [c4611ba0] Command: cd /var/www/numerikgames/deploy/releases/20190221140209 && /usr/bin/env echo "3a4a21d60ae2fd92d44515a0e932f3a2b4146e22" > REVISION
+  INFO [ceee65b9] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [e2098148] Running cp /var/www/numerikgames/deploy/../components/.env /var/www/numerikgames/deploy/releases/20190221140209 as cpnv@172.17.101.219
+ DEBUG [e2098148] Command: cp /var/www/numerikgames/deploy/../components/.env /var/www/numerikgames/deploy/releases/20190221140209
+  INFO [eea352f1] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [82eb8aaf] Running cp -r /var/www/numerikgames/deploy/../components/vendor /var/www/numerikgames/deploy/releases/20190221140209 as cpnv@172.17.101.219
+ DEBUG [82eb8aaf] Command: cp -r /var/www/numerikgames/deploy/../components/vendor /var/www/numerikgames/deploy/releases/20190221140209
+  INFO [b2ceab47] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO [864a8ea6] Running /usr/bin/env ln -s /var/www/numerikgames/deploy/releases/20190221140209 /var/www/numerikgames/deploy/releases/current as cpnv@172.17.101.219
+ DEBUG [864a8ea6] Command: /usr/bin/env ln -s /var/www/numerikgames/deploy/releases/20190221140209 /var/www/numerikgames/deploy/releases/current
+  INFO [9fcb36a8] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [d841d261] Running /usr/bin/env mv /var/www/numerikgames/deploy/releases/current /var/www/numerikgames/deploy as cpnv@172.17.101.219
+ DEBUG [d841d261] Command: /usr/bin/env mv /var/www/numerikgames/deploy/releases/current /var/www/numerikgames/deploy
+  INFO [5622322e] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [2ed14c97] Running /usr/bin/env ls -x /var/www/numerikgames/deploy/releases as cpnv@172.17.101.219
+ DEBUG [2ed14c97] Command: /usr/bin/env ls -x /var/www/numerikgames/deploy/releases
+ DEBUG [4527569b] 	20190221140209
+ DEBUG [4527569b] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [9ac5215b] Running if test ! -d /var/www/numerikgames/deploy/releases; then echo "Directory does not exist '/var/www/numerikgames/deploy/releases'" 1>&2; false; fi as cpnv@172.17.101.219
+ DEBUG [9ac5215b] Command: if test ! -d /var/www/numerikgames/deploy/releases; then echo "Directory does not exist '/var/www/numerikgames/deploy/releases'" 1>&2; false; fi
+ DEBUG [14846d46] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [fcfd91df] Running /usr/bin/env echo "Branch master (at 3a4a21d60ae2fd92d44515a0e932f3a2b4146e22) deployed as release 20190221140209 by Jarod.STRECKEISEN" >> /var/www/numerikgames/deploy/revisions.log as cpnv@172.17.101.219
+ DEBUG [fcfd91df] Command: cd /var/www/numerikgames/deploy/releases && /usr/bin/env echo "Branch master (at 3a4a21d60ae2fd92d44515a0e932f3a2b4146e22) deployed as release 20190221140209 by Jarod.STRECKEISEN" >> /var/www/numerikgames/deploy/revisions.log
+  INFO [c6979af8] Finished in 0.054 seconds with exit status 0 (successful).
