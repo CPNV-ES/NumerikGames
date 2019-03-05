@@ -1,5 +1,5 @@
-<?php
 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+/* Routes for admin only */
+Route::middleware(['auth'])->group(function () {
+    Route::resource('verses', 'VerseController');
+    Route::resource('themes', 'ThemeController');
 });
+
+/* Routes for standard user */
+Route::get('/', 'ThemeController@index')->name('home');
+Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
+Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
+Route::resource('themes', 'ThemeController', ['only' => ['show']]);
+Route::resource('proses', 'ProseController');
+
+/* Auth routes */
+Auth::routes();
+
