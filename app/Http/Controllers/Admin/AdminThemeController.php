@@ -21,7 +21,8 @@ class AdminThemeController extends Controller
      */
     public function index()
     {
-        //
+        $themes = Theme::all();
+        return view('themes.index')->with(compact('themes'));
     }
 
     /**
