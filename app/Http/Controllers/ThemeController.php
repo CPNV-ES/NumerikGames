@@ -64,7 +64,6 @@ class ThemeController extends Controller
         }])->where('theme_id', $theme->id)->get();
         
         return view('themes.show')->with(compact('proses'));
-
     }
 
     /**

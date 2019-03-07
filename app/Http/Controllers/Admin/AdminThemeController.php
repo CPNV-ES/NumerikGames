@@ -68,9 +68,9 @@ class AdminThemeController extends Controller
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
-    public function edit(Theme $them)
+    public function edit(Theme $theme)
     {
-        //
+        return view('admin.themes.edit')->with(compact('theme'));
     }
 
     /**
@@ -82,7 +82,9 @@ class AdminThemeController extends Controller
      */
     public function update(Request $request, Theme $theme)
     {
-        //
+        $theme->fill($request->all());
+        $theme->save();
+        return redirect()->route('admin.themes.index');
     }
 
     /**
