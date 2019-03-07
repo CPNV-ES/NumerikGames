@@ -1,30 +1,27 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Prose;
-use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 /**
- * VerseController
+ * AdminVerseController
  *
  * @author Nicolas Henry
- * @package App\Http\Controllers\Verse
+ * @package App\Http\Controllers\Admin\AdminVerseController
  */
-class VerseController extends Controller
+class AdminVerseController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $verses = Verse::all();
-        return view('verses.index')->with(compact('verses'));
+        //
     }
 
     /**
@@ -34,8 +31,7 @@ class VerseController extends Controller
      */
     public function create()
     {
-        $proses = Prose::all();
-        return view('verses.create')->with(compact('proses'));
+        //
     }
 
     /**
@@ -46,11 +42,7 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-          $verse = new Verse($request->all());
-          $verse->save();
-          $themes = Theme::all();
-          return view('welcome')->with(compact('themes'));
-
+        //
     }
 
     /**
@@ -61,12 +53,7 @@ class VerseController extends Controller
      */
     public function show(Verse $verse)
     {
-        if ($verse->status == 1) {
-            $verse->status = 'actif';
-        } else {
-            $verse->status = 'inactif';
-        }
-        return view('verses.show')->with(compact('verse'));
+        //
     }
 
     /**
@@ -77,8 +64,7 @@ class VerseController extends Controller
      */
     public function edit(Verse $verse)
     {
-        $proses = Prose::all();
-        return view('verses.edit')->with(compact('verse', 'proses'));
+        //
     }
 
     /**
@@ -90,9 +76,7 @@ class VerseController extends Controller
      */
     public function update(Request $request, Verse $verse)
     {
-        $verse->fill($request->all());
-        $verse->save();
-        return redirect()->route('verses.index');
+        //
     }
 
     /**
@@ -103,7 +87,6 @@ class VerseController extends Controller
      */
     public function destroy(Verse $verse)
     {
-        $verse->delete();
-        return redirect()->route('verses.index');
+        //
     }
 }
