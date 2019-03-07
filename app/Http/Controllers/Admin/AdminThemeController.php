@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Prose;
 
 /**
  * AdminThemeController
@@ -54,7 +55,11 @@ class AdminThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        //
+        $proses = Prose::with(['verse' => function ($query) {
+            $query->where('status', 1);     
+        }])->where('theme_id', $theme->id)->get();
+
+        return view('admin.themes.show')->with(compact('theme', 'proses'));
     }
 
     /**

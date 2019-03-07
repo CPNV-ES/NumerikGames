@@ -62,12 +62,8 @@ class ThemeController extends Controller
         $proses = Prose::with(['verse' => function ($query) {
             $query->where('status', 1);     
         }])->where('theme_id', $theme->id)->get();
-
-        if (Auth::check()) {
-            return view('themes.show')->with(compact('theme', 'proses'));
-        }
-            
-        return view('themes.show')->with('proses', $proses);
+        
+        return view('themes.show')->with(compact('proses'));
 
     }
 
