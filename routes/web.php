@@ -18,11 +18,12 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::resource('themes', 'AdminThemeController');
-    Route::resource('proses', 'AdminProseController');
-    Route::resource('verses', 'AdminVerseController');
+    Route::resource('themes.proses', 'AdminProseController');
+    Route::resource('themes.proses.verses', 'AdminVerseController');
 });
 
-/* Routes for standard user */
+//Routes for standard user
+
 Route::get('/', 'ThemeController@index')->name('home');
 Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
 Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);

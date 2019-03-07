@@ -24,12 +24,6 @@ class ThemeController extends Controller
     public function index(Request $request)
     {
         $themes = Theme::all();
-        if (Auth::check()) {
-            return view('themes.index')->with(compact('themes'));
-        }
-
-        
-
         return view('welcome')->with(compact('themes'));
         
     }

@@ -1,6 +1,6 @@
 {{--
   -- Index
-  -- Layout for proses index page
+  -- Layout for proses admin.index page
   --
   -- @author Nicolas Henry
   --}}

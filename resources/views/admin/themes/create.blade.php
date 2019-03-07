@@ -1,6 +1,6 @@
 {{--
   -- Create
-  -- Layout for themes create page
+  -- Layout for admin.themes create page
   --
   -- @author Nicolas Henry
   --}}
@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="POST" action="{{ route('themes.store') }}">
+            <form method="POST" action="{{ route('admin.themes.store') }}">
                 {{csrf_field()}}
                 <div class="form-group">
                     <label for="name">Titre du thème</label>
