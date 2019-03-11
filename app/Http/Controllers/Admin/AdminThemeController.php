@@ -6,6 +6,7 @@ use App\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Prose;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * AdminThemeController
@@ -33,7 +34,7 @@ class AdminThemeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.themes.create');
     }
 
     /**
@@ -44,7 +45,11 @@ class AdminThemeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $theme = new Theme($request->all());
+        $theme->path = 'pictures/themes/'.$request->path;
+        Storage::disk('local')->put('pictures/themes/'.$request->path, '$request->path');
+        $theme->save();
+        return redirect()->route('admin.themes.index');
     }
 
     /**
@@ -95,6 +100,13 @@ class AdminThemeController extends Controller
      */
     public function destroy(Request $request, Theme $theme)
     {
-        //
+        $prose = Prose::where('theme_id', $theme->id)->first();
+        if ($prose) {
+            $request->session()->flash('bug', 'Ce thème contient des proses, supprimez les proses avant de recommencer.');
+        } else {
+            $theme->delete();
+            $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
+        }
+        return redirect()->route('admin.themes.index');
     }
 }

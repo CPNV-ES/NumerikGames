@@ -31,8 +31,8 @@ class ThemesTableSeeder extends Seeder
         foreach ($themes as $value) {
                 $theme = Theme::create([
                     'name' => $value,
+                    'color' => '#'.substr(md5(rand()), 0, 6),
                     'path' => 'pictures/themes/'.mb_strtolower(str_replace(' ', '_', $value), 'UTF-8').'.jpg',
-                    
                 ]);
             $theme->save();
         }

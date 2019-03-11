@@ -36,6 +36,8 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Nom</th>
+                                    <th scope="col">Couleur</th>
+                                    <th scope="col">Image</th>
                                     <th scope="col">Actions</th>
                                     <th scope="col">Selectionnez</th>
                                 </tr>
@@ -46,6 +48,12 @@
                                         <th scope="row">{{$theme->id}}</th>
                                         <td>
                                             <p>{{$theme->name}}</p>
+                                        </td>
+                                        <td style="background-color:{{$theme->color}};">
+                                            <p></p>
+                                        </td>
+                                        <td>
+                                            <img src="{{$theme->path}}" alt="">
                                         </td>
                                         <td>
                                             <div class="btn-group btn-group-toggle">
