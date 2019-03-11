@@ -49,9 +49,7 @@
                                         <td>
                                             <p>{{$theme->name}}</p>
                                         </td>
-                                        <td style="background-color:{{$theme->color}};">
-                                            <p></p>
-                                        </td>
+                                        <td style="background-color:{{$theme->color}};"></td>
                                         <td>
                                             <img src="{{$theme->path}}" alt="">
                                         </td>

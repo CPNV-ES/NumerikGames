@@ -23,6 +23,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Vers</th>
+                                <th scope="col">Couleur</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -30,6 +31,7 @@
                             <tr>
                                 <th scope="row">{{$theme->id}}</th>
                                 <td>{{$theme->name}}</td>
+                                <td style="background-color:{{$theme->color}};"></td>
                                 <td>
                                     <div class="btn-group btn-group-toggle">
                                         <a class="btn btn-danger disabled" href="" role="button">Désactiver</a>
