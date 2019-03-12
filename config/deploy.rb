@@ -12,7 +12,9 @@ set :components_dir, components_dir
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-
+set :linked_dirs, fetch(:linked_dirs, []).push(
+    'storage/app',
+)
 # Devops commands
 namespace :ops do
 
