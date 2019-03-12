@@ -11,20 +11,22 @@
 |
 */
 
+/* Auth routes */
+Auth::routes();
 
-/* Routes for admin only */
-Route::middleware(['auth'])->group(function () {
-    Route::resource('verses', 'VerseController');
-    Route::resource('themes', 'ThemeController');
+// Admin resources
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+    Route::resource('themes', 'AdminThemeController');
+    Route::resource('themes.proses', 'AdminProseController');
+    Route::resource('themes.proses.verses', 'AdminVerseController');
 });
 
-/* Routes for standard user */
+//Routes for standard user
+
 Route::get('/', 'ThemeController@index')->name('home');
 Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
 Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
 Route::resource('themes', 'ThemeController', ['only' => ['show']]);
 Route::resource('proses', 'ProseController');
-
-/* Auth routes */
-Auth::routes();
 

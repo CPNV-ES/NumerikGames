@@ -1,31 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Prose;
 use App\Theme;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
+use App\Prose;
+use Illuminate\Support\Facades\Storage;
 
 /**
- * ThemeController
+ * AdminThemeController
  *
  * @author Nicolas Henry
- * @package App\Http\Controllers\Theme
+ * @package App\Http\Controllers\Admin\AdminThemeController
  */
-class ThemeController extends Controller
+class AdminThemeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
         $themes = Theme::all();
-        return view('welcome')->with(compact('themes'));
-        
+        return view('admin.themes.index')->with(compact('themes'));
     }
 
     /**
@@ -35,7 +34,7 @@ class ThemeController extends Controller
      */
     public function create()
     {
-        return view('themes.create');
+        return view('admin.themes.create');
     }
 
     /**
@@ -47,8 +46,10 @@ class ThemeController extends Controller
     public function store(Request $request)
     {
         $theme = new Theme($request->all());
+        $theme->path = 'pictures/themes/'.$request->path;
+        Storage::disk('local')->put('pictures/themes/'.$request->path, '$request->path');
         $theme->save();
-        return redirect()->route('themes.index');
+        return redirect()->route('admin.themes.index');
     }
 
     /**
@@ -62,8 +63,8 @@ class ThemeController extends Controller
         $proses = Prose::with(['verse' => function ($query) {
             $query->where('status', 1);     
         }])->where('theme_id', $theme->id)->get();
-        
-        return view('themes.show')->with(compact('proses'));
+
+        return view('admin.themes.show')->with(compact('theme', 'proses'));
     }
 
     /**
@@ -74,7 +75,7 @@ class ThemeController extends Controller
      */
     public function edit(Theme $theme)
     {
-        return view('themes.edit')->with(compact('theme'));
+        return view('admin.themes.edit')->with(compact('theme'));
     }
 
     /**
@@ -88,7 +89,7 @@ class ThemeController extends Controller
     {
         $theme->fill($request->all());
         $theme->save();
-        return redirect()->route('themes.index');
+        return redirect()->route('admin.themes.index');
     }
 
     /**
@@ -106,6 +107,6 @@ class ThemeController extends Controller
             $theme->delete();
             $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
         }
-        return redirect()->route('themes.index');
+        return redirect()->route('admin.themes.index');
     }
 }
