@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Prose;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Theme;
 
 /**
  * AdminProseController
@@ -19,9 +20,10 @@ class AdminProseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Theme $theme)
     {
-        //
+        $proses = Prose::all()->where('theme', $theme);
+        return view('admin.proses.index', $theme)->with(compact('theme', 'proses'));
     }
 
     /**
