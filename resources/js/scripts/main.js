@@ -11,11 +11,9 @@ $(document).ready(function(){
         }
     });
 
-    console.log($(document).height()-$(window).height())
-
     // Calls the function only for the projectors page
-    if($('div').has('#projectors-index')) {
-       projectorsLoop(); 
+    if ($("#projectors-index").length > 0) {
+        projectorsLoop(); 
     }
     
     // Function that move the proses and verses from bottom to top with an infinite loop

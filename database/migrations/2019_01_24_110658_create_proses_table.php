@@ -21,6 +21,7 @@ class CreateProsesTable extends Migration
         Schema::create('proses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->boolean('is_full');
             $table->integer('theme_id')->unsigned()->nullable();
             $table->timestamps();
 

@@ -51,6 +51,7 @@ class ProsesTableSeeder extends Seeder
         foreach($loveArray as $value) {
             $prose = Prose::create([
                 'title' => $value,
+                'is_full' => rand(0,1),
             ]);
             $prose->theme()->associate($love);
             $prose->save();
@@ -59,6 +60,7 @@ class ProsesTableSeeder extends Seeder
         foreach($friendshipArray as $value) {
             $prose = Prose::create([
                 'title' => $value,
+                'is_full' => rand(0,1),
             ]);
             $prose->theme()->associate($friendship);
             $prose->save();
@@ -67,6 +69,7 @@ class ProsesTableSeeder extends Seeder
         foreach($deathArray as $value) {
             $prose = Prose::create([
                 'title' => $value,
+                'is_full' => rand(0,1),
             ]);
             $prose->theme()->associate($death);
             $prose->save();
@@ -75,6 +78,7 @@ class ProsesTableSeeder extends Seeder
         foreach($sadnessArray as $value) {
             $prose = Prose::create([
                 'title' => $value,
+                'is_full' => rand(0,1),
             ]);
             $prose->theme()->associate($sadness);
             $prose->save();
@@ -83,6 +87,7 @@ class ProsesTableSeeder extends Seeder
         foreach($happinessArray as $value) {
             $prose = Prose::create([
                 'title' => $value,
+                'is_full' => rand(0,1),
             ]);
             $prose->theme()->associate($happiness);
             $prose->save();
