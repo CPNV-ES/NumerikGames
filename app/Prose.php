@@ -27,4 +27,14 @@ class Prose extends Model
     {
         return $this->hasMany('App\Verse');
     }
+
+    public function is_full() 
+    {
+        $contains = count($this->verse);
+        if ($contains >= Setting::where('name', 'default_limit')->first()->proses_limit) {
+            return true;
+        } else {
+            return false;
+        };
+    }
 }

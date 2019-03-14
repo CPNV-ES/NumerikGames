@@ -6,6 +6,7 @@ use App\Prose;
 use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * VerseController
@@ -46,11 +47,20 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-          $verse = new Verse($request->all());
-          $verse->save();
-          $themes = Theme::all();
-          return view('welcome')->with(compact('themes'));
+        $prose = Prose::find($request->get('prose_id'));
 
+        if($prose->is_full()) {
+            $prose->is_full = 1;
+            $prose->save();
+            $request->session()->flash('status', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez un autre thème.');
+            return redirect()->back();
+        } else {
+            $verse = new Verse($request->all());
+            $verse->save();
+            $request->session()->flash('status', 'Votre élément à bien été ajouté, pour votre participation.');
+        }
+        $themes = Theme::all();
+        return redirect()->route('home')->with(compact('themes'));
     }
 
     /**
