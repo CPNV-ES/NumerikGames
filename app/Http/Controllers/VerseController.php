@@ -47,6 +47,20 @@ class VerseController extends Controller
     public function store(Request $request)
     {
           $verse = new Verse($request->all());
+
+          // Create a new instance for the language
+          $syllable = new \Syllable('fr');
+
+          // Set the directory where Syllable can store cache files
+          $syllable->getCache()->setPath(base_path(). '/bootstrap/cache');
+
+          // Count the number of syllable in a text
+          $countSyllables = $syllable->countSyllablesText($request->get('content'));
+
+          if ($countSyllables > 12){
+              
+          }
+
           $verse->save();
           $themes = Theme::all();
           return view('welcome')->with(compact('themes'));
