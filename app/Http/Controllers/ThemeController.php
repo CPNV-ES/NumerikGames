@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Prose;
 use App\Theme;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 /**
  * ThemeController
@@ -23,6 +22,7 @@ class ThemeController extends Controller
      */
     public function index(Request $request)
     {
+        
         $themes = Theme::all();
         return view('welcome')->with(compact('themes'));
         

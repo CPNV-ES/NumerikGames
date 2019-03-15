@@ -52,12 +52,12 @@ class VerseController extends Controller
         if($prose->is_full()) {
             $prose->is_full = 1;
             $prose->save();
-            $request->session()->flash('status', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez un autre thème.');
+            $request->session()->flash('error', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez un autre thème.');
             return redirect()->back();
         } else {
             $verse = new Verse($request->all());
             $verse->save();
-            $request->session()->flash('status', 'Votre élément à bien été ajouté, pour votre participation.');
+            $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
         }
         $themes = Theme::all();
         return redirect()->route('home')->with(compact('themes'));

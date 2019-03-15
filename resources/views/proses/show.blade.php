@@ -9,13 +9,6 @@
     <div id="prose-id">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    @if (session('status'))
-                        <div class="alert alert-danger" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                </div>
                 <div class="col-md-12">
                     <h1 class="text-center">Rajoutez une prose</h1>
                     <hr>
