@@ -58,7 +58,7 @@ class VerseController extends Controller
           $countSyllables = $syllable->countSyllablesText($request->get('content'));
 
           if ($countSyllables > 12){
-              
+              return back()->with('error', 'Votre vers contient plus de 12 syllabes !');
           }
 
           $verse->save();
