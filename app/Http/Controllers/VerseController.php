@@ -6,7 +6,6 @@ use App\Prose;
 use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * VerseController
