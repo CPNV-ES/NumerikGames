@@ -23,11 +23,9 @@ class ProseController extends Controller
      */
     public function index(Verse $verse)
     {
-        $proses = Prose::with(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->withCount(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->having('verse_count', '>', 0)->get();
+        foreach (Prose::all() as $value) {
+            $proses = collect($value->only_with_data());
+        }
 
         return view('proses.index')->with(compact('proses', 'verse'));
     }
@@ -128,11 +126,9 @@ class ProseController extends Controller
      */
     public function projector()
     {
-        $proses = Prose::with(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->withCount(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->having('verse_count', '>', 0)->get();
+        foreach (Prose::all() as $value) {
+            $proses = collect($value->only_with_data());
+        }
 
         return view('projectors.index')->with(compact('proses'));
     }
