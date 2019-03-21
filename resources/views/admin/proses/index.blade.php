@@ -41,8 +41,8 @@
                                         <td>{{$prose->title}}</td>
                                         <td>
                                             <div class="btn-group btn-group-toggle">
-                                                <a class="btn btn-primary" href="{{ route('proses.edit', ['prose' => $prose]) }}" role="button">Editer</a>
-                                                <a class="btn btn-warning" href="{{ route('proses.show', ['prose' => $prose]) }}" role="button">Afficher</a>
+                                                <a class="btn btn-primary" href="{{ route('admin.themes.proses.edit', [ $theme, $prose]) }}" role="button">Editer</a>
+                                                <a class="btn btn-warning" href="{{ route('admin.themes.proses.show', [ $theme, $prose]) }}" role="button">Afficher</a>
                                                 
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="exampleModal-{{$prose}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

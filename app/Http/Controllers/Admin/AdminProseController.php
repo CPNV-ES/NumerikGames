@@ -16,6 +16,22 @@ use App\Theme;
 class AdminProseController extends Controller
 {
     /**
+     * Control if the resource exist in the current domain.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            if ( $request->theme->id == $request->prose->theme_id) {
+                return $next($request);
+            } else {
+                return abort(404);
+            }
+        });
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -53,9 +69,10 @@ class AdminProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function show(Prose $prose)
+    public function show(Theme $theme, Prose $prose)
     {
-        //
+        
+        return view('admin.proses.show', $theme)->with(compact('prose', 'theme'));
     }
 
     /**
@@ -64,9 +81,10 @@ class AdminProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prose $prose)
+    public function edit(Theme $theme, Prose $prose)
     {
-        //
+        $themes = Theme::all();
+        return view('admin.proses.edit')->with(compact('prose', 'theme', 'themes'));
     }
 
     /**

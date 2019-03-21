@@ -26,5 +26,10 @@ class SettingsTableSeeder extends Seeder
             'name' => 'limit40',
             'value' => '40',
         ]);
+
+        Setting::create([
+            'name' => 'syllabes',
+            'value' => '12',
+        ]);
     }
 }
