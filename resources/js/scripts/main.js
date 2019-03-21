@@ -26,5 +26,5 @@ $(document).ready(function(){
             function () {
                 projectorsLoop()
             });
-        }
+    }
  });
