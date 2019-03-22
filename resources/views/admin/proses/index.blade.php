@@ -8,8 +8,11 @@
   @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <div class="title m-b-md">
-                <h2>Proses page</h2>
+            <div class="row">
+                <div class="container">
+                        Theme : 
+                    <h2>{{$theme->name}}</h2>
+                </div>
             </div>
             <div class="container">
                 <div class="row">

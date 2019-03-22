@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Prose;
+use App\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Theme;
 
 /**
  * AdminProseController
@@ -28,7 +28,7 @@ class AdminProseController extends Controller
             } else {
                 return abort(404);
             }
-        });
+        }, ['except' => ['index', 'create', 'store']]);
     }
 
     /**
@@ -47,9 +47,10 @@ class AdminProseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Theme $theme)
     {
-        //
+        $themes = Theme::all();
+        return view('admin.proses.create', $theme)->with(compact('themes', 'theme'));
     }
 
     /**
@@ -58,9 +59,12 @@ class AdminProseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Theme $theme, Request $request)
     {
-        //
+        $prose = new Prose($request->all());
+        $prose->theme_id = $theme->id;
+        $prose->save();
+        return redirect()->route('admin.themes.proses.index', $theme);
     }
 
     /**
@@ -71,7 +75,6 @@ class AdminProseController extends Controller
      */
     public function show(Theme $theme, Prose $prose)
     {
-        
         return view('admin.proses.show', $theme)->with(compact('prose', 'theme'));
     }
 
