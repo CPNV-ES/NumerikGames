@@ -46,10 +46,10 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-          $verse = new Verse($request->all());
-          $verse->save();
-          $themes = Theme::all();
-          return view('welcome')->with(compact('themes'));
+        $verse = new Verse($request->all());
+        $verse->prose_id = $request->prose_id;
+        $verse->save();
+        return redirect()->route('home');
 
     }
 
