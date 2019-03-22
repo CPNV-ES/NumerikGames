@@ -28,7 +28,7 @@ class AdminProseController extends Controller
             } else {
                 return abort(404);
             }
-        }, ['except' => ['index', 'create', 'store']]);
+        }, ['except' => ['index', 'create', 'store', 'update']]);
     }
 
     /**
@@ -97,9 +97,11 @@ class AdminProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prose $prose)
+    public function update(Request $request, Theme $theme, Prose $prose)
     {
-        //
+        $prose->fill($request->all());
+        $prose->save();
+        return redirect()->route('admin.themes.proses.index', $theme);
     }
 
     /**

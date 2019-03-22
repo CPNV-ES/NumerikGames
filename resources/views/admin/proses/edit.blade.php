@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="POST" action="{{ route('proses.update', ['prose' => $prose->id]) }}">
+            <form method="POST" action="{{ route('admin.themes.proses.update', ['theme' => $theme, 'prose' => $prose]) }}">
                 {{ method_field('PUT') }}
                 {{csrf_field()}}
                 <div class="form-group">
