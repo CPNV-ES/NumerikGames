@@ -65,7 +65,7 @@ class ProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function show(Prose $prose, Request $request)
+    public function show(Prose $prose)
     {
         $verses = Verse::where('prose_id', $prose->id)->get();
         $inactivateVerses = $verses->where('status', 0);
