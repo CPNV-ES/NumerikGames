@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Verse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Prose;
+use App\Theme;
 
 /**
  * AdminVerseController
@@ -15,13 +17,32 @@ use App\Http\Controllers\Controller;
 class AdminVerseController extends Controller
 {
     /**
+     * Control if the resource exist in the current domain.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            dd($request->prose->id == $request->verse->prose_id);
+            dd($request->prose->theme_id == $request->theme->id);
+            if ( $request->theme->id == $request->prose->theme_id || $request->prose->id == $request->verse->prose_id) {
+                return $next($request);
+            } else {
+                return abort(404);
+            }
+        }, ['except' => ['index', 'create', 'store', 'update']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Theme $theme, Prose $prose)
     {
-        //
+        $verses = Verse::all()->where('prose', $prose);
+        return view('admin.verses.index', $prose)->with(compact('theme', 'prose', 'verses'));
     }
 
     /**
@@ -29,9 +50,10 @@ class AdminVerseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Theme $theme, Prose $prose)
     {
-        //
+        $proses = Prose::all();
+        return view('admin.verses.create')->with(compact('theme', 'prose', 'proses'));
     }
 
     /**

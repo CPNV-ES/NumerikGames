@@ -42,6 +42,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <a class="btn btn-success" href="{{ route('admin.themes.proses.verses.index', ['theme' => $theme, 'prose' => $prose]) }}" role="button">Voir les vers de la prose</a>
                     <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                 </div>{{-- .col-md-12 --}}
             </div>{{-- .row --}}
