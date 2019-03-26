@@ -63,6 +63,8 @@ class AdminVerseController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Theme  $theme
+     * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request, Theme $theme, Prose $prose)
@@ -75,12 +77,14 @@ class AdminVerseController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  \App\Theme  $theme
+     * @param  \App\Prose  $prose
      * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function show(Verse $verse)
+    public function show(Theme $theme, Prose $prose, Verse $verse)
     {
-        //
+        return view('admin.verses.show', ['theme' => $theme, 'prose' => $prose])->with(compact('prose', 'theme'));
     }
 
     /**
