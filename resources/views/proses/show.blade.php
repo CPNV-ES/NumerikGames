@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center">Rajoutez une prose</h1>
+                    <h1 class="text-center">{{$prose->theme->name}}</h1>
                     <hr>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                         <div>
                             <p class="text-center">{{$verse->content}}</p>
                         </div>
-                    @endforeach                   
+                    @endforeach
                     <div class="form-group">
                         <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
                     </div>
@@ -45,7 +45,7 @@
             @foreach ($versesLast as $verse)
                 <p class="text-center">{{$verse->content}}</p>
             @endforeach
-            
+
         <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}">
             @csrf
             <p class="text-center" name="content" id="modalVerse" type="text"></p>
