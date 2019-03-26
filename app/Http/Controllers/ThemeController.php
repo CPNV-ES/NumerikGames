@@ -94,6 +94,7 @@ class ThemeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */

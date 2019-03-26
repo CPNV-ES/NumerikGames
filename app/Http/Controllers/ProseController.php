@@ -106,6 +106,7 @@ class ProseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
@@ -124,7 +125,6 @@ class ProseController extends Controller
     /**
      * Get value from origin
      * The verse_count column is creater by Laravel in the eloquent query, you can see the log to see the query in App\Providers\AppServiceProvider
-     * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
     public function projector()
