@@ -46,11 +46,20 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-        $verse = new Verse($request->all());
-        $verse->prose_id = $request->prose_id;
-        $verse->save();
-        return redirect()->route('home');
+        $prose = Prose::find($request->get('prose_id'));
 
+        if($prose->is_full()) {
+            $prose->is_full = 1;
+            $prose->save();
+            $request->session()->flash('error', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez un autre thème.');
+            return redirect()->back();
+        } else {
+            $verse = new Verse($request->all());
+            $verse->save();
+            $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
+        }
+        $themes = Theme::all();
+        return redirect()->route('home')->with(compact('themes'));
     }
 
     /**

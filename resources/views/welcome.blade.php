@@ -9,6 +9,13 @@
             </div> <!-- .row -->
             <div class="row">
                 <div class="col-sm-12">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                </div>
+                <div class="col-sm-12">
                     <h4>Vous devez choisir l'un de nos thèmes ci-dessous pour commencer à écrire votre magnifique vers.</h4>
                 </div>
             </div> <!-- .row -->
