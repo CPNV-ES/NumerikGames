@@ -40,6 +40,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <a class="btn btn-success" href="{{ route('admin.themes.proses.index', $theme) }}" role="button">Voir les proses du thème</a>
                     <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                 </div>{{-- .col-md-12 --}}
             </div>{{-- .row --}}
