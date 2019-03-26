@@ -70,6 +70,7 @@ class AdminProseController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  \App\Theme  $theme
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
@@ -81,6 +82,7 @@ class AdminProseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
+     * @param  \App\Theme  $theme
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
@@ -94,6 +96,7 @@ class AdminProseController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Theme  $theme
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */

@@ -46,8 +46,8 @@
                                       <td>{{ $verse->status == 1 ? 'Affiché aux utilisateurs' : 'Inactif' }}</td>
                                       <td>
                                           <div class="btn-group btn-group-toggle">
-                                              <a class="btn btn-primary" href="{{ route('admin.themes.proses.edit', [ $theme, $prose]) }}" role="button">Editer</a>
-                                              <a class="btn btn-warning" href="{{ route('admin.themes.proses.show', [ $theme, $prose]) }}" role="button">Afficher</a>
+                                              <a class="btn btn-primary" href="{{ route('admin.themes.proses.verses.edit', [ 'theme' => $theme, 'prose' => $prose, 'verse' => $verse]) }}" role="button">Editer</a>
+                                              <a class="btn btn-warning" href="{{ route('admin.themes.proses.verses.show', [ 'theme' => $theme, 'prose' => $prose, 'verse' => $verse]) }}" role="button">Afficher</a>
                                               
                                               <!-- Modal -->
                                               <div class="modal fade" id="exampleModal-{{$verse->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
