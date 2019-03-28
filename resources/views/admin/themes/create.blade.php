@@ -8,9 +8,6 @@
 @section('content')
 <div class="container">
     <div class="row">
-
-    </div>
-    <div class="row">
         <div class="col-md-12">
             <form method="POST" action="{{ route('admin.themes.store') }}">
                 {{csrf_field()}}
