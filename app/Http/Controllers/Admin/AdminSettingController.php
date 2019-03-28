@@ -50,7 +50,7 @@ class AdminSettingController extends Controller
      */
     public function show(Setting $setting)
     {
-        //
+        return view('admin.settings.show')->with(compact('setting'));
     }
 
     /**
