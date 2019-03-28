@@ -84,7 +84,7 @@ class AdminVerseController extends Controller
      */
     public function show(Theme $theme, Prose $prose, Verse $verse)
     {
-        return view('admin.verses.show', ['theme' => $theme, 'prose' => $prose])->with(compact('prose', 'theme'));
+        return view('admin.verses.show', ['theme' => $theme, 'prose' => $prose])->with(compact('theme', 'prose', 'verse'));
     }
 
     /**
@@ -121,11 +121,14 @@ class AdminVerseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Theme  $theme
+     * @param  \App\Prose  $prose
      * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Verse $verse)
+    public function destroy(Request $request, Theme $theme, Prose $prose, Verse $verse)
     {
-        //
+        return redirect()->route('admin.themes.proses.verses.index', ['theme' => $theme, 'prose' => $prose]);
     }
 }

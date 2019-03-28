@@ -6,6 +6,7 @@ use App\Prose;
 use App\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Verse;
 
 /**
  * AdminProseController
@@ -28,7 +29,7 @@ class AdminProseController extends Controller
             } else {
                 return abort(404);
             }
-        }, ['except' => ['index', 'create', 'store', 'update']]);
+        }, ['only' => ['show', 'edit']]);
     }
 
     /**
@@ -56,6 +57,7 @@ class AdminProseController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param  \App\Theme  $theme
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -110,11 +112,21 @@ class AdminProseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \App\Theme  $theme
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prose $prose)
+    public function destroy(Theme $theme, Prose $prose)
     {
-        //
+        if (!$prose->verse->first->exists()) {
+            $prose->delete();
+            return redirect()
+                ->route('admin.themes.proses.index', $theme)
+                ->with('success', "Vous avez bien supprimé $prose->title");
+        }
+
+        return redirect()
+            ->route('admin.themes.proses.index', $theme)
+            ->with('error', 'Cette prose contient des vers, supprimez les avant de recommencer');
     }
 }

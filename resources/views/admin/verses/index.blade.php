@@ -60,7 +60,7 @@
                                                               </button>
                                                           </div>
                                                           <div class="modal-body">
-                                                              Vous êtes sur le point de supprimer <b>{{$verse->title}}</b>, Veuillez valider votre choix.
+                                                              Vous êtes sur le point de supprimer <b>{{$verse->content}}</b>, Veuillez valider votre choix.
                                                           </div>
                                                           <div class="modal-footer">
                                                               <form id="delete-verses-form-{{$verse->id}}"
