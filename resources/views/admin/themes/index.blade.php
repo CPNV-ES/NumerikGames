@@ -18,19 +18,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        @if (session('bug'))
-                            <div class="alert alert-danger" role="alert">
-                                {{ session('bug') }}
-                            </div>
-                        @endif
-                        @if (session('success'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('success') }}
-                            </div>
-                        @endif
-
                         <a class="btn btn-success" href="{{ route('admin.themes.create') }}" role="button">Créer</a>
-
                         <table class="table">
                             <thead class="thead-dark">
                                 <tr>

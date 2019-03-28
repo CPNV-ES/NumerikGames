@@ -17,16 +17,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        @if (session('bug'))
-                            <div class="alert alert-danger" role="alert">
-                                {{ session('bug') }}
-                            </div>
-                        @endif
-                        @if (session('success'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('success') }}
-                            </div>
-                        @endif
                         <a class="btn btn-success" href="{{ route('admin.themes.proses.create', $theme) }}" role="button">Créer</a>
                         <table class="table">
                             <thead class="thead-dark">
@@ -62,7 +52,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <form id="delete-proses-form-{{$prose->id}}"
-                                                                    action="{{ route('proses.destroy', ['prose' => $prose]) }}"
+                                                                    action="{{ route('admin.themes.proses.destroy', ['theme' => $theme, 'prose' => $prose]) }}"
                                                                     method="POST" style="display: none;">
                                                                     {{ csrf_field() }}
                                                                     {{ method_field('DELETE') }}

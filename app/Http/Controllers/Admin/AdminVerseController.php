@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Verse;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Prose;
 use App\Theme;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 /**
  * AdminVerseController
@@ -30,7 +30,7 @@ class AdminVerseController extends Controller
                 return abort(404);
             }
         }, 
-        ['except' => ['index', 'create', 'store', 'update']]);
+        ['only' => ['show', 'edit']]);
     }
 
     /**
@@ -84,7 +84,7 @@ class AdminVerseController extends Controller
      */
     public function show(Theme $theme, Prose $prose, Verse $verse)
     {
-        return view('admin.verses.show', ['theme' => $theme, 'prose' => $prose])->with(compact('prose', 'theme'));
+        return view('admin.verses.show', ['theme' => $theme, 'prose' => $prose])->with(compact('theme', 'prose', 'verse'));
     }
 
     /**
@@ -121,11 +121,16 @@ class AdminVerseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \App\Theme  $theme
+     * @param  \App\Prose  $prose
      * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Verse $verse)
+    public function destroy(Theme $theme, Prose $prose, Verse $verse)
     {
-        //
+        $verse->delete();
+        return redirect()
+            ->route('admin.themes.proses.verses.index', ['theme' => $theme, 'prose' => $prose])
+            ->with('success', "Vous avez bien supprimé $verse->content");
     }
 }
