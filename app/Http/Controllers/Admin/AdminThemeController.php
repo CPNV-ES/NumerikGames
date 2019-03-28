@@ -101,13 +101,15 @@ class AdminThemeController extends Controller
      */
     public function destroy(Request $request, Theme $theme)
     {
-        $prose = Prose::where('theme_id', $theme->id)->first();
-        if ($prose) {
-            $request->session()->flash('error', 'Ce thème contient des proses, supprimez les proses avant de recommencer.');
-        } else {
+        if (!$theme->prose->first->exists()) {
             $theme->delete();
-            $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
+            return redirect()
+                ->route('admin.themes.index')
+                ->with('success', "Vous avez bien supprimé $theme->name");
         }
-        return redirect()->route('admin.themes.index');
+
+        return redirect()
+            ->route('admin.themes.index')
+            ->with('error', 'Cette prose contient des vers, supprimez les avant de recommencer');
     }
 }
