@@ -61,7 +61,7 @@ class AdminSettingController extends Controller
      */
     public function edit(Setting $setting)
     {
-        //
+        return view('admin.settings.edit')->with(compact('setting'));
     }
 
     /**
@@ -73,7 +73,9 @@ class AdminSettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        //
+        $setting->fill($request->all());
+        $setting->save();
+        return redirect()->route('admin.settings.index');
     }
 
     /**
