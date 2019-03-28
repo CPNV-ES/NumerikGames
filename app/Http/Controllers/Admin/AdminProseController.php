@@ -29,7 +29,8 @@ class AdminProseController extends Controller
             } else {
                 return abort(404);
             }
-        }, ['only' => ['show', 'edit']]);
+        }, 
+        ['only' => ['show', 'edit']]);
     }
 
     /**

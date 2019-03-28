@@ -30,7 +30,7 @@ class AdminVerseController extends Controller
                 return abort(404);
             }
         }, 
-        ['except' => ['index', 'create', 'store', 'update']]);
+        ['only' => ['show', 'edit']]);
     }
 
     /**
@@ -129,6 +129,9 @@ class AdminVerseController extends Controller
      */
     public function destroy(Request $request, Theme $theme, Prose $prose, Verse $verse)
     {
-        return redirect()->route('admin.themes.proses.verses.index', ['theme' => $theme, 'prose' => $prose]);
+        $verse->delete();
+        return redirect()
+            ->route('admin.themes.proses.verses.index', ['theme' => $theme, 'prose' => $prose])
+            ->with('success', "Vous avez bien supprimé $verse->content");
     }
 }
