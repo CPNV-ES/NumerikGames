@@ -6,7 +6,6 @@ use App\Prose;
 use App\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Verse;
 
 /**
  * AdminProseController
@@ -36,6 +35,7 @@ class AdminProseController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
     public function index(Theme $theme)
@@ -47,6 +47,7 @@ class AdminProseController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
     public function create(Theme $theme)

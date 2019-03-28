@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Verse;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Prose;
 use App\Theme;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 /**
  * AdminVerseController
@@ -121,13 +121,12 @@ class AdminVerseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Theme  $theme
      * @param  \App\Prose  $prose
      * @param  \App\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, Theme $theme, Prose $prose, Verse $verse)
+    public function destroy(Theme $theme, Prose $prose, Verse $verse)
     {
         $verse->delete();
         return redirect()

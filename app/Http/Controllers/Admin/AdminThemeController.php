@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Theme;
+use App\Prose;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Prose;
 use Illuminate\Support\Facades\Storage;
 
 /**
@@ -60,11 +60,7 @@ class AdminThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        $proses = Prose::with(['verse' => function ($query) {
-            $query->where('status', 1);     
-        }])->where('theme_id', $theme->id)->get();
-
-        return view('admin.themes.show')->with(compact('theme', 'proses'));
+        return view('admin.themes.show')->with(compact('theme'));
     }
 
     /**
@@ -95,11 +91,10 @@ class AdminThemeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, Theme $theme)
+    public function destroy(Theme $theme)
     {
         if (!$theme->prose->first->exists()) {
             $theme->delete();
