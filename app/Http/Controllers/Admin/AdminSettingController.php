@@ -86,6 +86,9 @@ class AdminSettingController extends Controller
      */
     public function destroy(Setting $setting)
     {
-        //
+        $setting->delete();
+        return redirect()
+            ->route('admin.settings.index')
+            ->with('success', "Votre paramètre $setting->name a bien été supprimé !");
     }
 }
