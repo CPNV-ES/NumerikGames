@@ -15,7 +15,8 @@ class AdminSettingController extends Controller
      */
     public function index()
     {
-        return view('admin.settings.index');
+        $settings = Setting::all();
+        return view('admin.settings.index')->with(compact('settings'));
     }
 
     /**
@@ -25,7 +26,7 @@ class AdminSettingController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.settings.create');
     }
 
     /**
@@ -36,7 +37,9 @@ class AdminSettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $setting = new Setting($request->all());
+        $setting->save();
+        return redirect()->route('admin.settings.index');
     }
 
     /**
