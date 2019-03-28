@@ -19,7 +19,7 @@ For install the database, you need to create your database (with the name in you
 
 1. Run `composer dump-autoload`.
 2. Run `php artisan migrate:refresh --seed`.
-   1. Only if the last command make you an error.
+   1. Only if the last command make an error.
    2. Run `php artisan migrate`.
    3. Run `php artisan db:seed`. 
 
