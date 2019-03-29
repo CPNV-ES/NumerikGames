@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Prose;
 use App\Theme;
-use App\Verse;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 /**
  * ThemeController
@@ -24,13 +22,8 @@ class ThemeController extends Controller
      */
     public function index(Request $request)
     {
-        $themes = Theme::all();
-        if (Auth::check()) {
-            return view('themes.index')->with(compact('themes'));
-        }
-
         
-
+        $themes = Theme::all();
         return view('welcome')->with(compact('themes'));
         
     }
@@ -69,13 +62,8 @@ class ThemeController extends Controller
         $proses = Prose::with(['verse' => function ($query) {
             $query->where('status', 1);     
         }])->where('theme_id', $theme->id)->get();
-
-        if (Auth::check()) {
-            return view('themes.show')->with(compact('theme', 'proses'));
-        }
-            
-        return view('themes.show')->with('proses', $proses);
-
+        
+        return view('themes.show')->with(compact('proses'));
     }
 
     /**
@@ -106,10 +94,11 @@ class ThemeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
-    public function destroy( Request $request, Theme $theme)
+    public function destroy(Request $request, Theme $theme)
     {
         $prose = Prose::where('theme_id', $theme->id)->first();
         if ($prose) {

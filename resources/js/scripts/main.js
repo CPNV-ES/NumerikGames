@@ -11,11 +11,9 @@ $(document).ready(function(){
         }
     });
 
-    console.log($(document).height()-$(window).height())
-
     // Calls the function only for the projectors page
-    if($('div').has('#projectors-index')) {
-       projectorsLoop(); 
+    if ($("#projectors-index").length > 0) {
+        projectorsLoop(); 
     }
     
     // Function that move the proses and verses from bottom to top with an infinite loop
@@ -28,5 +26,14 @@ $(document).ready(function(){
             function () {
                 projectorsLoop()
             });
-        }
+    }
+    $('#addVerse').on('click', function () {
+        var verse = $('#verse').val();
+        console.log(verse)
+        var modal = $('#exampleModalCenter')
+        modal.find('.modal-body #modalVerse').text(verse)
+        modal.find('.modal-body #verse').val(verse)
+      })
+
+        
  });

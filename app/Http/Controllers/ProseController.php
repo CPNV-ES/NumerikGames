@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Prose;
 use App\Theme;
 use App\Verse;
+use Illuminate\Http\Request;
 
 /**
  * ProseController
@@ -23,11 +23,9 @@ class ProseController extends Controller
      */
     public function index(Verse $verse)
     {
-        $proses = Prose::with(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->withCount(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->having('verse_count', '>', 0)->get();
+        foreach (Prose::all() as $value) {
+            $proses = collect($value->only_with_data());
+        }
 
         return view('proses.index')->with(compact('proses', 'verse'));
     }
@@ -64,7 +62,7 @@ class ProseController extends Controller
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function show(Prose $prose, Request $request)
+    public function show(Prose $prose)
     {
         $verses = Verse::where('prose_id', $prose->id)->get();
         $inactivateVerses = $verses->where('status', 0);
@@ -105,34 +103,25 @@ class ProseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, Prose $prose)
+    public function destroy(Prose $prose)
     {
-        $verse = Verse::where('prose_id', $prose->id)->first();
-        if ($verse) {
-            $request->session()->flash('bug', 'Cette prose contient des vers, supprimez les vers avant de recommencer.');
-        } else {
-            $prose->delete();
-            $request->session()->flash('success', 'Vous avez bien supprimez '.$prose->title);
-        }
-        return redirect()->route('proses.index');
+        //
     }
     
     /**
      * Get value from origin
      * The verse_count column is creater by Laravel in the eloquent query, you can see the log to see the query in App\Providers\AppServiceProvider
-     * @param  \App\Prose  $prose
      * @return \Illuminate\Http\Response
      */
     public function projector()
     {
-        $proses = Prose::with(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->withCount(['verse' => function ($query) {
-            $query->where('status', 1);
-        }])->having('verse_count', '>', 0)->get();
+        foreach (Prose::all() as $value) {
+            $proses = collect($value->only_with_data());
+        }
 
         return view('projectors.index')->with(compact('proses'));
     }
