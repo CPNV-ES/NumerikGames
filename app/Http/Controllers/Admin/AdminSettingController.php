@@ -15,7 +15,8 @@ class AdminSettingController extends Controller
      */
     public function index()
     {
-        //
+        $settings = Setting::all();
+        return view('admin.settings.index')->with(compact('settings'));
     }
 
     /**
@@ -25,7 +26,7 @@ class AdminSettingController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.settings.create');
     }
 
     /**
@@ -36,7 +37,9 @@ class AdminSettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $setting = new Setting($request->all());
+        $setting->save();
+        return redirect()->route('admin.settings.index');
     }
 
     /**
@@ -47,7 +50,7 @@ class AdminSettingController extends Controller
      */
     public function show(Setting $setting)
     {
-        //
+        return view('admin.settings.show')->with(compact('setting'));
     }
 
     /**
@@ -58,7 +61,7 @@ class AdminSettingController extends Controller
      */
     public function edit(Setting $setting)
     {
-        //
+        return view('admin.settings.edit')->with(compact('setting'));
     }
 
     /**
@@ -70,7 +73,9 @@ class AdminSettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        //
+        $setting->fill($request->all());
+        $setting->save();
+        return redirect()->route('admin.settings.index');
     }
 
     /**
@@ -81,6 +86,9 @@ class AdminSettingController extends Controller
      */
     public function destroy(Setting $setting)
     {
-        //
+        $setting->delete();
+        return redirect()
+            ->route('admin.settings.index')
+            ->with('success', "Votre paramètre $setting->name a bien été supprimé !");
     }
 }
