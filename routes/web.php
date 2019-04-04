@@ -25,7 +25,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
 //Routes for standard user
 
-Route::get('/', 'ThemeController@index')->name('home');
+Route::get('/', 'WelcomeController@index')->name('home');
+Route::get('/choix', 'ThemeController@index')->name('choice');
 Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
 Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
 Route::resource('themes', 'ThemeController', ['only' => ['show']]);

@@ -100,7 +100,7 @@ class AdminThemeController extends Controller
             return redirect()
                 ->route('admin.themes.index')
                 ->with('success', "Vous avez bien supprimé $theme->name");
-        }
+            }
 
         return redirect()
             ->route('admin.themes.index')
