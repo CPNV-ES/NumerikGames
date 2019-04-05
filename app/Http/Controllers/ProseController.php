@@ -6,6 +6,7 @@ use App\Prose;
 use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
+use App\Setting;
 
 /**
  * ProseController
@@ -66,11 +67,9 @@ class ProseController extends Controller
     {
         $verses = Verse::where('prose_id', $prose->id)->get();
         $inactivateVerses = $verses->where('status', 0);
-        $versesLast = $verses->sortByDesc('created_at')->take(4);
-        $verses = $verses->where('status', 1);
-        $versesLast = $versesLast->reverse();
+        $versesLast = $verses->sortByDesc('id')->take(Setting::where("name", "limit_last_verses")->first()->value)->reverse();
+        $verses = $verses->where('status', 1)->count();
         
-
         return view('proses.show')->with(compact('prose', 'verses', 'inactivateVerses', 'versesLast'));
     }
 

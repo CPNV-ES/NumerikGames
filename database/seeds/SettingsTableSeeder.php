@@ -18,6 +18,11 @@ class SettingsTableSeeder extends Seeder
         ]);
 
         Setting::create([
+            'name' => 'limit_last_verses',
+            'value' => '2',
+        ]);
+
+        Setting::create([
             'name' => 'syllabes',
             'value' => '12',
         ]);
