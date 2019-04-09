@@ -16,10 +16,10 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    @foreach ($versesLast as $verse)
-                        <div>
-                            <p class="text-center">{{$verse->content}}</p>
-                        </div>
+                    @foreach ($versesLast as $verse)                   
+                        <div class="d-inline-block col-1 font-italic">{{$verse->id}} / {{$versesCount}} </div>
+                        <div class="d-inline-block col-10 text-center font-weight-bold"><h3>{{$verse->content}}</h3></div>
+                        <hr>
                     @endforeach
                     <div class="form-group">
                         <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
