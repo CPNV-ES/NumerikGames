@@ -52,7 +52,7 @@
             <input class="form-control form-control-lg" name="content" id="verseModal" type="hidden">
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
             <button type="submit" class="btn btn-primary" tutu="addVerse" id="addVerse">Enregistrer</button>
         </form>
         </div>

@@ -7,15 +7,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             @if (Route::has('login'))
-                {{-- @auth
+                @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.themes.index') }}">Thèmes</a>
+                        <a class="nav-link" href="#">Thèmes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.proses.index') }}">Proses</a>
+                        <a class="nav-link" href="#">Proses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.verses.index') }}">Vers</a>
+                        <a class="nav-link" href="#">Vers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -35,7 +35,7 @@
                             <a class="nav-link" href="{{ route('register') }}">Register</a>
                         </li>
                     @endif
-                @endauth --}}
+                @endauth
             @endif
         </ul>
     </div>
