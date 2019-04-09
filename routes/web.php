@@ -17,6 +17,7 @@ Auth::routes();
 // Admin resources
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+    Route::resource('settings', 'AdminSettingController');
     Route::resource('themes', 'AdminThemeController');
     Route::resource('themes.proses', 'AdminProseController');
     Route::resource('themes.proses.verses', 'AdminVerseController');

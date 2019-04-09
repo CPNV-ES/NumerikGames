@@ -26,5 +26,14 @@ $(document).ready(function(){
             function () {
                 projectorsLoop()
             });
-        }
+    }
+    $('#addVerse').on('click', function () {
+        var verse = $('#verse').val();
+        console.log(verse)
+        var modal = $('#exampleModalCenter')
+        modal.find('.modal-body #modalVerse').text(verse)
+        modal.find('.modal-body #verse').val(verse)
+      })
+
+        
  });

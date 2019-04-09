@@ -8,11 +8,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-
-    </div>
-    <div class="row">
         <div class="col-md-12">
-            <form method="POST" action="{{ route('admin.themes.store') }}">
+            <form method="POST" action="{{ route('admin.themes.store') }}" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="form-group">
                     <label for="name">Titre du thème</label>

@@ -10546,6 +10546,13 @@ h1 {
           transform: scale(1.1);
 }
 
+#home .card {
+  max-width: 200px;
+  max-height: 200px;
+  height: 200px;
+  width: 180px;
+}
+
 #home #link-all-proses {
   padding-top: 20px;
 }
@@ -10557,6 +10564,10 @@ h1 {
 #prose-id p {
   font-size: 36px;
   margin-bottom: 5px;
+}
+
+.modal-body > p {
+  font-style: italic;
 }
 
 /**
