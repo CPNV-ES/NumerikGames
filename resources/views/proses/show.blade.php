@@ -16,10 +16,10 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    @foreach ($versesLast as $verse)
-                        <div>
-                            <p class="text-center">{{$verse->content}}</p>
-                        </div>
+                    @foreach ($versesLast as $verse)                   
+                        <div class="d-inline-block col-1 font-italic">{{$verse->id}} / {{$versesCount}} </div>
+                        <div class="d-inline-block col-10 text-center font-weight-bold"><h3>{{$verse->content}}</h3></div>
+                        <hr>
                     @endforeach
                     <div class="form-group">
                         <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
@@ -49,7 +49,7 @@
         <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}">
             @csrf
             <p class="text-center" name="content" id="modalVerse" type="text"></p>
-            <input class="form-control form-control-lg" name="content" id="verse" type="hidden">
+            <input class="form-control form-control-lg" name="content" id="verseModal" type="hidden">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
