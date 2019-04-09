@@ -49,7 +49,7 @@
         <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}">
             @csrf
             <p class="text-center" name="content" id="modalVerse" type="text"></p>
-            <input class="form-control form-control-lg" name="content" id="verse" type="hidden">
+            <input class="form-control form-control-lg" name="content" id="verseModal" type="hidden">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
