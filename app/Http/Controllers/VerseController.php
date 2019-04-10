@@ -46,25 +46,10 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-          $verse = new Verse($request->all());
 
-          // Create a new instance for the language
-          $syllable = new \Syllable('fr');
-
-          // Set the directory where Syllable can store cache files
-          $syllable->getCache()->setPath(base_path(). '/bootstrap/cache');
-
-          // Count the number of syllable in a text
-          $countSyllables = $syllable->countSyllablesText($request->get('content'));
-
-          if ($countSyllables > 12){
+          /* if ($countSyllables > 12){
               return back()->with('error', 'Votre vers contient plus de 12 syllabes ! Il y en avait '. $countSyllables);
-          }
-
-          $verse->save();
-          $themes = Theme::all();
-          return view('welcome')->with(compact('themes'));
-        $prose = Prose::find($request->get('prose_id'));
+          } */
 
         if($prose->is_full()) {
             $prose->is_full = 1;
@@ -132,5 +117,19 @@ class VerseController extends Controller
     {
         $verse->delete();
         return redirect()->route('verses.index');
+    }
+
+    /**
+     * Count the number of syllables.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function ajaxRequestPost(Request $request)
+    {   
+        $verse = $request->verse;
+        $sylablleCount = Verse::countSyllable($verse, 'fr');
+
+        return response()->json(['success' => true, 'data' => $sylablleCount]);
     }
 }
