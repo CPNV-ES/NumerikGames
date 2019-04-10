@@ -22,6 +22,7 @@
                         <hr>
                     @endforeach
                     <div class="form-group">
+                        <div>Nombre de syllabes : <span></span></div>
                         <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
                     </div>
                     <div>

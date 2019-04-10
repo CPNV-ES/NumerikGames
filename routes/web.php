@@ -30,4 +30,4 @@ Route::get('/projectors', 'ProseController@projector')->name('projectors.index')
 Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
 Route::resource('themes', 'ThemeController', ['only' => ['show']]);
 Route::resource('proses', 'ProseController');
-
+Route::post('/ajaxRequestPostVerse', 'VerseController@ajaxRequestPost');
