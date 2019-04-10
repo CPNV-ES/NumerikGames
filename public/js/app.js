@@ -36470,6 +36470,31 @@ if (token) {
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
+  // Will count the syllable at every change in the input
+  $("#verse").on('input', function () {
+    var verse = $(this).val();
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+    $.ajax({
+      url: "../ajaxRequestPostVerse",
+      type: "POST",
+      data: {
+        'verse': verse
+      },
+      dataType: "json",
+      success: function success(response) {
+        if (response.success) {
+          $('.form-group span').html(response.data);
+        }
+      },
+      error: function error(textStatus) {
+        console.log("Request failed : " + textStatus);
+      }
+    });
+  });
   $('#unactive').css('display', 'none');
   $('input').on('click', function () {
     if ($('input').is(':checked')) {

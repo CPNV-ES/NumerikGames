@@ -1,5 +1,30 @@
 $(document).ready(function(){
 
+    // Will count the syllable at every change in the input
+    $("#verse").on('input', function(){
+        var verse = $(this).val();
+        $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
+        $.ajax({
+            url : "../ajaxRequestPostVerse",
+            type : "POST",
+            data : {'verse' : verse},
+            dataType : "json",
+            success : function(response){
+                if (response.success)
+                {
+                    $('.form-group span').html(response.data);
+                }
+            },
+            error : function(textStatus) {
+                console.log("Request failed : " + textStatus);
+            }
+        });
+    });
+
     $('#unactive').css('display', 'none');
 
 
