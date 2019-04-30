@@ -23,8 +23,6 @@ class ThemesTableSeeder extends Seeder
             'Amour',
             'Amitié',
             'La mort',
-            'La tristesse',
-            'Le bonheur',
         ];
 
 

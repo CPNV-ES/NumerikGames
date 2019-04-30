@@ -53,7 +53,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-            <button type="submit" class="btn btn-primary" tutu="addVerse" id="addVerse">Enregistrer</button>
+            <button type="submit" class="btn btn-primary" id="addVerse">Enregistrer</button>
         </form>
         </div>
         </div>

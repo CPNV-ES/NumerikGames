@@ -22,9 +22,10 @@ class ThemeController extends Controller
      */
     public function index(Request $request)
     {
+        $themes = Theme::take(3)->get();
         
-        $themes = Theme::all();
-        return view('welcome')->with(compact('themes'));
+        $size_column = 12 / count($themes);
+        return view('welcome')->with(compact('themes', 'size_column'));
         
     }
 

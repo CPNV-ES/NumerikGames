@@ -19,8 +19,9 @@ class Theme extends Model
         'color',
     ];
 
-    public function prose()
+    public function proses()
     {
         return $this->hasMany('App\Prose');
     }
+
 }
