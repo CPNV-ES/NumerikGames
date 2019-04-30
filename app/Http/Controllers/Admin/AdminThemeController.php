@@ -95,12 +95,12 @@ class AdminThemeController extends Controller
      */
     public function destroy(Theme $theme)
     {
-        if (!$theme->prose->first->exists()) {
+        if (!$theme->proses->first->exists()) {
             $theme->delete();
             return redirect()
                 ->route('admin.themes.index')
                 ->with('success', "Vous avez bien supprimé $theme->name");
-        }
+            }
 
         return redirect()
             ->route('admin.themes.index')
