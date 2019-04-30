@@ -36533,7 +36533,7 @@ $(document).ready(function () {
       var modal = $('#exampleModalCenter');
       modal.modal("show");
       modal.find('.modal-body #modalVerse').text(verse);
-      modal.find('.modal-body #verse').val(verse);
+      modal.find('.modal-body #verseModal').val(verse);
     }
   });
 });

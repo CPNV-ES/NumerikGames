@@ -33,10 +33,10 @@ class Prose extends Model
      *
      * @return Boolean
      */
-    public function is_full() 
+    public function is_full()
     {
         $contains = count($this->verse);
-        if ($contains >= Setting::where('name', 'default_limit')->first()->value) {
+        if ($contains >= Setting::where('name', 'limit_verses')->first()->value) {
             return true;
         } else {
             return false;
@@ -49,7 +49,7 @@ class Prose extends Model
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function only_with_data() 
+    public function only_with_data()
     {
         $proses = Prose::with(['verse' => function ($query) {
             $query->where('status', 1);
