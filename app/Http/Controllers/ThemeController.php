@@ -23,9 +23,14 @@ class ThemeController extends Controller
     public function index(Request $request)
     {
         $themes = Theme::take(3)->get();
+        $themesCollection = collect([]);
+
+        foreach ($themes as $theme) {
+            $themesCollection->push($theme->proses->where('is_full', 0));
+        }
         
         $size_column = 12 / count($themes);
-        return view('welcome')->with(compact('themes', 'size_column'));
+        return view('welcome')->with(compact('themes', 'size_column', 'themesCollection'));
         
     }
 

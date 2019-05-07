@@ -6,6 +6,7 @@ use App\Prose;
 use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
+use App\Setting;
 
 /**
  * VerseController
@@ -54,11 +55,24 @@ class VerseController extends Controller
         if($prose->is_full()) {
             $prose->is_full = 1;
             $prose->save();
-            $request->session()->flash('error', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez un autre thème.');
+            $newProse = new Prose();
+            $newProse->title = $prose->theme->name;
+            $newProse->theme_id = $prose->theme->id;
+            $newProse->save();
+            $request->session()->flash('error', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez une autre prose.');
             return redirect()->back();
         } else {
             $verse = new Verse($request->all());
+            
             $verse->save();
+            if ($prose->verse->count()+1 == Setting::where('name', 'default_limit')->first()->value) {
+                $prose->is_full = 1;
+                $prose->save();
+                $newProse = new Prose();
+                $newProse->title = $prose->theme->name;
+                $newProse->theme_id = $prose->theme->id;
+                $newProse->save();
+            }
             $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
         }
         $themes = Theme::all();

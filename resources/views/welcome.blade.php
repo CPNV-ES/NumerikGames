@@ -24,20 +24,21 @@
                 @foreach ($themes as $theme)
                     <div class="col-md-{{$size_column}}">
                         <h2>{{ $theme->name }}</h2>
+                    </div> <!-- .col-md- -->
+                @endforeach
+            </div> <!-- .row -->
 
-                        @foreach ($theme->proses as $item)
-                            <div class="card-group">
-                                <div class="card">
-                                    <a href="{{ route('proses.show', $item->id) }}">
-                                        <img class="thumbnail" src="{{ asset('storage/'. $theme->path) }}"/>
-                                    </a>
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">{{$item->title}}</h5>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row">
+                @foreach ($themesCollection as $theme)
+                    <div class="col-md-{{$size_column}}">
+                        @foreach ($theme->take(3) as $prose)
+                        <div class="prose">
+                            <a href="{{ route('proses.show', $prose->id) }}">
+                                <img class="thumbnail" src="{{ asset('storage/'. $prose->path) }}"/>
+                            </a>
+                            <p>{{$prose->title}}</p>
+                        </div>
                         @endforeach
-                        
                     </div>
                 @endforeach
             </div> <!-- .row -->

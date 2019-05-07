@@ -7,6 +7,7 @@ use App\Prose;
 use App\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Setting;
 
 /**
  * AdminVerseController
@@ -24,7 +25,7 @@ class AdminVerseController extends Controller
     public function __construct()
     {
         $this->middleware(function ($request, $next) {
-            if ( $request->theme->id == $request->proses->theme_id || $request->proses->id == $request->verse->prose_id) {
+            if ( $request->theme->id == $request->prose->theme_id || $request->prose->id == $request->verse->prose_id) {
                 return $next($request);
             } else {
                 return abort(404);
@@ -128,6 +129,11 @@ class AdminVerseController extends Controller
      */
     public function destroy(Theme $theme, Prose $prose, Verse $verse)
     {
+        $prose->is_full(intval(Setting::where('name', 'default_limit')->first()->value)+1) ? 
+            $prose->is_full = 1 : 
+            $prose->is_full = 0;
+            $prose->save();
+            
         $verse->delete();
         return redirect()
             ->route('admin.themes.proses.verses.index', ['theme' => $theme, 'prose' => $prose])

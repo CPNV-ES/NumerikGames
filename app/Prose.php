@@ -31,12 +31,14 @@ class Prose extends Model
     /**
      * Count number of verse in your prose, return boolean if the number is more important than Settings table value.
      *
+     * @param  Integer $limit is the limit if we need a special limit
      * @return Boolean
      */
-    public function is_full()
+    public function is_full($limit = null) 
     {
+        isset($limit) ? $limit : $limit = Setting::where('name', 'default_limit')->first()->value ;
         $contains = count($this->verse);
-        if ($contains >= Setting::where('name', 'limit_verses')->first()->value) {
+        if ($contains >= $limit) {
             return true;
         } else {
             return false;
