@@ -27,7 +27,7 @@
                     </div> <!-- .col-md- -->
                 @endforeach
             </div> <!-- .row -->
-
+            
             <div class="row">
                 @foreach ($themesCollection as $theme)
                     <div class="col-md-{{$size_column}}">
@@ -36,7 +36,6 @@
                             <a href="{{ route('proses.show', $prose->id) }}">
                                 <img class="thumbnail" src="{{ asset('storage/'. $prose->path) }}"/>
                             </a>
-                            <p>{{$prose->title}}</p>
                         </div>
                         @endforeach
                     </div>

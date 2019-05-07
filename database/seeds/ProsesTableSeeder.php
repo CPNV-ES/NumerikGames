@@ -21,23 +21,15 @@ class ProsesTableSeeder extends Seeder
     {
         /* Prepare data to be send */
         $loveArray = [
-            'Première soirée',
+            'Amour',
         ];
 
         $friendshipArray = [
-            'A M. A. T.',
+            'Amitié',
         ];
 
         $deathArray = [
-            'Ce que c’est que la mort',
-        ];
-
-        $sadnessArray = [
-            'Clair de lune',
-        ];
-
-        $happinessArray = [
-            'Printemps',
+            'La mort',
         ];
 
         /* Get foreign keys */
@@ -50,7 +42,7 @@ class ProsesTableSeeder extends Seeder
             foreach($loveArray as $value) {
                 $prose = Prose::create([
                     'title' => $value,
-                    'is_full' => 1,
+                    'is_full' => 0,
                 ]);
                 $prose->theme()->associate($love);
                 $prose->save();
@@ -72,7 +64,7 @@ class ProsesTableSeeder extends Seeder
             foreach($deathArray as $value) {
                 $prose = Prose::create([
                     'title' => $value,
-                    'is_full' => 1,
+                    'is_full' => 0,
                 ]);
                 $prose->theme()->associate($death);
                 $prose->save();
