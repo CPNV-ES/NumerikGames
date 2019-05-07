@@ -2237,3 +2237,48 @@ et que le dépôt existe.
   INFO [fcfd91df] Running /usr/bin/env echo "Branch master (at 3a4a21d60ae2fd92d44515a0e932f3a2b4146e22) deployed as release 20190221140209 by Jarod.STRECKEISEN" >> /var/www/numerikgames/deploy/revisions.log as cpnv@172.17.101.219
  DEBUG [fcfd91df] Command: cd /var/www/numerikgames/deploy/releases && /usr/bin/env echo "Branch master (at 3a4a21d60ae2fd92d44515a0e932f3a2b4146e22) deployed as release 20190221140209 by Jarod.STRECKEISEN" >> /var/www/numerikgames/deploy/revisions.log
   INFO [c6979af8] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 15:48:08 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [eb17f5ba] Running /usr/bin/env mkdir -p /tmp as numgames@projectname.mycpnv.ch
+ DEBUG [eb17f5ba] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 15:51:17 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ad5d5b65] Running /usr/bin/env mkdir -p /tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [ad5d5b65] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 15:54:06 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a39baed8] Running /usr/bin/env mkdir -p /tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [a39baed8] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 15:59:01 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9a51d440] Running /usr/bin/env mkdir -p /tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [9a51d440] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 16:08:13 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d125e471] Running /usr/bin/env mkdir -p /tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [d125e471] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 16:25:04 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f1162367] Running /usr/bin/env mkdir -p /home/numerikgames.mycpnv.ch/tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [f1162367] Command: /usr/bin/env mkdir -p /home/numerikgames.mycpnv.ch/tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 16:27:03 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [fe1534b5] Running /usr/bin/env mkdir -p /home/numerikgames.mycpnv.ch/tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [fe1534b5] Command: /usr/bin/env mkdir -p /home/numerikgames.mycpnv.ch/tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 16:27:25 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8af40ae1] Running /usr/bin/env mkdir -p /home/numerikgames.mycpnv.ch/tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [8af40ae1] Command: /usr/bin/env mkdir -p /home/numerikgames.mycpnv.ch/tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 16:27:55 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b31d902b] Running /usr/bin/env mkdir -p /tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [b31d902b] Command: /usr/bin/env mkdir -p /tmp
