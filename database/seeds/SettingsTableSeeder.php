@@ -14,7 +14,7 @@ class SettingsTableSeeder extends Seeder
     {
         Setting::create([
             'name' => 'default_limit',
-            'value' => '20',
+            'value' => '16',
         ]);
         
         Setting::create([

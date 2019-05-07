@@ -16,7 +16,7 @@
                 {{csrf_field()}}
                 <div class="form-group">
                     <label for="content">Ajoutez un nouveau vers</label>
-                    <input class="form-control" type="text" placeholder="Je suis mon cher ami, très heureux de te voir." id="content" name="content">
+                    <input class="form-control" type="text" placeholder="Je suis mon cher ami, très heureux de te voir." id="content" name="content" autofocus>
                     <small id="contentHelp" class="form-text text-muted">Le contenu du vers.</small>
                 </div>
                 <div class="form-group">

@@ -22,7 +22,7 @@
                         </div>
                     @endforeach
                     <div class="form-group">
-                        <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
+                        <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte..." autofocus>
                     </div>
                     <div>
                         <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="addVerse" id="addVerse" data-toggle="modal" data-target="#exampleModalCenter">Ajouter mon texte</button>
