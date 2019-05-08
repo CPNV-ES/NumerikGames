@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ca7343889332c2b8ecca11c251430c",
+    "content-hash": "497e75710d9fdf50c2151c476f27d16d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1008,7 +1008,7 @@
                 {
                     "name": "Luís Otávio Cobucci Oblonczyk",
                     "email": "lcobucci@gmail.com",
-                    "role": "Developer"
+                    "role": "developer"
                 }
             ],
             "description": "A simple library to work with JSON Web Token and JSON Web Signature",
@@ -1179,6 +1179,50 @@
                 "psr-3"
             ],
             "time": "2018-11-05T09:00:11+00:00"
+        },
+        {
+            "name": "neochief/syllable",
+            "version": "1.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neochief/phpSyllable.git",
+                "reference": "d57f779779391004963cebcc97f18c939e099721"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neochief/phpSyllable/zipball/d57f779779391004963cebcc97f18c939e099721",
+                "reference": "d57f779779391004963cebcc97f18c939e099721",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "classes/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Text syllable splitting and hyphenation using Frank M. Liang's TeX algorithm.",
+            "homepage": "https://github.com/vanderlee/phpSyllable",
+            "keywords": [
+                "dash",
+                "hyphen",
+                "hyphenate",
+                "hyphenation",
+                "language",
+                "locale",
+                "split",
+                "syllable",
+                "syllables",
+                "text",
+                "words"
+            ],
+            "time": "2018-02-12T12:18:33+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2608,7 +2652,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",

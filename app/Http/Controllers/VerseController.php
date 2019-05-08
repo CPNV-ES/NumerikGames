@@ -47,6 +47,9 @@ class VerseController extends Controller
     public function store(Request $request)
     {
         $prose = Prose::find($request->get('prose_id'));
+          /* if ($countSyllables > 12){
+              return back()->with('error', 'Votre vers contient plus de 12 syllabes ! Il y en avait '. $countSyllables);
+          } */
 
         if($prose->is_full()) {
             $prose->is_full = 1;
@@ -114,5 +117,19 @@ class VerseController extends Controller
     {
         $verse->delete();
         return redirect()->route('verses.index');
+    }
+
+    /**
+     * Count the number of syllables.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function ajaxRequestPost(Request $request)
+    {
+        $verse = $request->verse;
+        $sylablleCount = Verse::countSyllable($verse, 'fr');
+
+        return response()->json(['success' => true, 'data' => $sylablleCount]);
     }
 }
