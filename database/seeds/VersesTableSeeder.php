@@ -46,22 +46,6 @@ class VersesTableSeeder extends Seeder
                 'Elle eut un doux rire brutal ',
                 'Qui s’égrenait en claires trilles, ',
                 'Un joli rire de cristal.',
-                'Les petits pieds sous la chemise ',
-                'Se sauvèrent : "Veux-tu finir !" ',
-                'La première audace permise, ',
-                'Le rire feignait de punir !',
-                'Pauvrets palpitants sous ma lèvre, ',
-                'Je baisai doucement ses yeux : ',
-                'Elle jeta sa tête mièvre ',
-                'En arrière : "Oh ! c’est encor mieux !...',
-                'Monsieur, j’ai deux mots à te dire..." ',
-                'Je lui jetai le reste au sein ',
-                'Dans un baiser, qui la fit rire ',
-                'D’un bon rire qui voulait bien...',
-                'Elle était fort déshabillée ',
-                'Et de grands arbres indiscrets ',
-                'Aux vitres jetaient leur feuillée ',
-                'Malinement, tout près, tout près.',
             ],
             $friendship = [
                 'Ainsi, mon cher ami, vous allez donc partir !',
@@ -96,92 +80,40 @@ class VersesTableSeeder extends Seeder
                 'Vous jette au seuil des cieux. On tremble ; on se voit nu,',
                 'Impur, hideux, noué des mille noeuds funèbres',
                 'De ses torts, de ses maux honteux, de ses ténèbres ;',
-                'Et soudain on entend quelqu’un dans l’infini',
-                'Qui chante, et par quelqu’un on sent qu’on est béni,',
-                'Sans voir la main d’où tombe à notre âme méchante',
-                'L’amour, et sans savoir quelle est la voix qui chante.',
-                'On arrive homme, deuil, glaçon, neige ; on se sent',
-                'Fondre et vivre ; et, d’extase et d’azur s’emplissant,',
-                'Tout notre être frémit de la défaite étrange',
-                'Du monstre qui devient dans la lumière un ange.',
-            ],
-            $sadness = [
-                'La lune était sereine et jouait sur les flots. —',
-                'La fenêtre enfin libre est ouverte à la brise,',
-                'La sultane regarde, et la mer qui se brise,',
-                'Là-bas, d’un flot d’argent brode les noirs îlots.',
-                'De ses doigts en vibrant s’échappe la guitare.',
-                'Elle écoute… Un bruit sourd frappe les sourds échos.',
-                'Est-ce un lourd vaisseau turc qui vient des eaux de Cos,',
-                'Battant l’archipel grec de sa rame tartare ?',
-                'Sont-ce des cormorans qui plongent tour à tour,',
-                'Et coupent l’eau, qui roule en perles sur leur aile ?',
-                'Est-ce un djinn qui là-haut siffle d’un voix grêle,',
-                'Et jette dans la mer les créneaux de la tour ?',
-                'Qui trouble ainsi les flots près du sérail des femmes ? —',
-                'Ni le noir cormoran, sur la vague bercé,',
-                'Ni les pierres du mur, ni le bruit cadencé',
-                'Du lourd vaisseau, rampant sur l’onde avec des rames.',
-                'Ce sont des sacs pesants, d’où partent des sanglots.',
-                'On verrait, en sondant la mer qui les promène,',
-                'Se mouvoir dans leurs flancs comme une forme humaine… —',
-                'La lune était sereine et jouait sur les flots.',
-            ],
-            $happiness = [
-                'Voici donc les longs jours, lumière, amour, délire !',
-                'Voici le printemps ! mars, avril au doux sourire,',
-                'Mai fleuri, juin brûlant, tous les beaux mois amis !',
-                'Les peupliers, au bord des fleuves endormis,',
-                'Se courbent mollement comme de grandes palmes ;',
-                'L’oiseau palpite au fond des bois tièdes et calmes ;',
-                'Il semble que tout rit, et que les arbres verts',
-                'Sont joyeux d’être ensemble et se disent des vers.',
-                'Le jour naît couronné d’une aube fraîche et tendre ;',
-                'Le soir est plein d’amour ; la nuit, on croit entendre,',
-                'A travers l’ombre immense et sous le ciel béni,',
-                'Quelque chose d’heureux chanter dans l’infini.',
             ],
         ];
-        
-        foreach ($proses[0] as $value) {
-            $verse = Verse::create([
-                'content'   => $value,
-                'status'    => 1,
-            ]);
-            $verse->prose()->associate(1);
-            $verse->save();
+
+        for ($i = 1; $i <= 3; $i++) {
+            foreach ($proses[0] as $value) {
+                $verse = Verse::create([
+                    'content'   => $value,
+                    'status'    => 1,
+                ]);
+                $verse->prose()->associate($i);
+                $verse->save();
+            }
         }
-        foreach ($proses[1] as $value) {
-            $verse = Verse::create([
-                'content'   => $value,
-                'status'    => 1,
-            ]);
-            $verse->prose()->associate(2);
-            $verse->save();
+
+        for ($i = 3; $i <= 6; $i++) {
+            foreach ($proses[1] as $value) {
+                $verse = Verse::create([
+                    'content'   => $value,
+                    'status'    => 1,
+                ]);
+                $verse->prose()->associate($i);
+                $verse->save();
+            }
         }
-        foreach ($proses[2] as $value) {
-            $verse = Verse::create([
-                'content'   => $value,
-                'status'    => 1,
-            ]);
-            $verse->prose()->associate(3);
-            $verse->save();
-        }
-        foreach ($proses[3] as $value) {
-            $verse = Verse::create([
-                'content'   => $value,
-                'status'    => 1,
-            ]);
-            $verse->prose()->associate(4);
-            $verse->save();
-        }
-        foreach ($proses[4] as $value) {
-            $verse = Verse::create([
-                'content'   => $value,
-                'status'    => 1,
-            ]);
-            $verse->prose()->associate(5);
-            $verse->save();
+
+        for ($i = 6; $i <= 9; $i++) {
+            foreach ($proses[2] as $value) {
+                $verse = Verse::create([
+                    'content'   => $value,
+                    'status'    => 1,
+                ]);
+                $verse->prose()->associate($i);
+                $verse->save();
+            }
         }
     }
 }

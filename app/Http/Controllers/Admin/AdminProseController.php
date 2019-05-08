@@ -23,7 +23,7 @@ class AdminProseController extends Controller
     public function __construct()
     {
         $this->middleware(function ($request, $next) {
-            if ( $request->theme->id == $request->prose->theme_id) {
+            if ( $request->theme->id == $request->proses->theme_id) {
                 return $next($request);
             } else {
                 return abort(404);
