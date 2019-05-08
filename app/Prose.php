@@ -36,7 +36,7 @@ class Prose extends Model
      */
     public function is_full($limit = null) 
     {
-        isset($limit) ? $limit : $limit = Setting::where('name', 'default_limit')->first()->value ;
+        isset($limit) ? $limit : $limit = Setting::where('name', 'limit_verses')->first()->value ;
         $contains = count($this->verse);
         if ($contains >= $limit) {
             return true;

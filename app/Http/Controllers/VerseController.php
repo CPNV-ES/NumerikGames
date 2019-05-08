@@ -65,7 +65,7 @@ class VerseController extends Controller
             $verse = new Verse($request->all());
             
             $verse->save();
-            if ($prose->verse->count()+1 == Setting::where('name', 'default_limit')->first()->value) {
+            if ($prose->verse->count()+1 == Setting::where('name', 'limit_verses')->first()->value) {
                 $prose->is_full = 1;
                 $prose->save();
                 $newProse = new Prose();
