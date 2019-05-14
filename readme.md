@@ -31,3 +31,6 @@ For install the database, you need to create your database (with the name in you
 ## Clients
 - Jerome Chevillat
 - Marc Atallah
+
+### Version
+Current version : 0.4.0
