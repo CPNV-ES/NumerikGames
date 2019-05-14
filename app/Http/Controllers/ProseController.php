@@ -70,7 +70,7 @@ class ProseController extends Controller
         $versesLast = $verses->sortByDesc('id')->take(Setting::where("name", "limit_last_verses")->first()->value)->reverse();
         $versesCount = (int)Setting::where("name", "limit_verses")->first()->value;
 
-        return view('proses.show')->with(compact('prose', 'versesCount', 'inactivateVerses', 'versesLast', 'versesLastCount'));
+        return view('proses.show')->with(compact('prose', 'versesCount', 'inactivateVerses', 'versesLast'));
     }
 
     /**
