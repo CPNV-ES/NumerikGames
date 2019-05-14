@@ -26,5 +26,10 @@ class SettingsTableSeeder extends Seeder
             'name' => 'syllabes',
             'value' => '12',
         ]);
+
+        Setting::create([
+            'name' => 'home_limit_prose',
+            'value' => '3',
+        ]);
     }
 }
