@@ -16,7 +16,7 @@
     {{-- CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Numerik Games') }}</title>
+    <title>{{ config('app.name', 'Numerik Games Festival') }}</title>
     <link href="/favicon.png" rel="icon" data-n-head="true" type="image/png">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
@@ -24,6 +24,7 @@
 
 <body>
     @include('layouts.header')
+    @include('flash-message')
     @yield('content')
 
 </body>

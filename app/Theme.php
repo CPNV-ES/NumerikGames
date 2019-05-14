@@ -15,11 +15,13 @@ class Theme extends Model
 {
     protected $fillable = [
         'name',
+        'path',
+        'color',
     ];
 
-    public function prose()
+    public function proses()
     {
         return $this->hasMany('App\Prose');
     }
-    
+
 }
