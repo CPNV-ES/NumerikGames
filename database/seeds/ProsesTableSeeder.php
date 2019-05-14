@@ -21,76 +21,54 @@ class ProsesTableSeeder extends Seeder
     {
         /* Prepare data to be send */
         $loveArray = [
-            'Première soirée',
+            'Amour',
         ];
 
         $friendshipArray = [
-            'A M. A. T.',
+            'Amitié',
         ];
 
         $deathArray = [
-            'Ce que c’est que la mort',
-        ];
-
-        $sadnessArray = [
-            'Clair de lune',
-        ];
-
-        $happinessArray = [
-            'Printemps',
+            'La mort',
         ];
 
         /* Get foreign keys */
         $love        = Theme::where('name', 'Amour')->first();
         $friendship  = Theme::where('name', 'Amitié')->first();
         $death       = Theme::where('name', 'La mort')->first();
-        $sadness     = Theme::where('name', 'La tristesse')->first();
-        $happiness   = Theme::where('name', 'Le bonheur')->first();
 
         /* Insert data into the DB */
-        foreach($loveArray as $value) {
-            $prose = Prose::create([
-                'title' => $value,
-                'is_full' => 1,
-            ]);
-            $prose->theme()->associate($love);
-            $prose->save();
+        for ($i = 1; $i <= 3; $i++) {
+            foreach($loveArray as $value) {
+                $prose = Prose::create([
+                    'title' => $value,
+                    'is_full' => 0,
+                ]);
+                $prose->theme()->associate($love);
+                $prose->save();
+            }
         }
 
-        foreach($friendshipArray as $value) {
-            $prose = Prose::create([
-                'title' => $value,
-                'is_full' => 0,
-            ]);
-            $prose->theme()->associate($friendship);
-            $prose->save();
+        for ($i = 1; $i <= 3; $i++) {
+            foreach($friendshipArray as $value) {
+                $prose = Prose::create([
+                    'title' => $value,
+                    'is_full' => 0,
+                ]);
+                $prose->theme()->associate($friendship);
+                $prose->save();
+            }
         }
 
-        foreach($deathArray as $value) {
-            $prose = Prose::create([
-                'title' => $value,
-                'is_full' => 1,
-            ]);
-            $prose->theme()->associate($death);
-            $prose->save();
-        }
-
-        foreach($sadnessArray as $value) {
-            $prose = Prose::create([
-                'title' => $value,
-                'is_full' => 1,
-            ]);
-            $prose->theme()->associate($sadness);
-            $prose->save();
-        }
-
-        foreach($happinessArray as $value) {
-            $prose = Prose::create([
-                'title' => $value,
-                'is_full' => 0,
-            ]);
-            $prose->theme()->associate($happiness);
-            $prose->save();
+        for ($i = 1; $i <= 3; $i++) {
+            foreach($deathArray as $value) {
+                $prose = Prose::create([
+                    'title' => $value,
+                    'is_full' => 0,
+                ]);
+                $prose->theme()->associate($death);
+                $prose->save();
+            }
         }
 
     }

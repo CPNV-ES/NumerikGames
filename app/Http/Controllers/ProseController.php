@@ -6,6 +6,7 @@ use App\Prose;
 use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
+use App\Setting;
 
 /**
  * ProseController
@@ -66,12 +67,10 @@ class ProseController extends Controller
     {
         $verses = Verse::where('prose_id', $prose->id)->get();
         $inactivateVerses = $verses->where('status', 0);
-        $versesLast = $verses->sortByDesc('created_at')->take(4);
-        $verses = $verses->where('status', 1);
-        $versesLast = $versesLast->reverse();
-        
+        $versesLast = $verses->sortByDesc('id')->take(Setting::where("name", "limit_last_verses")->first()->value)->reverse();
+        $versesCount = (int)Setting::where("name", "limit_verses")->first()->value;
 
-        return view('proses.show')->with(compact('prose', 'verses', 'inactivateVerses', 'versesLast'));
+        return view('proses.show')->with(compact('prose', 'versesCount', 'inactivateVerses', 'versesLast'));
     }
 
     /**
@@ -111,7 +110,7 @@ class ProseController extends Controller
     {
         //
     }
-    
+
     /**
      * Get value from origin
      * The verse_count column is creater by Laravel in the eloquent query, you can see the log to see the query in App\Providers\AppServiceProvider

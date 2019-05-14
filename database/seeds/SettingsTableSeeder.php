@@ -13,23 +13,23 @@ class SettingsTableSeeder extends Seeder
     public function run()
     {
         Setting::create([
-            'name' => 'default_limit',
-            'value' => '20',
-        ]);
-        
-        Setting::create([
-            'name' => 'limit30',
-            'value' => '30',
+            'name' => 'limit_verses',
+            'value' => '16',
         ]);
 
         Setting::create([
-            'name' => 'limit40',
-            'value' => '40',
+            'name' => 'limit_last_verses',
+            'value' => '2',
         ]);
 
         Setting::create([
             'name' => 'syllabes',
             'value' => '12',
+        ]);
+
+        Setting::create([
+            'name' => 'home_limit_prose',
+            'value' => '3',
         ]);
     }
 }

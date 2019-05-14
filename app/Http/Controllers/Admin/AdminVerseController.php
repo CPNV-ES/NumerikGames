@@ -7,6 +7,7 @@ use App\Prose;
 use App\Theme;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Setting;
 
 /**
  * AdminVerseController
@@ -128,6 +129,11 @@ class AdminVerseController extends Controller
      */
     public function destroy(Theme $theme, Prose $prose, Verse $verse)
     {
+        $prose->is_full(intval(Setting::where('name', 'limit_verses')->first()->value)+1) ? 
+            $prose->is_full = 1 : 
+            $prose->is_full = 0;
+            $prose->save();
+            
         $verse->delete();
         return redirect()
             ->route('admin.themes.proses.verses.index', ['theme' => $theme, 'prose' => $prose])
