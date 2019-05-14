@@ -6,6 +6,7 @@ use App\Prose;
 use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Setting;
 
 /**
@@ -48,10 +49,6 @@ class VerseController extends Controller
     public function store(Request $request)
     {
         $prose = Prose::find($request->get('prose_id'));
-          /* if ($countSyllables > 12){
-              return back()->with('error', 'Votre vers contient plus de 12 syllabes ! Il y en avait '. $countSyllables);
-          } */
-
         if($prose->is_full()) {
             $prose->is_full = 1;
             $prose->save();
@@ -63,8 +60,8 @@ class VerseController extends Controller
             return redirect()->back();
         } else {
             $verse = new Verse($request->all());
-            
             $verse->save();
+
             if ($prose->verse->count()+1 == Setting::where('name', 'limit_verses')->first()->value) {
                 $prose->is_full = 1;
                 $prose->save();
@@ -75,8 +72,14 @@ class VerseController extends Controller
             }
             $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
         }
-        $themes = Theme::all();
-        return redirect()->route('home')->with(compact('themes'));
+
+        if(Input::get('save')) {
+            $themes = Theme::all();
+            return redirect()->route('home')->with(compact('themes'));
+    
+        } else if(Input::get('continue')) {
+            return back();
+        }
     }
 
     /**

@@ -21,7 +21,6 @@
             <div class="row">
                 <div class="col-md-12">
                     @foreach ($versesLast as $key => $verse)
-
                         <div class="d-inline-block col-1 font-italic">{{$key+1}} / {{$versesCount}} </div>
                         <div class="d-inline-block col-10 text-center font-weight-bold"><h3>{{$verse->content}}</h3></div>
                         <hr>
@@ -52,14 +51,15 @@
                 <p class="text-center">{{$verse->content}}</p>
             @endforeach
 
-        <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}">
+        <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}" id="post-verse-store">
             @csrf
             <p class="text-center font-weight-bold" name="content" id="modalVerse" type="text"></p>
             <input class="form-control form-control-lg" name="content" id="verseModal" type="hidden">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-            <button type="submit" class="btn btn-primary" id="addVerse">Enregistrer et continuer</button>
+            <button type="submit" class="btn btn-primary" name="continue" value="continue">Enregistrer et continuer</button>
+            <button type="submit" class="btn btn-primary" name="save" value="save">Enregistrer et revenir à l'accueil</button>
         </form>
         </div>
         </div>
