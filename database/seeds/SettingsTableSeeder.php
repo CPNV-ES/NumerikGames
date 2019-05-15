@@ -31,5 +31,10 @@ class SettingsTableSeeder extends Seeder
             'name' => 'home_limit_prose',
             'value' => '3',
         ]);
+
+        Setting::create([
+            'name' => 'default_vers',
+            'value' => 'Lorem ipsum dolor sit amet, consectetur',
+        ]);
     }
 }
