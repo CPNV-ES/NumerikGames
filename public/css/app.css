@@ -10538,7 +10538,6 @@ h1 {
   height: 100%;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  max-height: 125px;
 }
 
 #home a > img:hover {
@@ -10546,11 +10545,12 @@ h1 {
           transform: scale(1.1);
 }
 
-#home .card {
-  max-width: 200px;
+#home .prose {
+  max-width: 300px;
   max-height: 200px;
-  height: 200px;
-  width: 180px;
+  height: 400px;
+  width: 480px;
+  margin-bottom: 20px;
 }
 
 #home #link-all-proses {

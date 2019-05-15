@@ -27,21 +27,21 @@
                     </div> <!-- .col-md- -->
                 @endforeach
             </div> <!-- .row -->
-            
+
             <div class="row">
                 @foreach ($themesCollection as $theme)
                     <div class="col-md-{{$size_column}}">
                         @foreach ($theme->take($limit) as $prose)
                         <div class="prose">
                             <a href="{{ route('proses.show', $prose->id) }}">
-                                <img class="thumbnail" src="{{ asset('storage/'. $prose->path) }}"/>
+                                <img class="img-thumbnail" src="{{ asset($prose->path) }}"/>
                             </a>
                         </div>
                         @endforeach
                     </div>
                 @endforeach
             </div> <!-- .row -->
-            
+
             <div id="link-all-proses" class="row">
                 <div class="col-md-12">
                     <a href="{{route('proses.index')}}" class="btn btn-outline-dark" role="button" aria-pressed="true">Voir toutes les proses</a>
@@ -50,4 +50,3 @@
         </div>
     </div>
 @endsection
-    
