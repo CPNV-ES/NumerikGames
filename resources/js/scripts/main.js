@@ -52,8 +52,10 @@ $(document).ready(function(){
                 projectorsLoop()
             });
     }
+});
 
-
+// After the page is loaded
+$(window).bind('load', function() {
     // Add the verse from the input to the modal if not empty
     $('#addVerse').on('click', function () {
         var verse = $('#verse').val();
@@ -64,11 +66,15 @@ $(document).ready(function(){
         } else {
             var modal = $('#exampleModalCenter')
             modal.modal("show")
+            // Hide the buttom if the verse is at 15
+            if (parseInt($('.col-md-12 #verseActive:last').text()) + 1 >= $('#lastCountVerse').text()) {
+                $("#continue").css("display", "none");
+            }
             modal.find('.modal-body #modalVerse').text(verse)
             modal.find('.modal-body #verseModal').val(verse)
         }
 
-      })
+    })
+});
 
 
- });
