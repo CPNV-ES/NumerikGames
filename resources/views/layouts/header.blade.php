@@ -21,6 +21,7 @@
                                 <a class="dropdown-item" href="{{ route('admin.themes.proses.index', $item->id) }}">{{$item->name}}</a>
                                 <div class="dropdown-divider"></div>
                             @endforeach
+                            <a class="dropdown-item" href="{{ route('admin.proses') }}">Proses</a>
                         </div>
                     </li>
                     <li class="nav-item">

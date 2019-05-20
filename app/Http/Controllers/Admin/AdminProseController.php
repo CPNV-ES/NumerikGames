@@ -131,4 +131,15 @@ class AdminProseController extends Controller
             ->route('admin.themes.proses.index', $theme)
             ->with('error', 'Cette prose contient des vers, supprimez les avant de recommencer');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function all()
+    {
+        $proses = Prose::all()->sortBy('title');
+        return view('admin.proses.all')->with(compact('proses'));
+    }
 }
