@@ -52,10 +52,9 @@ class VerseController extends Controller
         if($prose->is_full()) {
             $prose->is_full = 1;
             $prose->save();
-            $newProse = new Prose();
-            $newProse->title = $prose->theme->name;
-            $newProse->theme_id = $prose->theme->id;
-            $newProse->save();
+
+            Prose::setDefault($prose);
+
             $request->session()->flash('error', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez une autre prose.');
             return redirect()->back();
         } else {
@@ -65,10 +64,8 @@ class VerseController extends Controller
             if ($prose->verse->count()+1 == Setting::where('name', 'limit_verses')->first()->value) {
                 $prose->is_full = 1;
                 $prose->save();
-                $newProse = new Prose();
-                $newProse->title = $prose->theme->name;
-                $newProse->theme_id = $prose->theme->id;
-                $newProse->save();
+                
+                Prose::setDefault($prose);
             }
             $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
         }

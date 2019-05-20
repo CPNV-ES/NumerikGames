@@ -21,6 +21,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('themes', 'AdminThemeController');
     Route::resource('themes.proses', 'AdminProseController');
     Route::resource('themes.proses.verses', 'AdminVerseController');
+    Route::get('proses', 'AdminProseController@all')->name('proses');
 });
 
 //Routes for standard user

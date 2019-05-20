@@ -60,4 +60,26 @@ class Prose extends Model
         }])->having('verse_count', '>', 0)->get();
         return $proses;
     }
+
+    /**
+     * Generate new prose with new verses
+     *
+     * @param  Object $oldProse is the current prose you work with
+     * @return
+     */
+    public static function setDefault($oldProse) {
+        $prose = new Prose();
+        $prose->title = $oldProse->theme->name;
+        $prose->theme_id = $oldProse->theme->id;
+        $prose->save();
+
+        for ($i = 1; $i < 3; $i++) {
+            $vers = new Verse();
+            $vers->content = Setting::where('name', "default_vers_$i")->first()->value;
+            $vers->prose_id = $prose->id;
+            $vers->status = 1;
+            $vers->save();
+        }
+
+    }
 }
