@@ -32,7 +32,7 @@
                                     <td>{{$prose->title}}</td>
                                     <td>{{$prose->theme->name}}</td>
                                     <td>{{$prose->verse->count()}}</td>
-                                    <td>{{$prose->created_at}}</td>
+                                    <td>{{$prose->created_at->toDayDateTimeString()}}</td>
                                     <td><input type="checkbox" name="{{$prose}}" id="prose-{{$prose->id}}"></td>
                                     <td><a href="{{ route('admin.themes.proses.verses.index', [ $prose->theme, $prose]) }}" class="btn btn-primary">{{$prose->title}}</a></td>
                                 </tr>   

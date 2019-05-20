@@ -139,7 +139,7 @@ class AdminProseController extends Controller
      */
     public function all()
     {
-        $proses = Prose::all()->sortBy('title');
+        $proses = Prose::all();
         return view('admin.proses.all')->with(compact('proses'));
     }
 }
