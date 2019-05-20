@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Snipe\BanBuilder\CensorWords;
 use App\Prose;
 use App\Theme;
 use App\Verse;
@@ -58,7 +58,20 @@ class VerseController extends Controller
             $request->session()->flash('error', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez une autre prose.');
             return redirect()->back();
         } else {
+            $censor = new CensorWords;
+            $badwords = $censor->setDictionary('fr');
+
             $verse = new Verse($request->all());
+            $words = explode(" ",$verse->content);
+            for($i=0;$i<count($words);$i++)
+            {
+              $string = $censor->censorString($words[$i]);
+              if($string['matched'] != null)
+              {
+                $request->session()->flash('error', 'N\'utilisez pas d\'injure s\'il vous plait.');
+                return redirect()->back();
+              }
+            }
             $verse->save();
 
             if ($prose->verse->count()+1 == Setting::where('name', 'limit_verses')->first()->value) {
