@@ -21,6 +21,7 @@
                                 <th scope="col">Thème</th>
                                 <th scope="col">Vers dans cette prose</th>
                                 <th scope="col">Date de création</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Selectionnez</th>
                                 <th scope="col"></th>
                             </tr>
@@ -33,6 +34,7 @@
                                     <td>{{$prose->theme->name}}</td>
                                     <td>{{$prose->verse->count()}}</td>
                                     <td>{{$prose->created_at->toDayDateTimeString()}}</td>
+                                    <td>{{$prose->is_projectable ? 'activé' : 'désactivé' }}</td>
                                     <td><input type="checkbox" name="{{$prose}}" id="prose-{{$prose->id}}"></td>
                                     <td><a href="{{ route('admin.themes.proses.verses.index', [ $prose->theme, $prose]) }}" class="btn btn-primary">{{$prose->title}}</a></td>
                                 </tr>   
