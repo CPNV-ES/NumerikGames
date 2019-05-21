@@ -34,7 +34,7 @@ class Prose extends Model
      * @param  Integer $limit is the limit if we need a special limit
      * @return Boolean
      */
-    public function is_full($limit = null) 
+    public function is_full($limit = null)
     {
         isset($limit) ? $limit : $limit = Setting::where('name', 'limit_verses')->first()->value ;
         $contains = count($this->verse);
@@ -71,6 +71,7 @@ class Prose extends Model
         $prose = new Prose();
         $prose->title = $oldProse->theme->name;
         $prose->theme_id = $oldProse->theme->id;
+        $prose->path = $oldProse->theme->path;
         $prose->save();
 
         for ($i = 1; $i < 3; $i++) {

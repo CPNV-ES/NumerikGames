@@ -51,6 +51,7 @@ class VerseController extends Controller
         $prose = Prose::find($request->get('prose_id'));
         if($prose->is_full()) {
             $prose->is_full = 1;
+            $prose->is_projectable = 1;
             $prose->save();
 
             Prose::setDefault($prose);
@@ -63,6 +64,7 @@ class VerseController extends Controller
 
             if ($prose->verse->count()+1 == Setting::where('name', 'limit_verses')->first()->value) {
                 $prose->is_full = 1;
+                $prose->is_projectable = 1;
                 $prose->save();
                 
                 Prose::setDefault($prose);

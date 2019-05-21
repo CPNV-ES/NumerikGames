@@ -29,14 +29,14 @@
                         <tbody>
                             @foreach ($proses as $prose)
                                 <tr>
-                                    <th scope="row">{{$prose->id}}</th>
-                                    <td>{{$prose->title}}</td>
+                                    <th scope="row"><span class="btn" style="background:{{$prose->theme->color}}; color: white;">{{$prose->id}}</span></th>
+                                    <td><span class="btn">{{$prose->title}}</span></td>
                                     <td>{{$prose->theme->name}}</td>
                                     <td>{{$prose->verse->count()}}</td>
                                     <td>{{$prose->created_at->toDayDateTimeString()}}</td>
-                                    <td>{{$prose->is_projectable ? 'activé' : 'désactivé' }}</td>
+                                    <td>{{$prose->is_projectable ? 'activée' : 'désactivée' }}</td>
                                     <td><input type="checkbox" name="{{$prose}}" id="prose-{{$prose->id}}"></td>
-                                    <td><a href="{{ route('admin.themes.proses.verses.index', [ $prose->theme, $prose]) }}" class="btn btn-primary">{{$prose->title}}</a></td>
+                                    <td><a href="{{ route('admin.themes.proses.verses.index', [ $prose->theme, $prose]) }}" class="btn btn-primary"  style="background:{{$prose->theme->color}}; border: none;">Voir les vers </a></td>
                                 </tr>   
                             @endforeach
                         </tbody>
