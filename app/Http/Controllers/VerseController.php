@@ -68,7 +68,7 @@ class VerseController extends Controller
               $string = $censor->censorString($words[$i]);
               if($string['matched'] != null)
               {
-                $request->session()->flash('error', 'N\'utilisez pas d\'injure s\'il vous plait.');
+                $request->session()->flash('error', 'N\'utilisez pas d\'injures s\'il vous plait.');
                 return redirect()->back();
               }
             }
