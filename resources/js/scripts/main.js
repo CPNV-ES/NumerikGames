@@ -1,4 +1,12 @@
-$(document).ready(function(){
+// After the page is loaded
+$(window).bind('load', function() {
+
+    // ------------- VARIABLES ------------- //
+    var prose = $('.background');
+    var totalSlideNumber = prose.length;
+    var slideDurationSetting = 5000; //Amount of time for which slide is "locked"
+    var speedSlides = 5000;
+
 
     // Will count the syllable at every change in the input
     $("#verse").on('input', function(){
@@ -37,25 +45,32 @@ $(document).ready(function(){
     });
 
     // Calls the function only for the projectors page
-    if ($("#projectors-index").length > 0) {
+    if (!totalSlideNumber) {
         projectorsLoop();
     }
 
+    // Time set for the first slide
+    setTimeout(slideDurationSetting);
+
     // Function that move the proses and verses from bottom to top with an infinite loop
     function projectorsLoop() {
-        $('nav').css('z-index', 99999);
-        var h_prose = $('.prose').height();
-        $(".prose")
-            .css({top:920,position:'fixed'})
-            .animate({top: '-'+h_prose}, 130000, 'swing',
-            function () {
-                projectorsLoop()
-            });
-    }
-});
+        var proseHeight = prose.height();
+        prose.each(function(index) {
+            $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
+            proseHeight = proseHeight + prose.height();
+            if (parseInt(index) == 8 && totalSlideNumber == 8) {
+                $('html').animate({scrollTop: 0}, speedSlides);
+            }
+        });
 
-// After the page is loaded
-$(window).bind('load', function() {
+    }
+    // No maximum size exceeded
+    setInterval(projectorsLoop, 2000);
+
+
+
+
+
     // Add the verse from the input to the modal if not empty
     $('#addVerse').on('click', function () {
         var verse = $('#verse').val();

@@ -10505,6 +10505,11 @@ h1 {
 * Import for the project
 */
 
+html,
+body {
+  overflow: hidden;
+}
+
 #projectors-index #title-projectors {
   height: auto;
   width: 100%;
@@ -10521,6 +10526,7 @@ h1 {
 
 #projectors-index .proses {
   margin-bottom: 80px;
+  display: none;
 }
 
 #projectors-index .proses h2 {
@@ -10531,6 +10537,57 @@ h1 {
 #projectors-index .proses p {
   margin-bottom: 5px;
   font-size: 29px;
+}
+
+#projectors-index .proses img {
+  width: 50%;
+  height: 50%;
+}
+
+#projectors-index .background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 130vh;
+  width: 100%;
+  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 4);
+}
+
+#projectors-index .background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#projectors-index .content-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column nowrap;
+  color: #fff;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  -webkit-transform: translateY(40vh);
+          transform: translateY(40vh);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+#projectors-index .content-title {
+  font-size: 12vh;
+  line-height: 1.4;
 }
 
 #home a > img {
