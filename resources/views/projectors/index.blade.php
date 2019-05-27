@@ -5,7 +5,7 @@
   -- @author Nicolas Henry
   --}}
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}" class="overflow">
 
 <head>
     <meta charset="utf-8">
@@ -22,24 +22,16 @@
 </head>
     <body>
     <div id="projectors-index">
-
-
-                    @foreach ($proses as $prose)
-
-
-
-                            <section class="background" style="background-image: url({{$prose->path}});">
-                                <div class="content-wrapper">
-                                <p class="content-title">{{$prose->title}}</p>
-                                @foreach ($prose->verse as $value)
-                                    <p class="content-subtitle">{{$value->content}}</p>
-                                @endforeach
-                                </div>
-                            </section>
-
-
-                    @endforeach
-
+        @foreach ($proses as $prose)
+            <section class="background" style="background-image: url({{$prose->path}});">
+                <div class="content-wrapper">
+                <p class="content-title">{{$prose->title}}</p>
+                @foreach ($prose->verse as $value)
+                    <p class="content-subtitle">{{$value->content}}</p>
+                @endforeach
+                </div>
+            </section>
+        @endforeach
     </div>
 </body>
 </html>

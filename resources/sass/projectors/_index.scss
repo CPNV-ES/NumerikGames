@@ -1,7 +1,6 @@
-html, body {
-        overflow: hidden;
-      }
-
+.overflow {
+    overflow: hidden;
+}
 #projectors-index {
     // ------------- MIXINS ------------- //
     @mixin transition($time, $property: all, $easing: ease-in) {
@@ -12,6 +11,9 @@ html, body {
     $parallax-offset: 30vh;
     $content-offset: 40vh;
     $transition-speed: 1.2s;
+
+
+
 
     #title-projectors {
         height: auto;

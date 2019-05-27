@@ -36537,7 +36537,7 @@ $(window).bind('load', function () {
 
   setInterval(projectorsLoop, 2000); // Add the verse from the input to the modal if not empty
 
-  $('#addVerse').on('click', function () {
+  function modalOpen() {
     var verse = $('#verse').val();
 
     if (!verse) {
@@ -36554,6 +36554,18 @@ $(window).bind('load', function () {
       modal.find('.modal-body #modalVerse').text(verse);
       modal.find('.modal-body #verseModal').val(verse);
     }
+  } // Trigger modal on Enter
+
+
+  $("#verse").keypress(function (event) {
+    if (event.which == 13) {
+      event.preventDefault;
+      modalOpen();
+    }
+  }); // Trigger modal on button click
+
+  $('#addVerse').on('click', function () {
+    modalOpen();
   });
 });
 

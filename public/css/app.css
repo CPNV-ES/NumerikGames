@@ -10505,8 +10505,7 @@ h1 {
 * Import for the project
 */
 
-html,
-body {
+.overflow {
   overflow: hidden;
 }
 
@@ -10616,6 +10615,11 @@ body {
 
 #prose-id h1 {
   font-size: 52px;
+}
+
+#prose-id img {
+  max-width: 50%;
+  border-radius: 50% !important;
 }
 
 .modal-body > p {
