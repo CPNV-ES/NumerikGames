@@ -108,7 +108,8 @@ class AdminProseController extends Controller
     {
         $prose->fill($request->all());
         $prose->save();
-        return redirect()->route('admin.themes.proses.index', $theme);
+        //return redirect()->route('admin.themes.proses.index', $theme);
+        return redirect()->route('admin.proses');
     }
 
     /**

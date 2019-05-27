@@ -16,6 +16,7 @@ class Prose extends Model
     protected $fillable = [
         'title',
         'theme_id',
+        'is_projectable',
     ];
 
     public function theme()
@@ -81,6 +82,5 @@ class Prose extends Model
             $vers->status = 1;
             $vers->save();
         }
-
     }
 }

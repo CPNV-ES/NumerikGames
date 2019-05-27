@@ -58,7 +58,12 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-            <button type="submit" class="btn btn-primary" name="continue" value="continue">Enregistrer et continuer</button>
+
+            {{-- If the prose will be full, don't let continue with this prose --}}
+            @if ($prose->verse->count()+2 <= $versesCount)
+                <button type="submit" class="btn btn-primary" name="continue" value="continue">Enregistrer et continuer</button>
+            @endif
+
             <button type="submit" class="btn btn-primary" name="save" value="save">Enregistrer et revenir à l'accueil</button>
         </form>
         </div>

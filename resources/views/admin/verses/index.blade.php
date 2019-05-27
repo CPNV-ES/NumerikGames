@@ -83,7 +83,10 @@
                                               <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal-{{$verse->id}}">Supprimer</button>
                                           </div>
                                       </td>
-                                      <td><input type="checkbox" name="{{$verse}}" id="verse-{{$verse->id}}"></td>
+                                      <td>
+                                          <input type="checkbox" name="{{$verse}}" id="verse-{{$verse->id}}">
+                                          {{-- Check if this vers is "douteux" --}}
+                                      </td>
                                   </tr>   
                               @endforeach
                           </tbody>
