@@ -48,9 +48,13 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
+        /* Get the correct prose */
         $prose = Prose::find($request->get('prose_id'));
+
+        /* Check if the prose is full */
         if($prose->is_full()) {
             $prose->is_full = 1;
+            $prose->is_projectable = 1;
             $prose->save();
 
             Prose::setDefault($prose);
@@ -58,6 +62,7 @@ class VerseController extends Controller
             $request->session()->flash('error', 'Malheureusement cette resource n\'a pas fonctionné correctement, choisissez une autre prose.');
             return redirect()->back();
         } else {
+            /* If the prose is not full, add the new verse */
             $censor = new CensorWords;
             $badwords = $censor->setDictionary('fr');
 
@@ -76,6 +81,7 @@ class VerseController extends Controller
 
             if ($prose->verse->count()+1 == Setting::where('name', 'limit_verses')->first()->value) {
                 $prose->is_full = 1;
+                $prose->is_projectable = 1;
                 $prose->save();
                 
                 Prose::setDefault($prose);
@@ -83,6 +89,7 @@ class VerseController extends Controller
             $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
         }
 
+        /* Get the action for the correct button on the view */
         if(Input::get('save')) {
             $themes = Theme::all();
             return redirect()->route('home')->with(compact('themes'));

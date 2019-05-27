@@ -37,8 +37,6 @@ class ProsesTableSeeder extends Seeder
         $friendship  = Theme::where('name', 'Amitié')->first();
         $death       = Theme::where('name', 'La mort')->first();
 
-        $theme = Theme::all();
-
 
         /* Insert data into the DB */
         for ($i = 1; $i <= 3; $i++) {
