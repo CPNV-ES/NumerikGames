@@ -73,8 +73,7 @@ class VerseController extends Controller
               $string = $censor->censorString($words[$i]);
               if($string['matched'] != null)
               {
-                $request->session()->flash('error', 'N\'utilisez pas d\'injures s\'il vous plait.');
-                return redirect()->back();
+                $verse->word_flag = 1;
               }
             }
             $verse->save();
@@ -83,7 +82,7 @@ class VerseController extends Controller
                 $prose->is_full = 1;
                 $prose->is_projectable = 1;
                 $prose->save();
-                
+
                 Prose::setDefault($prose);
             }
             $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
@@ -93,7 +92,7 @@ class VerseController extends Controller
         if(Input::get('save')) {
             $themes = Theme::all();
             return redirect()->route('home')->with(compact('themes'));
-    
+
         } else if(Input::get('continue')) {
             return back();
         }
