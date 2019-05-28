@@ -83,4 +83,17 @@ class Prose extends Model
             $vers->save();
         }
     }
+
+    
+    public static function flagged_verse($prose) {
+        $i = 0;
+        foreach ($prose->verse as $verse) {
+            if ($verse->word_flag) {    
+                $i++;
+            }
+        }
+        if ($i) {
+            echo "<span class='badge badge-danger'>Cette prose contient $i vers suspect.</span>";
+        }
+    }
 }

@@ -11,6 +11,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2>Prose : {{$prose->title}}</h2>
+                    @if ($verse->word_flag)
+                        <span class="badge badge-danger">Ce vers contient un mot suspect.</span>
+                    @elseif (!$verse->word_flag && $verse->prose->is_projectable)
+                        <span class="badge badge-success">Ce vers est publié.</span>
+                    @else
+                        <span class="badge badge-primary">Ce vers sera publié si la prose est pleine.</span>
+                    @endif
                 </div>
             </div>{{-- .row --}}
             <div class="row">
@@ -37,7 +44,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                 </div>{{-- .col-md-12 --}}
             </div>{{-- .row --}}
         </div>{{-- .container --}}

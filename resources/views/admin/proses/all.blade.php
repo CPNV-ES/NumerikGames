@@ -44,7 +44,7 @@
                                         <button onclick="event.preventDefault();
                                             document.getElementById('update-proses-form-{{$prose->id}}').submit();"
                                             class="btn btn-{{$prose->is_projectable ? 'danger' : 'success' }}">
-                                            {{$prose->is_projectable ? 'Désactiver' : 'Publier' }}
+                                            {{$prose->is_projectable ? 'Ne plus projeter' : 'Valider pour projeter' }}
                                         </button>
                                     </td>
                                     <td>

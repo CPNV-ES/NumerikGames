@@ -25,7 +25,7 @@
                                     <th scope="col">Titre</th>
                                     <th scope="col">Date de création</th>
                                     <th scope="col">Actions</th>
-                                    <th scope="col">Selectionnez</th>
+                                    <th scope="col">Informations</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,12 +73,13 @@
                                                 <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal-{{$prose->id}}">Supprimer</button>
                                             </div>
                                         </td>
-                                        <td><input type="checkbox" name="{{$prose}}" id="prose-{{$prose->id}}"></td>
-                                    </tr>   
+                                        <td>
+                                            {{$prose->flagged_verse($prose)}}
+                                        </td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                     </div>
                 </div>
             </div>
