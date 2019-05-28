@@ -51,10 +51,11 @@ $(window).bind('load', function() {
         projectorsLoop();
     }
 
+    // Loops projectors infinitely after some time
+    setInterval(projectorsLoop, totalSlideNumber * 10000);
+
     // Function that move the proses and verses from bottom to top with an infinite loop
-    setInterval(function projectorsLoop() {
-        // Time set for the first slide
-        //setTimeout(slideDurationSetting);
+    function projectorsLoop() {
         var proseHeight = prose.height();
         $('#projectors-index').each(function() {
             $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
@@ -62,9 +63,7 @@ $(window).bind('load', function() {
         });
         $('html').animate({scrollTop: 0}, speedSlides);
 
-    }, totalSlideNumber * 10000);
-
-
+    };
 
 
     // Add the verse from the input to the modal if not empty

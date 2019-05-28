@@ -74,6 +74,7 @@ class VerseController extends Controller
               if($string['matched'] != null)
               {
                 $verse->word_flag = 1;
+                $verse->status = 0;
               }
             }
             $verse->save();

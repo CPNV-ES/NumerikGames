@@ -36791,12 +36791,12 @@ $(window).bind('load', function () {
 
   if (!totalSlideNumber) {
     projectorsLoop();
-  } // Function that move the proses and verses from bottom to top with an infinite loop
+  } // Loops projectors infinitely after some time
 
 
-  Object(timers__WEBPACK_IMPORTED_MODULE_0__["setInterval"])(function projectorsLoop() {
-    // Time set for the first slide
-    //setTimeout(slideDurationSetting);
+  Object(timers__WEBPACK_IMPORTED_MODULE_0__["setInterval"])(projectorsLoop, totalSlideNumber * 10000); // Function that move the proses and verses from bottom to top with an infinite loop
+
+  function projectorsLoop() {
     var proseHeight = prose.height();
     $('#projectors-index').each(function () {
       $('html').animate({
@@ -36807,7 +36807,9 @@ $(window).bind('load', function () {
     $('html').animate({
       scrollTop: 0
     }, speedSlides);
-  }, totalSlideNumber * 10000); // Add the verse from the input to the modal if not empty
+  }
+
+  ; // Add the verse from the input to the modal if not empty
 
   function modalOpen() {
     var verse = $('#verse').val();
