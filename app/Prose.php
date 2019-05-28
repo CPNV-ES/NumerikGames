@@ -59,7 +59,7 @@ class Prose extends Model
         }])->withCount(['verse' => function ($query) {
             $query->where('status', 1);
         }])->having('verse_count', '>', 0)->get();
-        return $proses;
+        return $proses->where('is_projectable', 1);
     }
 
     /**

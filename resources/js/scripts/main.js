@@ -1,3 +1,5 @@
+import { setInterval } from "timers";
+
 // After the page is loaded
 $(window).bind('load', function() {
 
@@ -49,23 +51,21 @@ $(window).bind('load', function() {
         projectorsLoop();
     }
 
-    // Time set for the first slide
-    setTimeout(slideDurationSetting);
-
     // Function that move the proses and verses from bottom to top with an infinite loop
-    function projectorsLoop() {
+    setInterval(function projectorsLoop() {
+        // Time set for the first slide
+        //setTimeout(slideDurationSetting);
         var proseHeight = prose.height();
-        prose.each(function(index) {
+        $('#projectors-index').each(function() {
             $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
             proseHeight = proseHeight + prose.height();
-            if (parseInt(index) == 8 && totalSlideNumber == 8) {
-                $('html').animate({scrollTop: 0}, speedSlides);
-            }
         });
+        $('html').animate({scrollTop: 0}, speedSlides);
 
-    }
-    // No maximum size exceeded
-    setInterval(projectorsLoop, 2000);
+    }, totalSlideNumber * 10000);
+
+
+
 
     // Add the verse from the input to the modal if not empty
     function modalOpen() {
