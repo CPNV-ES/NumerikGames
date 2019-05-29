@@ -1,5 +1,3 @@
-import { setInterval } from "timers";
-
 // After the page is loaded
 $(window).bind('load', function() {
 
@@ -7,7 +5,7 @@ $(window).bind('load', function() {
     var prose = $('.background');
     var totalSlideNumber = prose.length;
     var slideDurationSetting = 3000; //Amount of time for which slide is "locked"
-    var speedSlides = 5000;
+    var speedSlides = 3000;
 
 
     // Will count the syllable at every change in the input

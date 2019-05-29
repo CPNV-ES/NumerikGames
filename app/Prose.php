@@ -54,7 +54,7 @@ class Prose extends Model
      */
     public function only_with_data()
     {
-        $proses = Prose::with(['verse' => function ($query) {
+        $proses = Prose::inRandomOrder()->with(['verse' => function ($query) {
             $query->where('status', 1);
         }])->withCount(['verse' => function ($query) {
             $query->where('status', 1);
@@ -84,11 +84,11 @@ class Prose extends Model
         }
     }
 
-    
+
     public static function flagged_verse($prose) {
         $i = 0;
         foreach ($prose->verse as $verse) {
-            if ($verse->word_flag) {    
+            if ($verse->word_flag) {
                 $i++;
             }
         }
