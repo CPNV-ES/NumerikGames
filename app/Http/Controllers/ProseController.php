@@ -69,6 +69,9 @@ class ProseController extends Controller
         $inactivateVerses = $verses->where('status', 0);
         $versesLast = $verses->sortByDesc('id')->take(Setting::where("name", "limit_last_verses")->first()->value)->reverse();
         $versesCount = (int)Setting::where("name", "limit_verses")->first()->value;
+        $value = Setting::where("name", "theme_amour_helper")->first()->value;
+        $pieces = explode(", ", $value);
+        dd($pieces);
 
         return view('proses.show')->with(compact('prose', 'versesCount', 'inactivateVerses', 'versesLast'));
     }

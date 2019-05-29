@@ -41,5 +41,20 @@ class SettingsTableSeeder extends Seeder
             'name' => 'default_vers_2',
             'value' => 'Adipiscing elit. Duis aliquet, nisl',
         ]);
+        
+        Setting::create([
+            'name' => 'theme_amour_helper',
+            'value' => 'aime, Anel, mon amour, passion, Jarod, fréquentation, engouement, concubinage, coït, attachement, adultère',
+        ]);
+        
+        Setting::create([
+            'name' => 'theme_amitie_helper',
+            'value' => 'mon ami, service, compliment, bonté, liaison, sex-friend, souris',
+        ]);
+        
+        Setting::create([
+            'name' => 'theme_la_mort_helper',
+            'value' => 'mort, tristesse, violence, sex, viol, CPNV, détresse, consentement',
+        ]);
     }
 }
