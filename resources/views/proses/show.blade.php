@@ -28,7 +28,7 @@
                     @endforeach
                     <div class="form-group">
                         <div>Nombre de syllabes : <span></span></div>
-                        <input class="form-control form-control-lg" name="content" id="verse" type="text" autofocus placeholder="Une souris verte...">
+                        <input class="form-control form-control-lg" name="content" id="verse" type="text" autofocus placeholder="Une souris verte..." autocomplete="off">
                     </div>
                     <div>
                         <button class="btn btn-outline-success mx-auto d-block pl-5 pr-5" type="submit" name="addVerse" id="addVerse">Ajouter mon texte</button>
