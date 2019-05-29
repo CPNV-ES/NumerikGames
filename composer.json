@@ -12,7 +12,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "neochief/syllable": "^1.4"
+        "neochief/syllable": "^1.4",
+        "snipe/banbuilder": "dev-master"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

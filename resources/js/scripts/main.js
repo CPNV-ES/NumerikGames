@@ -1,4 +1,14 @@
-$(document).ready(function(){
+import { setInterval } from "timers";
+
+// After the page is loaded
+$(window).bind('load', function() {
+
+    // ------------- VARIABLES ------------- //
+    var prose = $('.background');
+    var totalSlideNumber = prose.length;
+    var slideDurationSetting = 5000; //Amount of time for which slide is "locked"
+    var speedSlides = 5000;
+
 
     // Will count the syllable at every change in the input
     $("#verse").on('input', function(){
@@ -37,25 +47,27 @@ $(document).ready(function(){
     });
 
     // Calls the function only for the projectors page
-    if ($("#projectors-index").length > 0) {
+    if (!totalSlideNumber) {
         projectorsLoop();
     }
 
+    // Loops projectors infinitely after some time
+    setInterval(projectorsLoop, totalSlideNumber * 10000);
+
     // Function that move the proses and verses from bottom to top with an infinite loop
     function projectorsLoop() {
-        $('nav').css('z-index', 99999);
-        var h_prose = $('.prose').height();
-        $(".prose")
-            .css({top:920,position:'fixed'})
-            .animate({top: '-'+h_prose}, 130000, 'swing',
-            function () {
-                projectorsLoop()
-            });
-    }
+        var proseHeight = prose.height();
+        $('#projectors-index').each(function() {
+            $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
+            proseHeight = proseHeight + prose.height();
+        });
+        $('html').animate({scrollTop: 0}, speedSlides);
+
+    };
 
 
     // Add the verse from the input to the modal if not empty
-    $('#addVerse').on('click', function () {
+    function modalOpen() {
         var verse = $('#verse').val();
         if (!verse)
         {
@@ -64,11 +76,28 @@ $(document).ready(function(){
         } else {
             var modal = $('#exampleModalCenter')
             modal.modal("show")
+            // Hide the buttom if the verse is at 15
+            if (parseInt($('.col-md-12 #verseActive:last').text()) + 1 >= $('#lastCountVerse').text()) {
+                $("#continue").css("display", "none");
+            }
             modal.find('.modal-body #modalVerse').text(verse)
             modal.find('.modal-body #verseModal').val(verse)
         }
+    }
 
-      })
+    // Trigger modal on Enter
+    $("#verse").keypress(function (event) {
+        if (event.which == 13) {
+            event.preventDefault
+            modalOpen()
+        }
+    })
 
 
- });
+    // Trigger modal on button click
+    $('#addVerse').on('click', function () {
+        modalOpen()
+    })
+});
+
+

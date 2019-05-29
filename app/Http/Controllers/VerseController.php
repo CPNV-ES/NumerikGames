@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Snipe\BanBuilder\CensorWords;
 use App\Prose;
 use App\Theme;
 use App\Verse;
@@ -63,14 +63,27 @@ class VerseController extends Controller
             return redirect()->back();
         } else {
             /* If the prose is not full, add the new verse */
+            $censor = new CensorWords;
+            $badwords = $censor->setDictionary('fr');
+
             $verse = new Verse($request->all());
+            $words = explode(" ",$verse->content);
+            for($i=0;$i<count($words);$i++)
+            {
+              $string = $censor->censorString($words[$i]);
+              if($string['matched'] != null)
+              {
+                $verse->word_flag = 1;
+                $verse->status = 0;
+              }
+            }
             $verse->save();
 
             if ($prose->verse->count()+1 == Setting::where('name', 'limit_verses')->first()->value) {
                 $prose->is_full = 1;
                 $prose->is_projectable = 1;
                 $prose->save();
-                
+
                 Prose::setDefault($prose);
             }
             $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
@@ -80,7 +93,7 @@ class VerseController extends Controller
         if(Input::get('save')) {
             $themes = Theme::all();
             return redirect()->route('home')->with(compact('themes'));
-    
+
         } else if(Input::get('continue')) {
             return back();
         }

@@ -15,22 +15,23 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center">{{$prose->theme->name}}</h1>
+                    <img class="mx-auto d-block"  src="{{ asset($prose->theme->path) }}"/>
                     <hr>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     @foreach ($versesLast as $key => $verse)
-                        <div class="d-inline-block col-1 font-italic">{{$key+1}} / {{$versesCount}} </div>
+                        <div class="d-inline-block col-1 font-italic"><span id="verseActive">{{$key+1}}</span> / <span id="lastCountVerse">{{$versesCount}}</span> </div>
                         <div class="d-inline-block col-10 text-center font-weight-bold"><h3>{{$verse->content}}</h3></div>
                         <hr>
                     @endforeach
                     <div class="form-group">
                         <div>Nombre de syllabes : <span></span></div>
-                        <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
+                        <input class="form-control form-control-lg" name="content" id="verse" type="text" autofocus placeholder="Une souris verte...">
                     </div>
                     <div>
-                        <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="addVerse" id="addVerse">Ajouter mon texte</button>
+                        <button class="btn btn-outline-success mx-auto d-block pl-5 pr-5" type="submit" name="addVerse" id="addVerse">Ajouter mon texte</button>
                     </div>
                 </div>
             </div>
@@ -51,19 +52,14 @@
                 <p class="text-center">{{$verse->content}}</p>
             @endforeach
 
-        <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}" id="post-verse-store">
+        <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}">
             @csrf
             <p class="text-center font-weight-bold" name="content" id="modalVerse" type="text"></p>
             <input class="form-control form-control-lg" name="content" id="verseModal" type="hidden">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-
-            {{-- If the prose will be full, don't let continue with this prose --}}
-            @if ($prose->verse->count()+2 <= $versesCount)
-                <button type="submit" class="btn btn-primary" name="continue" value="continue">Enregistrer et continuer</button>
-            @endif
-
+            <button type="submit" class="btn btn-primary" name="continue" value="continue" id="continue">Enregistrer et continuer</button>
             <button type="submit" class="btn btn-primary" name="save" value="save">Enregistrer et revenir à l'accueil</button>
         </form>
         </div>
