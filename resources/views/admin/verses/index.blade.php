@@ -35,7 +35,7 @@
                                   <th scope="col">Content</th>
                                   <th scope="col">Status du vers</th>
                                   <th scope="col">Actions</th>
-                                  <th scope="col">Selectionnez</th>
+                                  <th scope="col">Informations</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -83,12 +83,15 @@
                                               <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal-{{$verse->id}}">Supprimer</button>
                                           </div>
                                       </td>
-                                      <td><input type="checkbox" name="{{$verse}}" id="verse-{{$verse->id}}"></td>
+                                      <td>
+                                          @if ($verse->word_flag)
+                                            <span class="badge badge-danger">Ce vers contient un mot suspect.</span>
+                                          @endif
+                                      </td>
                                   </tr>   
                               @endforeach
                           </tbody>
                       </table>
-                      <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                   </div>
               </div>
           </div>

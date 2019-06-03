@@ -1,4 +1,12 @@
-$(document).ready(function(){
+// After the page is loaded
+$(window).bind('load', function() {
+
+    // ------------- VARIABLES ------------- //
+    var prose = $('.background');
+    var totalSlideNumber = prose.length;
+    var slideDurationSetting = 3000; //Amount of time for which slide is "locked"
+    var speedSlides = 3000;
+
 
     // Will count the syllable at every change in the input
     $("#verse").on('input', function(){
@@ -37,25 +45,35 @@ $(document).ready(function(){
     });
 
     // Calls the function only for the projectors page
-    if ($("#projectors-index").length > 0) {
+    if (!totalSlideNumber) {
         projectorsLoop();
     }
 
     // Function that move the proses and verses from bottom to top with an infinite loop
     function projectorsLoop() {
-        $('nav').css('z-index', 99999);
-        var h_prose = $('.prose').height();
-        $(".prose")
-            .css({top:920,position:'fixed'})
-            .animate({top: '-'+h_prose}, 130000, 'swing',
-            function () {
-                projectorsLoop()
-            });
-    }
+        var proseHeight = prose.height();
 
+        // Loop trough every prose
+        prose.each(function(index) {
+            $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
+            proseHeight = proseHeight + prose.height();
+
+            // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+            if (index === totalSlideNumber-2) {
+                return false;
+            }
+        });
+
+        // Return to the top page
+        $('html').animate({scrollTop: 0}, speedSlides);
+
+    };
+
+    // Loops projectors infinitely after some time
+    setInterval(projectorsLoop, totalSlideNumber * slideDurationSetting * 3);
 
     // Add the verse from the input to the modal if not empty
-    $('#addVerse').on('click', function () {
+    function modalOpen() {
         var verse = $('#verse').val();
         if (!verse)
         {
@@ -64,11 +82,28 @@ $(document).ready(function(){
         } else {
             var modal = $('#exampleModalCenter')
             modal.modal("show")
+            // Hide the buttom if the verse is at 15
+            if (parseInt($('.col-md-12 #verseActive:last').text()) + 1 >= $('#lastCountVerse').text()) {
+                $("#continue").css("display", "none");
+            }
             modal.find('.modal-body #modalVerse').text(verse)
             modal.find('.modal-body #verseModal').val(verse)
         }
+    }
 
-      })
+    // Trigger modal on Enter
+    $("#verse").keypress(function (event) {
+        if (event.which == 13) {
+            event.preventDefault
+            modalOpen()
+        }
+    })
 
 
- });
+    // Trigger modal on button click
+    $('#addVerse').on('click', function () {
+        modalOpen()
+    })
+});
+
+

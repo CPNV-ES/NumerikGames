@@ -22,6 +22,7 @@ class CreateVersesTable extends Migration
             $table->increments('id');
             $table->string('content');
             $table->string('status')->default('1');
+            $table->string('word_flag')->default('0');
             $table->integer('prose_id')->unsigned()->nullable();
             $table->timestamps();
 

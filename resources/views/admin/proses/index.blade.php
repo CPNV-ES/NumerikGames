@@ -23,8 +23,9 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Titre</th>
+                                    <th scope="col">Date de création</th>
                                     <th scope="col">Actions</th>
-                                    <th scope="col">Selectionnez</th>
+                                    <th scope="col">Informations</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,6 +33,7 @@
                                     <tr>
                                         <th scope="row">{{$prose->id}}</th>
                                         <td>{{$prose->title}}</td>
+                                        <td>{{$prose->created_at->toDayDateTimeString()}}</td>
                                         <td>
                                             <div class="btn-group btn-group-toggle">
                                                 <a class="btn btn-primary" href="{{ route('admin.themes.proses.edit', [ $theme, $prose]) }}" role="button">Editer</a>
@@ -71,12 +73,13 @@
                                                 <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal-{{$prose->id}}">Supprimer</button>
                                             </div>
                                         </td>
-                                        <td><input type="checkbox" name="{{$prose}}" id="prose-{{$prose->id}}"></td>
-                                    </tr>   
+                                        <td>
+                                            {{$prose->flagged_verse($prose)}}
+                                        </td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        <a class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                     </div>
                 </div>
             </div>

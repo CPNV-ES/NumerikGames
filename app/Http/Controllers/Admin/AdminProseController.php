@@ -108,7 +108,8 @@ class AdminProseController extends Controller
     {
         $prose->fill($request->all());
         $prose->save();
-        return redirect()->route('admin.themes.proses.index', $theme);
+        //return redirect()->route('admin.themes.proses.index', $theme);
+        return redirect()->route('admin.proses');
     }
 
     /**
@@ -130,5 +131,16 @@ class AdminProseController extends Controller
         return redirect()
             ->route('admin.themes.proses.index', $theme)
             ->with('error', 'Cette prose contient des vers, supprimez les avant de recommencer');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function all()
+    {
+        $proses = Prose::all()->sortByDesc('id');
+        return view('admin.proses.all')->with(compact('proses'));
     }
 }

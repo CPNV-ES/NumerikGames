@@ -17,6 +17,7 @@ class Verse extends Model
         'content',
         'status',
         'prose_id',
+        'word_flag',
     ];
     
     public function prose()
@@ -43,6 +44,5 @@ class Verse extends Model
         $syllableCount = $syllable->countSyllablesText($verse);
 
         return $syllableCount;
-
     }
 }

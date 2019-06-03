@@ -83,11 +83,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-
-                        @auth
-                            <a id="unactive" class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
-                        @endauth
-
                     </div>
                 </div>
             </div>

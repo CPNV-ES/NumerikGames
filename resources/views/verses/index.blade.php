@@ -75,7 +75,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <a id="unactive" class="btn btn-dark" href="#" role="button">Désactivez la selection</a>
                     </div>
                 </div>
             </div>
