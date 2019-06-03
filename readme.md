@@ -33,4 +33,4 @@ For install the database, you need to create your database (with the name in you
 - Marc Atallah
 
 ### Version
-Current version : 0.4.0
+Current version : 0.5.0
