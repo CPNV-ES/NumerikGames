@@ -44,7 +44,7 @@ class SettingsTableSeeder extends Seeder
         
         Setting::create([
             'name' => 'theme_amour_helper',
-            'value' => 'aime, Anel, mon amour, passion, Jarod, fréquentation, engouement, concubinage, coït, attachement, adultère',
+            'value' => 'aime, mon amour, passion, fréquentation, engouement, concubinage, coït, attachement, adultère',
         ]);
         
         Setting::create([
@@ -54,7 +54,7 @@ class SettingsTableSeeder extends Seeder
         
         Setting::create([
             'name' => 'theme_la_mort_helper',
-            'value' => 'mort, tristesse, violence, sex, viol, CPNV, détresse, consentement',
+            'value' => 'mort, tristesse, violence, sex, viol, détresse, consentement',
         ]);
     }
 }
