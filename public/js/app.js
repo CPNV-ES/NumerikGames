@@ -36495,6 +36495,11 @@ $(window).bind('load', function () {
       success: function success(response) {
         if (response.success) {
           $('.form-group span').html(response.data);
+          console.log(response.data);
+
+          if (response.data > 10) {
+            $('#verse').css("border", "2px solid #3CBC8D");
+          }
         }
       },
       error: function error(textStatus) {
