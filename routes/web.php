@@ -1,5 +1,5 @@
-
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,25 +11,10 @@
 |
 */
 
-/* Auth routes */
-Auth::routes();
-
-// Admin resources
-
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
-    Route::resource('settings', 'AdminSettingController');
-    Route::resource('themes', 'AdminThemeController');
-    Route::resource('themes.proses', 'AdminProseController');
-    Route::resource('themes.proses.verses', 'AdminVerseController');
-    Route::get('proses', 'AdminProseController@all')->name('proses');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-//Routes for standard user
+Auth::routes();
 
-Route::get('/', 'WelcomeController@index')->name('home');
-Route::get('/choix', 'ThemeController@index')->name('choice');
-Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
-Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
-Route::resource('themes', 'ThemeController', ['only' => ['show']]);
-Route::resource('proses', 'ProseController');
-Route::post('/ajaxRequestPostVerse', 'VerseController@ajaxRequestPost');
+Route::get('/home', 'HomeController@index')->name('home');

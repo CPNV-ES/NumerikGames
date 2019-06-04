@@ -10,18 +10,16 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0",
-        "neochief/syllable": "^1.4",
-        "snipe/banbuilder": "dev-master"
+        "laravel/framework": "5.8.*",
+        "laravel/tinker": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.0"
+        "nunomaduro/collision": "^3.0",
+        "phpunit/phpunit": "^7.5"
     },
     "config": {
         "optimize-autoloader": true,
@@ -39,8 +37,7 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories",
-            "vendor/neochief/syllable/classes"
+            "database/factories"
         ]
     },
     "autoload-dev": {
