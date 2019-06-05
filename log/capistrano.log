@@ -4368,3 +4368,360 @@ Discovered Package: [32mnesbot/carbon[39m
   INFO [20b0f877] Running /usr/bin/env echo "Branch feature/test_production (at a74b4fb567ab4c1d36e1ce97f1566c5c5efdf9f9) deployed as release 20190605085859 by Jarod.STRECKEISEN" >> /home/numgames/numerikgames.mycpnv.ch/revisions.log as numgames@numerikgames.mycpnv.ch
  DEBUG [20b0f877] Command: cd /home/numgames/numerikgames.mycpnv.ch/releases && /usr/bin/env echo "Branch feature/test_production (at a74b4fb567ab4c1d36e1ce97f1566c5c5efdf9f9) deployed as release 20190605085859 by Jarod.STRECKEISEN" >> /home/numgames/numerikgames.mycpnv.ch/revisions.log
   INFO [a247431b] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-06-05 11:03:05 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9be4a0da] Running /usr/bin/env mkdir -p /tmp as numgames@numerikgames.mycpnv.ch
+ DEBUG [9be4a0da] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c1713572] Finished in 0.207 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh 0.0%
+  INFO Uploading /tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh 100.0%
+  INFO [6f4b1d16] Running /usr/bin/env chmod 700 /tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh as numgames@numerikgames.mycpnv.ch
+ DEBUG [6f4b1d16] Command: /usr/bin/env chmod 700 /tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh
+  INFO [3c3cf4be] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [96021aca] Running /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD as numgames@numerikgames.mycpnv.ch
+ DEBUG [96021aca] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git ls-remote git@github.com:CPNV-ES/NumerikGames.git HEAD )
+ DEBUG [4694fe8a] 	e3603bf4bdb880829bef94a0b02b61274156f0f0	HEAD
+  INFO [4694fe8a] Finished in 3.718 seconds with exit status 0 (successful).
+  INFO [ec64fbfe] Running /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/shared /home/numgames/numerikgames.mycpnv.ch/releases as numgames@numerikgames.mycpnv.ch
+ DEBUG [ec64fbfe] Command: /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/shared /home/numgames/numerikgames.mycpnv.ch/releases
+  INFO [973c37d4] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [17cd8b7a] Running /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/shared/storage/app /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/cache /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/sessions /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/views /home/numgames/numerikgames.mycpnv.ch/shared/storage/logs as numgames@numerikgames.mycpnv.ch
+ DEBUG [17cd8b7a] Command: /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/shared/storage/app /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/cache /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/sessions /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/views /home/numgames/numerikgames.mycpnv.ch/shared/storage/logs
+  INFO [599542c9] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [4b5b60cc] Running [ -f /home/numgames/numerikgames.mycpnv.ch/current/REVISION ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [4b5b60cc] Command: [ -f /home/numgames/numerikgames.mycpnv.ch/current/REVISION ]
+ DEBUG [c1695c26] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [5c5d6fe1] Running /usr/bin/env cat /home/numgames/numerikgames.mycpnv.ch/current/REVISION 2>/dev/null as numgames@numerikgames.mycpnv.ch
+ DEBUG [5c5d6fe1] Command: /usr/bin/env cat /home/numgames/numerikgames.mycpnv.ch/current/REVISION 2>/dev/null
+ DEBUG [b7a67ccb] 	a74b4fb567ab4c1d36e1ce97f1566c5c5efdf9f9
+ DEBUG [b7a67ccb] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [9514e961] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [9514e961] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [04051213] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [e5f0358e] Running /usr/bin/env mkdir -p storage/app as numgames@numerikgames.mycpnv.ch
+ DEBUG [e5f0358e] Command: cd /home/numgames/numerikgames.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/app
+  INFO [ba2eea4e] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [0e9d5d9d] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [0e9d5d9d] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [aebfbd41] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [34c1b7ed] Running /usr/bin/env mkdir -p storage/framework/cache as numgames@numerikgames.mycpnv.ch
+ DEBUG [34c1b7ed] Command: cd /home/numgames/numerikgames.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/cache
+  INFO [00923097] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [596a2137] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [596a2137] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [4fdd7e7a] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [794bdcb0] Running /usr/bin/env mkdir -p storage/framework/sessions as numgames@numerikgames.mycpnv.ch
+ DEBUG [794bdcb0] Command: cd /home/numgames/numerikgames.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/sessions
+  INFO [9876c32a] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [872ad04a] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [872ad04a] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [ac3c8194] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [929b7cca] Running /usr/bin/env mkdir -p storage/framework/views as numgames@numerikgames.mycpnv.ch
+ DEBUG [929b7cca] Command: cd /home/numgames/numerikgames.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/framework/views
+  INFO [38da9db3] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [e6e308c0] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [e6e308c0] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/shared; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/shared'" 1>&2; false; fi
+ DEBUG [9e9e70f7] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [8b8d80b9] Running /usr/bin/env mkdir -p storage/logs as numgames@numerikgames.mycpnv.ch
+ DEBUG [8b8d80b9] Command: cd /home/numgames/numerikgames.mycpnv.ch/shared && /usr/bin/env mkdir -p storage/logs
+  INFO [c274ed24] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [3dc6f85f] Running [ -f /home/numgames/numerikgames.mycpnv.ch/repo/HEAD ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [3dc6f85f] Command: [ -f /home/numgames/numerikgames.mycpnv.ch/repo/HEAD ]
+ DEBUG [3c2bc983] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/numgames/numerikgames.mycpnv.ch/repo
+ DEBUG [d219270e] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/repo; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/repo'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [d219270e] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/repo; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [31355f9e] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [79943e1b] Running /usr/bin/env git remote set-url origin git@github.com:CPNV-ES/NumerikGames.git as numgames@numerikgames.mycpnv.ch
+ DEBUG [79943e1b] Command: cd /home/numgames/numerikgames.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git remote set-url origin git@github.com:CPNV-ES/NumerikGames.git )
+  INFO [e4617407] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [5b051719] Running /usr/bin/env git remote update --prune as numgames@numerikgames.mycpnv.ch
+ DEBUG [5b051719] Command: cd /home/numgames/numerikgames.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3db4321f] 	Fetching origin
+ DEBUG [3db4321f] 	From github.com:CPNV-ES/NumerikGames
+   a74b4fb..ac0c8e2  feature/test_production -> feature/test_production
+  INFO [3db4321f] Finished in 1.749 seconds with exit status 0 (successful).
+ DEBUG [42e61dce] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/repo; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/repo'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [42e61dce] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/repo; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [91597d6b] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [42d2e53e] Running /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 as numgames@numerikgames.mycpnv.ch
+ DEBUG [42d2e53e] Command: cd /home/numgames/numerikgames.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 )
+  INFO [44f1f0be] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [71bad67b] Running /usr/bin/env git archive feature/test_production | /usr/bin/env tar -x -f - -C /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 as numgames@numerikgames.mycpnv.ch
+ DEBUG [71bad67b] Command: cd /home/numgames/numerikgames.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git archive feature/test_production | /usr/bin/env tar -x -f - -C /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 )
+  INFO [4dd9569e] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [c78eaf56] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/repo; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/repo'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [c78eaf56] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/repo; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/repo'" 1>&2; false; fi
+ DEBUG [cfadc9ed] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [3a957445] Running /usr/bin/env git rev-list --max-count=1 feature/test_production as numgames@numerikgames.mycpnv.ch
+ DEBUG [3a957445] Command: cd /home/numgames/numerikgames.mycpnv.ch/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-numerikgames.mycpnv.ch-production-Jarod.STRECKEISEN.sh" ; /usr/bin/env git rev-list --max-count=1 feature/test_production )
+ DEBUG [9275c615] 	ac0c8e2e481eceaa8d3ce6b6ae5f8a7aed7040ed
+ DEBUG [9275c615] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [daa9477a] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [daa9477a] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi
+ DEBUG [563d0dee] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [d96394c9] Running /usr/bin/env echo "ac0c8e2e481eceaa8d3ce6b6ae5f8a7aed7040ed" > REVISION as numgames@numerikgames.mycpnv.ch
+ DEBUG [d96394c9] Command: cd /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 && /usr/bin/env echo "ac0c8e2e481eceaa8d3ce6b6ae5f8a7aed7040ed" > REVISION
+  INFO [30493a39] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [8ffcf142] Running /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework as numgames@numerikgames.mycpnv.ch
+ DEBUG [8ffcf142] Command: /usr/bin/env mkdir -p /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework
+  INFO [d6776cb6] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [d1a9c7cf] Running [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [d1a9c7cf] Command: [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app ]
+ DEBUG [87165dc1] Finished in 0.075 seconds with exit status 1 (failed).
+ DEBUG [f14946fa] Running [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [f14946fa] Command: [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app ]
+ DEBUG [ee381358] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [be566edf] Running /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app as numgames@numerikgames.mycpnv.ch
+ DEBUG [be566edf] Command: /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app
+  INFO [57032020] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [92357f67] Running /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/app /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app as numgames@numerikgames.mycpnv.ch
+ DEBUG [92357f67] Command: /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/app /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/app
+  INFO [3ad41be1] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [edb8c56f] Running [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [edb8c56f] Command: [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache ]
+ DEBUG [eaaac945] Finished in 0.067 seconds with exit status 1 (failed).
+ DEBUG [35eaa82b] Running [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [35eaa82b] Command: [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache ]
+ DEBUG [6908c276] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [994bc610] Running /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache as numgames@numerikgames.mycpnv.ch
+ DEBUG [994bc610] Command: /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache
+  INFO [09f8d72b] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [f6acb801] Running /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/cache /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache as numgames@numerikgames.mycpnv.ch
+ DEBUG [f6acb801] Command: /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/cache /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/cache
+  INFO [8f2cd224] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [efa01ef2] Running [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [efa01ef2] Command: [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions ]
+ DEBUG [3e2dacbd] Finished in 0.076 seconds with exit status 1 (failed).
+ DEBUG [25a64242] Running [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [25a64242] Command: [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions ]
+ DEBUG [7563a60a] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [f6eb9da2] Running /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions as numgames@numerikgames.mycpnv.ch
+ DEBUG [f6eb9da2] Command: /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions
+  INFO [2c395a63] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [997149f5] Running /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/sessions /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions as numgames@numerikgames.mycpnv.ch
+ DEBUG [997149f5] Command: /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/sessions /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/sessions
+  INFO [4bd2c8f3] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [b747ed1b] Running [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [b747ed1b] Command: [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views ]
+ DEBUG [78c33432] Finished in 0.076 seconds with exit status 1 (failed).
+ DEBUG [3799b210] Running [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [3799b210] Command: [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views ]
+ DEBUG [3546ccb4] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [df2d6caa] Running /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views as numgames@numerikgames.mycpnv.ch
+ DEBUG [df2d6caa] Command: /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views
+  INFO [a3d65bbf] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [e0f13cb4] Running /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/views /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views as numgames@numerikgames.mycpnv.ch
+ DEBUG [e0f13cb4] Command: /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/framework/views /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/framework/views
+  INFO [fb7ccc4b] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [df88649d] Running [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [df88649d] Command: [ -L /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs ]
+ DEBUG [0be8eb42] Finished in 0.076 seconds with exit status 1 (failed).
+ DEBUG [148a433e] Running [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs ] as numgames@numerikgames.mycpnv.ch
+ DEBUG [148a433e] Command: [ -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs ]
+ DEBUG [d3f72267] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [4edbb103] Running /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs as numgames@numerikgames.mycpnv.ch
+ DEBUG [4edbb103] Command: /usr/bin/env rm -rf /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs
+  INFO [5cd51e3c] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [bf7948de] Running /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/logs /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs as numgames@numerikgames.mycpnv.ch
+ DEBUG [bf7948de] Command: /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/shared/storage/logs /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/storage/logs
+  INFO [8e8fc079] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [16dc5378] Running ls /home/numgames/.data/numerikgames.mycpnv.ch_php* 2>/dev/null | sed -E 's/.+(php[[:digit:]]+)$/\1/' >/tmp/.php-cli-version as numgames@numerikgames.mycpnv.ch
+ DEBUG [16dc5378] Command: ls /home/numgames/.data/numerikgames.mycpnv.ch_php* 2>/dev/null | sed -E 's/.+(php[[:digit:]]+)$/\1/' >/tmp/.php-cli-version
+  INFO [424670ec] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [177bab9a] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [177bab9a] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi
+ DEBUG [ba02fc22] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [dec2cd89] Running php -d allow_url_fopen=true /home/numgames/numerikgames.mycpnv.ch/shared/composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader as numgames@numerikgames.mycpnv.ch
+ DEBUG [dec2cd89] Command: cd /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 && php -d allow_url_fopen=true /home/numgames/numerikgames.mycpnv.ch/shared/composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
+ DEBUG [3c46cfe4] 	Loading composer repositories with package information
+ DEBUG [3c46cfe4] 	Installing dependencies from lock file
+ DEBUG [3c46cfe4] 	Package operations: 61 installs, 0 updates, 0 removals
+ DEBUG [3c46cfe4] 	  - Installing kylekatarnls/update-helper (1.1.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing doctrine/inflector (v1.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing dragonmantank/cron-expression (v2.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing erusev/parsedown (1.7.3): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/polyfill-ctype (v1.11.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing vlucas/phpdotenv (v2.6.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/css-selector (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing tijsverkoyen/css-to-inline-styles (2.2.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/polyfill-php72 (v1.11.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/polyfill-mbstring (v1.11.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/var-dumper (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/routing (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/process (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/polyfill-php73 (v1.11.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/polyfill-intl-idn (v1.11.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/mime (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/http-foundation (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/event-dispatcher-contracts (v1.1.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/event-dispatcher (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing psr/log (1.1.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/debug (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/http-kernel (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/finder (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/service-contracts (v1.1.2): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/console (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/polyfill-iconv (v1.11.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing egulias/email-validator (2.1.8): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing swiftmailer/swiftmailer (v6.2.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing paragonie/random_compat (v9.99.99): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing ramsey/uuid (3.8.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing psr/simple-cache (1.0.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing psr/container (1.0.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing opis/closure (3.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing symfony/translation-contracts (v1.1.2): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing symfony/translation (v4.3.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing nesbot/carbon (1.38.4): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing monolog/monolog (1.24.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing league/flysystem (1.0.52): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing ralouphie/getallheaders (2.0.5): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing psr/http-message (1.0.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing guzzlehttp/psr7 (1.5.2): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing guzzlehttp/promises (v1.3.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing guzzlehttp/guzzle (6.3.3): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing laravel/slack-notification-channel (v1.0.3): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing psr/http-factory (1.0.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing zendframework/zend-diactoros (2.1.2): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing php-http/promise (v1.0.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing php-http/httplug (v1.1.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing php-http/guzzle6-adapter (v1.1.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing lcobucci/jwt (3.3.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing nexmo/client (1.8.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing laravel/nexmo-notification-channel (v1.0.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing laravel/framework (v5.7.28): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing fideloper/proxy (4.1.0): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing jakub-onderka/php-console-color (v0.2): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	  - Installing nikic/php-parser (v4.2.2): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing jakub-onderka/php-console-highlighter (v0.4): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing dnoegel/php-xdg-base-dir (0.1): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing psy/psysh (v0.9.9): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	  - Installing laravel/tinker (v1.0.8): 
+ DEBUG [3c46cfe4] 	Loading from cache
+ DEBUG [3c46cfe4] 	
+ DEBUG [3c46cfe4] 	Generating optimized autoload files
+ DEBUG [3c46cfe4] 	Carbon 1 is deprecated, see how to migrate to Carbon 2.
+https://carbon.nesbot.com/docs/#api-carbon-2
+ DEBUG [3c46cfe4] 	    You can run './vendor/bin/upgrade-carbon' to get help in updating carbon and other frameworks and libraries that depend on it.
+ DEBUG [3c46cfe4] 	> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+ DEBUG [3c46cfe4] 	> @php artisan package:discover --ansi
+ DEBUG [3c46cfe4] 	Discovered Package: [32mfideloper/proxy[39m
+Discovered Package: [32mlaravel/nexmo-notification-channel[39m
+Discovered Package: [32mlaravel/slack-notification-channel[39m
+Discovered Package: [32mlaravel/tinker[39m
+Discovered Package: [32mnesbot/carbon[39m
+[32mPackage manifest generated successfully.[39m
+  INFO [3c46cfe4] Finished in 4.279 seconds with exit status 0 (successful).
+ DEBUG [15774e1d] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [15774e1d] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi
+ DEBUG [bf134734] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [a9dae771] Running /usr/bin/env php artisan storage:link --env=production as numgames@numerikgames.mycpnv.ch
+ DEBUG [a9dae771] Command: cd /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 && /usr/bin/env php artisan storage:link --env=production
+ DEBUG [573f5023] 	The [public/storage] directory has been linked.
+  INFO [573f5023] Finished in 0.568 seconds with exit status 0 (successful).
+  INFO [6a162968] Running /usr/bin/env cp /home/numgames/numerikgames.mycpnv.ch/shared/.env /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/.env as numgames@numerikgames.mycpnv.ch
+ DEBUG [6a162968] Command: /usr/bin/env cp /home/numgames/numerikgames.mycpnv.ch/shared/.env /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310/.env
+  INFO [d5a29253] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [ee97dbd4] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [ee97dbd4] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases/20190605090310'" 1>&2; false; fi
+ DEBUG [e2d54b8d] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [a4cc039a] Running /usr/bin/env php artisan migrate --force --env=production as numgames@numerikgames.mycpnv.ch
+ DEBUG [a4cc039a] Command: cd /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 && /usr/bin/env php artisan migrate --force --env=production
+ DEBUG [6f27afae] 	Nothing to migrate.
+  INFO [6f27afae] Finished in 0.441 seconds with exit status 0 (successful).
+  INFO [849e080d] Running /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 /home/numgames/numerikgames.mycpnv.ch/releases/current as numgames@numerikgames.mycpnv.ch
+ DEBUG [849e080d] Command: /usr/bin/env ln -s /home/numgames/numerikgames.mycpnv.ch/releases/20190605090310 /home/numgames/numerikgames.mycpnv.ch/releases/current
+  INFO [bfe56621] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [d94d53cd] Running /usr/bin/env mv /home/numgames/numerikgames.mycpnv.ch/releases/current /home/numgames/numerikgames.mycpnv.ch as numgames@numerikgames.mycpnv.ch
+ DEBUG [d94d53cd] Command: /usr/bin/env mv /home/numgames/numerikgames.mycpnv.ch/releases/current /home/numgames/numerikgames.mycpnv.ch
+  INFO [0b124f4e] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [5eb5da11] Running /usr/bin/env ls -x /home/numgames/numerikgames.mycpnv.ch/releases as numgames@numerikgames.mycpnv.ch
+ DEBUG [5eb5da11] Command: /usr/bin/env ls -x /home/numgames/numerikgames.mycpnv.ch/releases
+ DEBUG [8d89d6b7] 	20190605084418	20190605084623	20190605085859	20190605090310
+ DEBUG [8d89d6b7] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [7baaff48] Running if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases'" 1>&2; false; fi as numgames@numerikgames.mycpnv.ch
+ DEBUG [7baaff48] Command: if test ! -d /home/numgames/numerikgames.mycpnv.ch/releases; then echo "Directory does not exist '/home/numgames/numerikgames.mycpnv.ch/releases'" 1>&2; false; fi
+ DEBUG [e85837cb] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [218e35c0] Running /usr/bin/env echo "Branch feature/test_production (at ac0c8e2e481eceaa8d3ce6b6ae5f8a7aed7040ed) deployed as release 20190605090310 by Jarod.STRECKEISEN" >> /home/numgames/numerikgames.mycpnv.ch/revisions.log as numgames@numerikgames.mycpnv.ch
+ DEBUG [218e35c0] Command: cd /home/numgames/numerikgames.mycpnv.ch/releases && /usr/bin/env echo "Branch feature/test_production (at ac0c8e2e481eceaa8d3ce6b6ae5f8a7aed7040ed) deployed as release 20190605090310 by Jarod.STRECKEISEN" >> /home/numgames/numerikgames.mycpnv.ch/revisions.log
+  INFO [d4454ed6] Finished in 0.076 seconds with exit status 0 (successful).
