@@ -7,7 +7,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="flex-center position-ref full-height">
-        
+
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -39,13 +39,13 @@
                                         </td>
                                         <td style="background-color:{{$theme->color}};"></td>
                                         <td>
-                                            <img src="{{$theme->path}}" alt="">
+                                            <img class="mx-auto d-block" src="{{ asset($theme->path) }}" style="width: 200px; height:100px" alt="">
                                         </td>
                                         <td>
                                             <div class="btn-group btn-group-toggle">
                                                 <a class="btn btn-primary" href="{{ route('admin.themes.edit', ['theme' => $theme->id]) }}" role="button">Editer</a>
                                                 <a class="btn btn-warning" href="{{ route('admin.themes.show', ['theme' => $theme->id]) }}" role="button">Afficher</a>
-                                                
+
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="exampleModal-{{$theme->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
@@ -81,7 +81,7 @@
                                             </div>
                                         </td>
                                         <td><input type="checkbox" name="themes[]" id="theme-{{$theme->id}}"></td>
-                                    </tr>   
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
