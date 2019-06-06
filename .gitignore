@@ -12,3 +12,5 @@ package-lock.json
 composer.lock
 /config/config.rb
 /config/*_rsa*
+
+log/capistrano\.log
