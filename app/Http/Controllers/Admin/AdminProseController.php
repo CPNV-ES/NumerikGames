@@ -28,7 +28,7 @@ class AdminProseController extends Controller
             } else {
                 return abort(404);
             }
-        }, 
+        },
         ['only' => ['show', 'edit']]);
     }
 
@@ -110,6 +110,11 @@ class AdminProseController extends Controller
         $prose->save();
         //return redirect()->route('admin.themes.proses.index', $theme);
         return redirect()->route('admin.proses');
+    }
+    public function reset(Request $request)
+    {
+      Prose::query()->update(['is_projectable' => 0]);
+      return redirect()->route('admin.proses');
     }
 
     /**
