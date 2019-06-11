@@ -10622,6 +10622,69 @@ h1 {
   border-radius: 50% !important;
 }
 
+#prose-id p {
+  float: right;
+}
+
+#prose-id input[type=text]:focus {
+  box-shadow: 0 0 5px #51cbee;
+  border: 2px solid #51cbee;
+}
+
+#prose-id #switch-container {
+  width: 92px;
+  height: 26px;
+  font-size: 0.8rem;
+  background: rgba(33, 33, 33, 0.5);
+  position: relative;
+  line-height: 1rem;
+  box-shadow: 0px 1px 2px #333;
+  border: 2px solid #ababab;
+  border-radius: 5px;
+  cursor: pointer;
+  cursor: hand;
+  display: block;
+  float: left;
+}
+
+#prose-id #sw-check {
+  display: none;
+}
+
+#prose-id #switch-selector {
+  background: #345D9D;
+  margin: 1px;
+  height: 24px;
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  box-shadow: 0px 1px 3px #333;
+}
+
+#prose-id .sw-active,
+#prose-id .sw-inactive {
+  position: absolute;
+  line-height: 24px;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.4);
+}
+
+#prose-id .sw {
+  color: #fff;
+}
+
+#prose-id .sw-active {
+  right: 10px;
+}
+
+#prose-id .sw-inactive {
+  left: 10px;
+}
+
+#prose-id .sw-deactivated {
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
 .modal-body > p {
   font-style: italic;
 }
