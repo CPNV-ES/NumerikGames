@@ -36473,34 +36473,81 @@ if (token) {
 $(window).bind('load', function () {
   // ------------- VARIABLES ------------- //
   var prose = $('.background');
-  var totalSlideNumber = prose.length;
-  var slideDurationSetting = 3000; //Amount of time for which slide is "locked"
+  var totalSlideNumber = prose.length; // Number of slides
 
-  var speedSlides = 3000; // Will count the syllable at every change in the input
+  var slideDurationSetting = 3000; // Amount of time for which a slide is "locked"
 
-  $("#verse").on('input', function () {
-    var verse = $(this).val();
-    $.ajaxSetup({
-      headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
-    });
-    $.ajax({
-      url: "../ajaxRequestPostVerse",
-      type: "POST",
-      data: {
-        'verse': verse
-      },
-      dataType: "json",
-      success: function success(response) {
-        if (response.success) {
-          $('.form-group span').html(response.data);
-        }
-      },
-      error: function error(textStatus) {
-        console.log("Request failed : " + textStatus);
-      }
-    });
+  var speedSlides = 3000; // Speed animation between slides
+
+  var isoff = true; // Check switch button, true by default
+
+  var xhr = null; // Css function that switch from "Oui" to "Non"
+
+  $('#switch-container').click(function () {
+    $('.sw').toggleClass('sw-deactivated');
+    $('#sw-check').trigger('click');
+
+    if (isoff) {
+      $('#switch-selector').animate({
+        opacity: 0.8,
+        left: "+=44px"
+      }, 100);
+      $('#count-syllable').removeClass('d-none').addClass('d-block'); // Will count the syllable at every change in the input
+
+      $("#verse").on('input', function () {
+        var verse = $(this).val();
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        xhr = $.ajax({
+          url: "../ajaxRequestPostVerse",
+          type: "POST",
+          data: {
+            'verse': verse
+          },
+          dataType: "json",
+          success: function success(response) {
+            if (response.success && !isoff) {
+              $('.form-group span').html(response.data);
+
+              if (response.data >= 10 && response.data < 15) {
+                $('#verse').css("border", "3px solid #3CBC8D");
+              } else if (response.data >= 15 && response.data < 20) {
+                $('#verse').css("border", "3px solid #e8f442");
+              } else if (response.data >= 20 && response.data < 25) {
+                $('#verse').css("border", "3px solid #f4ac41");
+              } else if (response.data >= 25) {
+                $('#verse').css("border", "3px solid #f44941");
+              } else {
+                $('#verse').css("border", "");
+              }
+            }
+          },
+          error: function error(textStatus) {
+            console.log("Request failed : " + textStatus);
+          },
+          beforeSend: function beforeSend() {
+            if (isoff) {
+              xhr.onreadystatechange === null;
+            }
+          }
+        });
+      });
+      isoff = false;
+    } else {
+      $('#count-syllable').removeClass('d-block').addClass('d-none');
+      $('#verse').css("border", "");
+      $('#switch-selector').animate({
+        opacity: 1,
+        left: "-=44px"
+      }, 100);
+      $('.container').animate({
+        backgroundColor: '#222'
+      }, 400);
+      isoff = true;
+    }
   });
   $('#unactive').css('display', 'none');
   $('input').on('click', function () {
@@ -36535,8 +36582,7 @@ $(window).bind('load', function () {
     }, speedSlides);
   }
 
-  ; // Loops projectors infinitely after some time
-
+  ;
   setInterval(projectorsLoop, totalSlideNumber * slideDurationSetting * 3); // Add the verse from the input to the modal if not empty
 
   function modalOpen() {
