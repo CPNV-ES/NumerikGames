@@ -104,6 +104,27 @@ $(window).bind('load', function() {
     $('#addVerse').on('click', function () {
         modalOpen()
     })
+
+    /* Check if we are in page with this id */
+    if($("#prose-id").length > 0) {
+        helperArray()
+    }
+
+    /* This function will show helper if the user check the box */
+    function helperArray() {
+        $('#helpers-words').css('display', 'none')
+        $('#helperArray').change(function() {
+            if ($(this).prop('checked')) {
+                $('#helpers-words').css('display', 'flex')
+                $('#helpers-words').addClass('fadeIn')
+            }
+            else {
+                $('#helpers-words').removeClass('fadeIn')
+                $('#helpers-words').delay(1301).css('display', 'none')
+            }
+        });
+    }
+
 });
 
 

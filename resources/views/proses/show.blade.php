@@ -30,11 +30,18 @@
                         <div>Nombre de syllabes : <span></span></div>
                         <input class="form-control form-control-lg" name="content" id="verse" type="text" autofocus placeholder="Une souris verte..." autocomplete="off">
                     </div>
-                    Activer une aide ? <input type="checkbox" id="helper" name="helper">
+                    Activer une aide ? <input type="checkbox" id="helperArray" name="helperArray">
                     <div>
                         <button class="btn btn-outline-success mx-auto d-block pl-5 pr-5" type="submit" name="addVerse" id="addVerse">Ajouter mon texte</button>
                     </div>
                 </div>
+            </div>
+            <div id="helpers-words" class="row">
+                @foreach ($helpers as $helper)
+                    <div class="col-md-3">
+                        <p class="text-uppercase">{{$helper}}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

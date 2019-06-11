@@ -10626,6 +10626,44 @@ h1 {
   font-style: italic;
 }
 
+#prose-id #helpers-words {
+  padding-top: 20px;
+}
+
+#prose-id #helpers-words p {
+  border: 1px solid #6cb2eb;
+  padding: 8px 0px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+}
+
+#prose-id #helpers-words.fadeIn {
+  -webkit-animation: fadein 1.3s;
+          animation: fadein 1.3s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /**
 * Admin 
 */

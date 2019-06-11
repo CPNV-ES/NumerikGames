@@ -16,7 +16,7 @@ use App\Http\Controllers\Controller;
 class AdminProseController extends Controller
 {
     /**
-     * Control if the resource exist in the current domain.
+     * Control if the resource exist in the current domain. Or return 404
      *
      * @return void
      */

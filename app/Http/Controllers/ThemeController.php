@@ -26,6 +26,7 @@ class ThemeController extends Controller
         $themes = Theme::take(Setting::where('name', 'home_limit_prose')->first()->value)->get();
         $themesCollection = collect([]);
 
+        /* Create a collection with is_full = 0 */
         foreach ($themes as $theme) {
             $themesCollection->push($theme->proses->where('is_full', 0));
         }
