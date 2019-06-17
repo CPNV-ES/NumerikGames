@@ -16,6 +16,7 @@ class Prose extends Model
     protected $fillable = [
         'title',
         'theme_id',
+        'is_projectable',
     ];
 
     public function theme()
@@ -31,12 +32,14 @@ class Prose extends Model
     /**
      * Count number of verse in your prose, return boolean if the number is more important than Settings table value.
      *
+     * @param  Integer $limit is the limit if we need a special limit
      * @return Boolean
      */
-    public function is_full() 
+    public function is_full($limit = null)
     {
+        isset($limit) ? $limit : $limit = Setting::where('name', 'limit_verses')->first()->value ;
         $contains = count($this->verse);
-        if ($contains >= Setting::where('name', 'default_limit')->first()->value) {
+        if ($contains >= $limit) {
             return true;
         } else {
             return false;
@@ -49,13 +52,48 @@ class Prose extends Model
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function only_with_data() 
+    public function only_with_data()
     {
-        $proses = Prose::with(['verse' => function ($query) {
+        $proses = Prose::inRandomOrder()->with(['verse' => function ($query) {
             $query->where('status', 1);
         }])->withCount(['verse' => function ($query) {
             $query->where('status', 1);
         }])->having('verse_count', '>', 0)->get();
-        return $proses;
+        return $proses->where('is_projectable', 1);
+    }
+
+    /**
+     * Generate new prose with new verses
+     *
+     * @param  Object $oldProse is the current prose you work with
+     * @return
+     */
+    public static function setDefault($oldProse) {
+        $prose = new Prose();
+        $prose->title = $oldProse->theme->name;
+        $prose->theme_id = $oldProse->theme->id;
+        $prose->path = $oldProse->theme->path;
+        $prose->save();
+
+        for ($i = 1; $i < 3; $i++) {
+            $vers = new Verse();
+            $vers->content = Setting::where('name', "default_vers_$i")->first()->value;
+            $vers->prose_id = $prose->id;
+            $vers->status = 1;
+            $vers->save();
+        }
+    }
+
+
+    public static function flagged_verse($prose) {
+        $i = 0;
+        foreach ($prose->verse as $verse) {
+            if ($verse->word_flag) {
+                $i++;
+            }
+        }
+        if ($i) {
+            echo "<span class='badge badge-danger'>Cette prose contient $i vers suspect.</span>";
+        }
     }
 }

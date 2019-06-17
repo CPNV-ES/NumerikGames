@@ -16,7 +16,7 @@ use App\Http\Controllers\Controller;
 class AdminProseController extends Controller
 {
     /**
-     * Control if the resource exist in the current domain.
+     * Control if the resource exist in the current domain. Or return 404
      *
      * @return void
      */
@@ -28,7 +28,7 @@ class AdminProseController extends Controller
             } else {
                 return abort(404);
             }
-        }, 
+        },
         ['only' => ['show', 'edit']]);
     }
 
@@ -108,7 +108,13 @@ class AdminProseController extends Controller
     {
         $prose->fill($request->all());
         $prose->save();
-        return redirect()->route('admin.themes.proses.index', $theme);
+        //return redirect()->route('admin.themes.proses.index', $theme);
+        return redirect()->route('admin.proses');
+    }
+    public function reset(Request $request)
+    {
+      Prose::query()->update(['is_projectable' => 0]);
+      return redirect()->route('admin.proses');
     }
 
     /**
@@ -130,5 +136,16 @@ class AdminProseController extends Controller
         return redirect()
             ->route('admin.themes.proses.index', $theme)
             ->with('error', 'Cette prose contient des vers, supprimez les avant de recommencer');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function all()
+    {
+        $proses = Prose::all()->sortByDesc('id');
+        return view('admin.proses.all')->with(compact('proses'));
     }
 }

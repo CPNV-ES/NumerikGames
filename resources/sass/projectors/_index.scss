@@ -1,4 +1,20 @@
+.overflow {
+    overflow: hidden;
+}
 #projectors-index {
+    // ------------- MIXINS ------------- //
+    @mixin transition($time, $property: all, $easing: ease-in) {
+        transition: $property $time $easing;
+    }
+
+    // ------------- VARIABLES ------------- //
+    $parallax-offset: 30vh;
+    $content-offset: 40vh;
+    $transition-speed: 1.2s;
+
+
+
+
     #title-projectors {
         height: auto;
         width: 100%;
@@ -15,6 +31,8 @@
     .proses {
 
         margin-bottom: 80px;
+        display: none;
+
 
         h2 {
             padding: 15px 0px;
@@ -24,5 +42,52 @@
             margin-bottom: 5px;
             font-size: 29px;
         }
+        img {
+            width: 50%;
+            height:50%;;
+        }
     }
+    .background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+        will-change: transform;
+        backface-visibility: hidden;
+        height: 130vh;
+        width: 100%;
+        @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 4));
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,.5);
+        }
+
+      }
+
+      .content {
+        &-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-flow: column nowrap;
+        color: #fff;
+        font-family: Montserrat;
+        text-transform: uppercase;
+        transform: translateY($content-offset);
+        will-change: transform;
+        backface-visibility: hidden;
+        @include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
+        }
+        &-title {
+          font-size: 12vh;
+          line-height: 1.4;
+        }
+      }
 }

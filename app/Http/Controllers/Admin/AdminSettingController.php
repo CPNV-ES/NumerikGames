@@ -77,18 +77,4 @@ class AdminSettingController extends Controller
         $setting->save();
         return redirect()->route('admin.settings.index');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Setting $setting)
-    {
-        $setting->delete();
-        return redirect()
-            ->route('admin.settings.index')
-            ->with('success', "Votre paramètre $setting->name a bien été supprimé !");
-    }
 }

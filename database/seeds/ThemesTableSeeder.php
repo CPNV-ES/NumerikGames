@@ -23,18 +23,25 @@ class ThemesTableSeeder extends Seeder
             'Amour',
             'Amitié',
             'La mort',
-            'La tristesse',
-            'Le bonheur',
         ];
 
+        $slugs = [
+            'amour',
+            'amitie',
+            'la_mort',
+        ];
 
+        $i = 0;
         foreach ($themes as $value) {
-                $theme = Theme::create([
-                    'name' => $value,
-                    'color' => '#'.substr(md5(rand()), 0, 6),
-                    'path' => 'pictures/themes/'.mb_strtolower(str_replace(' ', '_', $value), 'UTF-8').'.jpg',
-                ]);
+
+            $theme = Theme::create([
+                'name' => $value,
+                'color' => '#'.substr(md5(rand()), 0, 6),
+                'path' => 'pictures/themes/'.mb_strtolower(str_replace(' ', '_', $value), 'UTF-8').'.jpg',
+                'slug' => $slugs[$i],
+            ]);
             $theme->save();
+            $i++;
         }
     }
 }

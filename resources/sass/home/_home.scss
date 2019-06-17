@@ -4,10 +4,16 @@
         height:100%;
         transition: all .2s ease-in-out;
         cursor: pointer;
-        max-height: 125px;
-        
+
         &:hover {
             transform: scale(1.1);
         }
+    }
+    .prose {
+        max-width: 300px;
+        max-height: 200px;
+        height: 400px;
+        width: 480px;
+        margin-bottom: 20px;
     }
 }

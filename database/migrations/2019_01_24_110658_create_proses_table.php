@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 /**
  * CreateProsesTable
- * 
+ *
  * @author Nicolas Henry
  */
 class CreateProsesTable extends Migration
@@ -22,7 +22,9 @@ class CreateProsesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->boolean('is_full')->default(0);
+            $table->boolean('is_projectable')->default(0);
             $table->integer('theme_id')->unsigned()->nullable();
+            $table->string('path');
             $table->timestamps();
 
             // Foreing keys

@@ -2,11 +2,64 @@
     h1 {
         font-size: 52px;
     }
-
-    p {
-        font-size: 36px;
-        margin-bottom: 5px;
+    img {
+        max-width: 50%;
+        border-radius: 50% !important;
     }
+    p {
+        float: right;
+    }
+    input[type=text]:focus
+    {
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+        border: 2px solid rgba(81, 203, 238, 1);
+    }
+    #switch-container{
+        width:92px;
+        height:26px;
+        font-size:0.8rem;
+        background:rgba(33,33,33,0.5);
+        position:relative;
+        line-height:1rem;
+        box-shadow:0px 1px 2px #333;
+        border:2px solid #ababab;
+        border-radius:5px;
+        cursor:pointer;
+        cursor:hand;
+        display:block;
+        float: left;
+      }
+      #sw-check{
+        display:none;
+      }
+      #switch-selector{
+        background:#345D9D;
+        margin:1px;
+        height:24px;
+        width:50%;
+        position:absolute;
+        left:0px;
+        box-shadow:0px 1px 3px #333;
+
+      }
+      .sw-active, .sw-inactive{
+        position:absolute;
+        line-height:24px;
+        text-shadow:0px 0px 3px rgba(255,255,255,0.4);
+
+      }
+      .sw{color:#fff;}
+      .sw-active{
+        right:10px;
+      }
+      .sw-inactive{
+        left:10px;
+
+      }
+      .sw-deactivated{
+        color:rgba(0,0,0,0.3);
+         text-shadow:0px 0px 1px rgba(0,0,0,0.2);
+      }
 }
 .modal-body > p {
     font-style: italic;

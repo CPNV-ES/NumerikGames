@@ -23,6 +23,6 @@
         "vue-template-compiler": "^2.6.6"
     },
     "dependencies": {
-        "velocity-animate": "^2.0.5"
+        "axios": "^0.19.0"
     }
 }

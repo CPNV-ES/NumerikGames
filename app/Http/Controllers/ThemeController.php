@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Prose;
 use App\Theme;
 use Illuminate\Http\Request;
+use App\Setting;
 
 /**
  * ThemeController
@@ -22,9 +23,17 @@ class ThemeController extends Controller
      */
     public function index(Request $request)
     {
+        $themes = Theme::take(Setting::where('name', 'home_limit_prose')->first()->value)->get();
+        $themesCollection = collect([]);
+
+        /* Create a collection with is_full = 0 */
+        foreach ($themes as $theme) {
+            $themesCollection->push($theme->proses->where('is_full', 0));
+        }
         
-        $themes = Theme::all();
-        return view('welcome')->with(compact('themes'));
+        $limit = Setting::where('name', 'home_limit_prose')->first()->value;
+        $size_column = 12 / count($themes);
+        return view('welcome')->with(compact('themes', 'size_column', 'themesCollection', 'limit'));
         
     }
 
@@ -94,6 +103,7 @@ class ThemeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */

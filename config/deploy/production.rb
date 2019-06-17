@@ -1,6 +1,6 @@
-set :stage, :dev
+set :swisscenter_username, "numgames"
+set :swisscenter_servername, "numerikgames.mycpnv.ch"
 
-# Définit un serveur pour le déploiement préprod
-# Vous pouvez en définir plusieurs si vous souhaitez
-# déployer sur plusieurs serveurs en meme temps
-server '172.17.101.219', user: 'cpnv', roles: %w{web app laravel composer}
+set :repo_url, "git@github.com:CPNV-ES/NumerikGames.git"
+
+require_relative 'laravel_swisscenter'

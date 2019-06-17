@@ -21,13 +21,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('themes', 'AdminThemeController');
     Route::resource('themes.proses', 'AdminProseController');
     Route::resource('themes.proses.verses', 'AdminVerseController');
+    Route::get('proses', 'AdminProseController@all')->name('proses');
+    Route::post('proses/reset', 'AdminProseController@reset')->name('proses.reset');
 });
 
 //Routes for standard user
 
-Route::get('/', 'ThemeController@index')->name('home');
+Route::get('/', 'WelcomeController@index')->name('home');
+Route::get('/choix', 'ThemeController@index')->name('choice');
 Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
 Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
 Route::resource('themes', 'ThemeController', ['only' => ['show']]);
 Route::resource('proses', 'ProseController');
-
+Route::post('/ajaxRequestPostVerse', 'VerseController@ajaxRequestPost');

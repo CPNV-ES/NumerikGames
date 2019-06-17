@@ -10505,6 +10505,10 @@ h1 {
 * Import for the project
 */
 
+.overflow {
+  overflow: hidden;
+}
+
 #projectors-index #title-projectors {
   height: auto;
   width: 100%;
@@ -10521,6 +10525,7 @@ h1 {
 
 #projectors-index .proses {
   margin-bottom: 80px;
+  display: none;
 }
 
 #projectors-index .proses h2 {
@@ -10533,17 +10538,75 @@ h1 {
   font-size: 29px;
 }
 
+#projectors-index .proses img {
+  width: 50%;
+  height: 50%;
+}
+
+#projectors-index .background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 130vh;
+  width: 100%;
+  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 4);
+}
+
+#projectors-index .background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#projectors-index .content-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column nowrap;
+  color: #fff;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  -webkit-transform: translateY(40vh);
+          transform: translateY(40vh);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+#projectors-index .content-title {
+  font-size: 12vh;
+  line-height: 1.4;
+}
+
 #home a > img {
   width: 100%;
   height: 100%;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  max-height: 125px;
 }
 
 #home a > img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#home .prose {
+  max-width: 300px;
+  max-height: 200px;
+  height: 400px;
+  width: 480px;
+  margin-bottom: 20px;
 }
 
 #home #link-all-proses {
@@ -10554,13 +10617,114 @@ h1 {
   font-size: 52px;
 }
 
+#prose-id img {
+  max-width: 50%;
+  border-radius: 50% !important;
+}
+
 #prose-id p {
-  font-size: 36px;
-  margin-bottom: 5px;
+  float: right;
+}
+
+#prose-id input[type=text]:focus {
+  box-shadow: 0 0 5px #51cbee;
+  border: 2px solid #51cbee;
+}
+
+#prose-id #switch-container {
+  width: 92px;
+  height: 26px;
+  font-size: 0.8rem;
+  background: rgba(33, 33, 33, 0.5);
+  position: relative;
+  line-height: 1rem;
+  box-shadow: 0px 1px 2px #333;
+  border: 2px solid #ababab;
+  border-radius: 5px;
+  cursor: pointer;
+  cursor: hand;
+  display: block;
+  float: left;
+}
+
+#prose-id #sw-check {
+  display: none;
+}
+
+#prose-id #switch-selector {
+  background: #345D9D;
+  margin: 1px;
+  height: 24px;
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  box-shadow: 0px 1px 3px #333;
+}
+
+#prose-id .sw-active,
+#prose-id .sw-inactive {
+  position: absolute;
+  line-height: 24px;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.4);
+}
+
+#prose-id .sw {
+  color: #fff;
+}
+
+#prose-id .sw-active {
+  right: 10px;
+}
+
+#prose-id .sw-inactive {
+  left: 10px;
+}
+
+#prose-id .sw-deactivated {
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal-body > p {
   font-style: italic;
+}
+
+#prose-id #helpers-words {
+  padding-top: 20px;
+}
+
+#prose-id #helpers-words p {
+  border: 1px solid #6cb2eb;
+  padding: 8px 0px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+}
+
+#prose-id #helpers-words.fadeIn {
+  -webkit-animation: fadein 1.3s;
+          animation: fadein 1.3s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /**

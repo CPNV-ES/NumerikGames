@@ -46,8 +46,7 @@ class AdminThemeController extends Controller
     public function store(Request $request)
     {
         $theme = new Theme($request->all());
-        $theme->path = 'pictures/themes/'.$request->path;
-        Storage::disk('local')->put('pictures/themes/'.$request->path, '$request->path');
+        $theme->path = $request->file('path')->store('pictures/themes');
         $theme->save();
         return redirect()->route('admin.themes.index');
     }
@@ -96,12 +95,12 @@ class AdminThemeController extends Controller
      */
     public function destroy(Theme $theme)
     {
-        if (!$theme->prose->first->exists()) {
+        if (!$theme->proses->first->exists()) {
             $theme->delete();
             return redirect()
                 ->route('admin.themes.index')
                 ->with('success', "Vous avez bien supprimé $theme->name");
-        }
+            }
 
         return redirect()
             ->route('admin.themes.index')

@@ -6,31 +6,61 @@
   --}}
 @extends('layouts.app')
 @section('content')
+    <!-- Error -->
+    <div id="error">
+	    <strong></strong>
+    </div>
     <div id="prose-id">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center">{{$prose->theme->name}}</h1>
+                    <img class="mx-auto d-block"  src="{{ asset($prose->theme->path) }}"/>
                     <hr>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    @foreach ($versesLast as $verse)
-                        <div>
-                            <p class="text-center">{{$verse->content}}</p>
-                        </div>
+                    @foreach ($versesLast as $key => $verse)
+                        <div class="d-inline-block col-1 font-italic"><span id="verseActive">{{$key+1}}</span> / <span id="lastCountVerse">{{$versesCount}}</span> </div>
+                        <div class="d-inline-block col-10 text-center font-weight-bold"><h3>{{$verse->content}}</h3></div>
+                        <hr>
                     @endforeach
                     <div class="form-group">
-                        <input class="form-control form-control-lg" name="content" id="verse" type="text" placeholder="Une souris verte...">
+                        <div class="mx-auto d-none pb-3" id="count-syllable">Nombre de syllabes : <span></span></div>
+                        <input class="form-control form-control-lg" name="content" id="verse" type="text" autofocus placeholder="Une souris verte..." autocomplete="off">
                     </div>
+                    Activer une aide ? <input type="checkbox" id="helperArray" name="helperArray">
                     <div>
-                        <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="addVerse" id="addVerse" data-toggle="modal" data-target="#exampleModalCenter">Ajouter mon texte</button>
+                        <button class="btn btn-outline-success mx-auto d-block pl-5 pr-5" type="submit" name="addVerse" id="addVerse">Ajouter mon texte</button>
                     </div>
+
                 </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p> Activer le compteur de syllabes ?</p>
+                </div>
+                <div class="col-md-6">
+                    <div id="switch-container">
+                        <div id="switch-selector"></div>
+                        <span class="sw-active sw-deactivated sw">Oui</span>
+                        <span class="sw-inactive sw">Non</span>
+                    </div>
+                    <input id="sw-check" type="checkbox" />
+                </div>
+            </div>
+            <div id="helpers-words" class="row">
+                @foreach ($helpers as $helper)
+                    <div class="col-md-3">
+                        <p class="text-uppercase">{{$helper}}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -48,12 +78,13 @@
 
         <form method="POST" action="{{ route('verses.store', ['prose_id' => $prose ]) }}">
             @csrf
-            <p class="text-center" name="content" id="modalVerse" type="text"></p>
-            <input class="form-control form-control-lg" name="content" id="verse" type="hidden">
+            <p class="text-center font-weight-bold" name="content" id="modalVerse" type="text"></p>
+            <input class="form-control form-control-lg" name="content" id="verseModal" type="hidden">
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" tutu="addVerse" id="addVerse">Enregistrer</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary" name="continue" value="continue" id="continue">Enregistrer et continuer</button>
+            <button type="submit" class="btn btn-primary" name="save" value="save">Enregistrer et revenir à l'accueil</button>
         </form>
         </div>
         </div>
