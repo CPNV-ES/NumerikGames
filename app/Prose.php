@@ -15,6 +15,7 @@ class Prose extends Model
 {
     protected $fillable = [
         'title',
+        'path',
         'theme_id',
         'is_projectable',
     ];
@@ -72,7 +73,7 @@ class Prose extends Model
         $prose = new Prose();
         $prose->title = $oldProse->theme->name;
         $prose->theme_id = $oldProse->theme->id;
-        $prose->path = $oldProse->theme->path;
+        $prose->path = $oldProse->path;
         $prose->save();
 
         for ($i = 1; $i < 3; $i++) {

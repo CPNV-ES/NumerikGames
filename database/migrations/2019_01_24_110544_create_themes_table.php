@@ -23,7 +23,6 @@ class CreateThemesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('color')->nullable();
-            $table->string('path');
             $table->timestamps();
         });
     }
