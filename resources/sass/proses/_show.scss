@@ -1,0 +1,26 @@
+#prose-id {
+    #helpers-words {
+        padding-top: 20px;
+        p {
+            border: 1px solid $cyan;
+            padding: 8px 0px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+            width: 100%;
+        }
+        &.fadeIn {
+            animation: fadein 1.3s;
+        }
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

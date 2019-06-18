@@ -48,8 +48,8 @@
                                         </button>
                                     </td>
                                     <td>
-                                        <a href="{{ route('admin.themes.proses.verses.index', [ $prose->theme, $prose]) }}" 
-                                            class="btn btn-primary" 
+                                        <a href="{{ route('admin.themes.proses.verses.index', [ $prose->theme, $prose]) }}"
+                                            class="btn btn-primary"
                                             style="background:{{$prose->theme->color}}; border: none;">
                                             Voir les vers
                                             @if ($prose->verse->where('word_flag', 1)->count() >= 1)
@@ -57,14 +57,19 @@
                                             @endif
                                         </a>
                                     </td>
-                                </tr>   
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    <form id="reset-proses" action="{{ route('admin.proses.reset')}}"method="POST">
+                        
+                        {{ csrf_field() }}
+                        <input type="submit" class="btn btn-primary" value="Reset"></input>
+                    </form>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
-  

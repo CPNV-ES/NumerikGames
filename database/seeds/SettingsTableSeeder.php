@@ -29,6 +29,11 @@ class SettingsTableSeeder extends Seeder
 
         Setting::create([
             'name' => 'home_limit_prose',
+            'value' => '2',
+        ]);
+
+        Setting::create([
+            'name' => 'home_limit_theme',
             'value' => '3',
         ]);
 
@@ -43,18 +48,18 @@ class SettingsTableSeeder extends Seeder
         ]);
         
         Setting::create([
-            'name' => 'theme_amour_helper',
-            'value' => 'aime, Anel, mon amour, passion, Jarod, fréquentation, engouement, concubinage, coït, attachement, adultère',
+            'name' => 'theme_robot_helper',
+            'value' => 'androïde, appareil, automate, humanoïde, machine',
         ]);
         
         Setting::create([
-            'name' => 'theme_amitie_helper',
-            'value' => 'mon ami, service, compliment, bonté, liaison, sex-friend, souris',
+            'name' => 'theme_cyborg_helper',
+            'value' => 'mécananthrope, machine, humanoïde, chose',
         ]);
         
         Setting::create([
-            'name' => 'theme_la_mort_helper',
-            'value' => 'mort, tristesse, violence, sex, viol, CPNV, détresse, consentement',
+            'name' => 'theme_ia_helper',
+            'value' => 'être, machine, chose, intelligence, pensée',
         ]);
     }
 }

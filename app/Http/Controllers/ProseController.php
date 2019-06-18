@@ -7,6 +7,7 @@ use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
 use App\Setting;
+use Illuminate\Support\Facades\Route;
 
 /**
  * ProseController
@@ -70,9 +71,13 @@ class ProseController extends Controller
         $inactivateVerses = $verses->where('status', 0);
         $versesLast = $verses->sortByDesc('id')->take(Setting::where("name", "limit_last_verses")->first()->value)->reverse();
         $versesCount = (int)Setting::where("name", "limit_verses")->first()->value;
-        $helper = Setting::where("name", "theme_".$slug."_helper")->first()->value;
-        $helper = explode(", ", $helper);
-        return view('proses.show')->with(compact('prose', 'versesCount', 'inactivateVerses', 'versesLast'));
+        
+        $helpers = ['Malheureusement, aucune aide n\'est disponible pour cette prose'];
+        if (Setting::where("name", "theme_".$slug."_helper")->first()) {
+            $helpers = Setting::where("name", "theme_".$slug."_helper")->first()->value;
+            $helpers = explode(", ", $helpers);
+        }
+        return view('proses.show')->with(compact('prose', 'versesCount', 'inactivateVerses', 'versesLast', 'helpers'));
     }
 
     /**
@@ -124,6 +129,10 @@ class ProseController extends Controller
             $proses = collect($value->only_with_data());
         }
 
-        return view('projectors.index')->with(compact('proses'));
+        if (Route::getCurrentRoute()->getName() == "projectors.index2") {
+            return view('projectors.index2')->with(compact('proses'));
+        } else {
+            return view('projectors.index')->with(compact('proses'));
+        }
     }
 }

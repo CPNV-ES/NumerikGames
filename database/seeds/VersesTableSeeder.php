@@ -21,9 +21,10 @@ class VersesTableSeeder extends Seeder
     {
 
         $proses = [
-            'Lorem ipsum dolor sit amet, consectetur',
-            'Adipiscing elit. Duis aliquet, nisl',
+            App\Setting::where("name", "default_vers_1")->first()->value,
+            App\Setting::where("name", "default_vers_2")->first()->value,
         ];
+
 
         for ($i = 1; $i <= 2; $i++) {
             foreach ($proses as $value) {
@@ -36,7 +37,7 @@ class VersesTableSeeder extends Seeder
             }
         }
 
-        for ($i = 3; $i <= 5; $i++) {
+        for ($i = 3; $i <= 4; $i++) {
             foreach ($proses as $value) {
                 $verse = Verse::create([
                     'content'   => $value,
@@ -47,7 +48,7 @@ class VersesTableSeeder extends Seeder
             }
         }
 
-        for ($i = 6; $i <= 9; $i++) {
+        for ($i = 5; $i <= 6; $i++) {
             foreach ($proses as $value) {
                 $verse = Verse::create([
                     'content'   => $value,

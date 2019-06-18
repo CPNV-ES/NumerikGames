@@ -16,7 +16,7 @@ use App\Http\Controllers\Controller;
 class AdminProseController extends Controller
 {
     /**
-     * Control if the resource exist in the current domain.
+     * Control if the resource exist in the current domain. Or return 404
      *
      * @return void
      */
@@ -28,7 +28,7 @@ class AdminProseController extends Controller
             } else {
                 return abort(404);
             }
-        }, 
+        },
         ['only' => ['show', 'edit']]);
     }
 
@@ -67,6 +67,7 @@ class AdminProseController extends Controller
     {
         $prose = new Prose($request->all());
         $prose->theme_id = $theme->id;
+        $prose->path = $request->file('path')->storeAs('pictures/proses',$request->file('path')->getClientOriginalName());
         $prose->save();
         return redirect()->route('admin.themes.proses.index', $theme);
     }
@@ -110,6 +111,11 @@ class AdminProseController extends Controller
         $prose->save();
         //return redirect()->route('admin.themes.proses.index', $theme);
         return redirect()->route('admin.proses');
+    }
+    public function reset(Request $request)
+    {
+      Prose::query()->update(['is_projectable' => 0]);
+      return redirect()->route('admin.proses');
     }
 
     /**
