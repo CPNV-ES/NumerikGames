@@ -20,15 +20,15 @@ class ThemesTableSeeder extends Seeder
     {
 
         $themes = [
-            'Amour',
-            'Amitié',
-            'La mort',
+            'Robot',
+            'Cyborg',
+            'IA',
         ];
 
         $slugs = [
-            'amour',
-            'amitie',
-            'la_mort',
+            'robot',
+            'cyborg',
+            'ia',
         ];
 
         $i = 0;
@@ -37,9 +37,8 @@ class ThemesTableSeeder extends Seeder
             $theme = Theme::create([
                 'name' => $value,
                 'color' => '#'.substr(md5(rand()), 0, 6),
-                'path' => 'pictures/themes/'.mb_strtolower(str_replace(' ', '_', $value), 'UTF-8').'.jpg',
                 'slug' => $slugs[$i],
-            ]);
+            ]);         
             $theme->save();
             $i++;
         }

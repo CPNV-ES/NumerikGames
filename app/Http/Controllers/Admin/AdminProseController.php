@@ -67,6 +67,7 @@ class AdminProseController extends Controller
     {
         $prose = new Prose($request->all());
         $prose->theme_id = $theme->id;
+        $prose->path = $request->file('path')->storeAs('pictures/proses',$request->file('path')->getClientOriginalName());
         $prose->save();
         return redirect()->route('admin.themes.proses.index', $theme);
     }

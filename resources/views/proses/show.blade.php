@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center">{{$prose->theme->name}}</h1>
-                    <img class="mx-auto d-block"  src="{{ asset($prose->theme->path) }}"/>
+                    <img class="mx-auto d-block" src="{{ asset($prose->path) }}"/>
                     <hr>
                 </div>
             </div>

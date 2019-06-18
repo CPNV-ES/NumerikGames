@@ -15,9 +15,6 @@
                     <label for="name">Titre du thème</label>
                     <input class="form-control" type="text" placeholder="Les robots" id="name" name="name">
 
-                    <label for="path">Image du thème</label>
-                    <input class="form-control" type="file" placeholder="Selectionnez un fichier" id="path" name="path">
-
                     <label for="color">Couleur du thème</label>
                     <input class="form-control" type="color" value="#{{ substr(md5(rand()), 0, 6) }}" id="color" name="color">
 
