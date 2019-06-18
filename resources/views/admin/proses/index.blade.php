@@ -24,6 +24,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Titre</th>
                                     <th scope="col">Date de création</th>
+                                    <th scope="col">Image</th>
                                     <th scope="col">Actions</th>
                                     <th scope="col">Informations</th>
                                 </tr>
@@ -34,6 +35,7 @@
                                         <th scope="row">{{$prose->id}}</th>
                                         <td>{{$prose->title}}</td>
                                         <td>{{$prose->created_at->toDayDateTimeString()}}</td>
+                                        <td><img src="{{asset($prose->path)}}" alt="{{$prose->path}}" width="100"></td>
                                         <td>
                                             <div class="btn-group btn-group-toggle">
                                                 <a class="btn btn-primary" href="{{ route('admin.themes.proses.edit', [ $theme, $prose]) }}" role="button">Editer</a>

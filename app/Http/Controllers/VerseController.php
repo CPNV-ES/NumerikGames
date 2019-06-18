@@ -50,7 +50,6 @@ class VerseController extends Controller
     {
         /* Get the correct prose */
         $prose = Prose::find($request->get('prose_id'));
-
         /* Check if the prose is full */
         if($prose->is_full()) {
             $prose->is_full = 1;

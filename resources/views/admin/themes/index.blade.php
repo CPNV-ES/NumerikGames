@@ -25,7 +25,6 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Nom</th>
                                     <th scope="col">Couleur</th>
-                                    <th scope="col">Image</th>
                                     <th scope="col">Actions</th>
                                     <th scope="col">Selectionnez</th>
                                 </tr>
@@ -38,9 +37,6 @@
                                             <p>{{$theme->name}}</p>
                                         </td>
                                         <td style="background-color:{{$theme->color}};"></td>
-                                        <td>
-                                            <img class="mx-auto d-block" src="{{ asset($theme->path) }}" style="width: 200px; height:100px" alt="">
-                                        </td>
                                         <td>
                                             <div class="btn-group btn-group-toggle">
                                                 <a class="btn btn-primary" href="{{ route('admin.themes.edit', ['theme' => $theme->id]) }}" role="button">Editer</a>

@@ -46,7 +46,7 @@ class AdminThemeController extends Controller
     public function store(Request $request)
     {
         $theme = new Theme($request->all());
-        $theme->path = $request->file('path')->store('pictures/themes');
+        $theme->slug = mb_strtolower(str_replace(' ', '_', $request->name), 'UTF-8');
         $theme->save();
         return redirect()->route('admin.themes.index');
     }

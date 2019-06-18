@@ -23,7 +23,7 @@ class ThemeController extends Controller
      */
     public function index(Request $request)
     {
-        $themes = Theme::take(Setting::where('name', 'home_limit_prose')->first()->value)->get();
+        $themes = Theme::take(Setting::where('name', 'home_limit_theme')->first()->value)->get();
         $themesCollection = collect([]);
 
         /* Create a collection with is_full = 0 */
