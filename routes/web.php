@@ -20,6 +20,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('themes.proses', 'AdminProseController');
     Route::resource('themes.proses.verses', 'AdminVerseController');
     Route::get('proses', 'AdminProseController@all')->name('proses');
+    Route::post('proses/reset', 'AdminProseController@reset')->name('proses.reset');
 });
 //Routes for standard user
 Route::get('/', 'WelcomeController@index')->name('home');
