@@ -7,6 +7,7 @@ use App\Theme;
 use App\Verse;
 use Illuminate\Http\Request;
 use App\Setting;
+use Illuminate\Support\Facades\Route;
 
 /**
  * ProseController
@@ -124,6 +125,10 @@ class ProseController extends Controller
             $proses = collect($value->only_with_data());
         }
 
-        return view('projectors.index')->with(compact('proses'));
+        if (Route::getCurrentRoute()->getName() == "projectors.index2") {
+            return view('projectors.index2')->with(compact('proses'));
+        } else {
+            return view('projectors.index')->with(compact('proses'));
+        }
     }
 }
