@@ -76,11 +76,12 @@ class Prose extends Model
         $prose->path = $oldProse->path;
         $prose->save();
 
-        $slug = $oldProse->theme->slug;
+        $slug_id = substr(basename($oldProse->path), 0, strrpos(basename($oldProse->path), "."));
 
         for ($i = 1; $i < 3; $i++) {
+            //cyborg-1-default_vers_2
             $vers = new Verse();
-            $vers->content = Setting::where('name', "default_vers_$slug-$i")->first()->value;
+            $vers->content = Setting::where('name', "$slug_id-default_vers_$i")->first()->value;
             $vers->prose_id = $prose->id;
             $vers->status = 1;
             $vers->save();
