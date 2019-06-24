@@ -10789,7 +10789,8 @@ h1 {
   border: 2px solid #51cbee;
 }
 
-#prose-id #switch-container {
+#prose-id #switch-container,
+#prose-id #switch-container2 {
   width: 92px;
   height: 26px;
   font-size: 0.8rem;
@@ -10805,11 +10806,13 @@ h1 {
   float: left;
 }
 
-#prose-id #sw-check {
+#prose-id #sw-check,
+#prose-id #sw-check2 {
   display: none;
 }
 
-#prose-id #switch-selector {
+#prose-id #switch-selector,
+#prose-id #switch-selector2 {
   background: #345D9D;
   margin: 1px;
   height: 24px;
@@ -10820,7 +10823,8 @@ h1 {
 }
 
 #prose-id .sw-active,
-#prose-id .sw-inactive {
+#prose-id .sw-inactive,
+#prose-id .sw-inactive2 {
   position: absolute;
   line-height: 24px;
   text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.4);
@@ -10834,11 +10838,13 @@ h1 {
   right: 10px;
 }
 
-#prose-id .sw-inactive {
+#prose-id .sw-inactive,
+#prose-id .sw-inactive2 {
   left: 10px;
 }
 
-#prose-id .sw-deactivated {
+#prose-id .sw-deactivated,
+#prose-id .sw-deactivated2 {
   color: rgba(0, 0, 0, 0.3);
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
