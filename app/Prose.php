@@ -76,9 +76,11 @@ class Prose extends Model
         $prose->path = $oldProse->path;
         $prose->save();
 
+        $slug = $oldProse->theme->slug;
+
         for ($i = 1; $i < 3; $i++) {
             $vers = new Verse();
-            $vers->content = Setting::where('name', "default_vers_$i")->first()->value;
+            $vers->content = Setting::where('name', "default_vers_$slug-$i")->first()->value;
             $vers->prose_id = $prose->id;
             $vers->status = 1;
             $vers->save();

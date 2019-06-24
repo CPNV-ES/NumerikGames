@@ -20,14 +20,24 @@ class VersesTableSeeder extends Seeder
     public function run()
     {
 
-        $proses = [
-            App\Setting::where("name", "default_vers_1")->first()->value,
-            App\Setting::where("name", "default_vers_2")->first()->value,
+        $robot = [
+            App\Setting::where("name", "default_vers_cyborg-1")->first()->value,
+            App\Setting::where("name", "default_vers_cyborg-2")->first()->value,
+        ];
+
+        $cyborg = [
+            App\Setting::where("name", "default_vers_cyborg-1")->first()->value,
+            App\Setting::where("name", "default_vers_cyborg-2")->first()->value,
+        ];
+
+        $ia = [
+            App\Setting::where("name", "default_vers_cyborg-1")->first()->value,
+            App\Setting::where("name", "default_vers_cyborg-2")->first()->value,
         ];
 
 
         for ($i = 1; $i <= 2; $i++) {
-            foreach ($proses as $value) {
+            foreach ($robot as $value) {
                 $verse = Verse::create([
                     'content'   => $value,
                     'status'    => 1,
@@ -38,7 +48,7 @@ class VersesTableSeeder extends Seeder
         }
 
         for ($i = 3; $i <= 4; $i++) {
-            foreach ($proses as $value) {
+            foreach ($cyborg as $value) {
                 $verse = Verse::create([
                     'content'   => $value,
                     'status'    => 1,
@@ -49,7 +59,7 @@ class VersesTableSeeder extends Seeder
         }
 
         for ($i = 5; $i <= 6; $i++) {
-            foreach ($proses as $value) {
+            foreach ($ia as $value) {
                 $verse = Verse::create([
                     'content'   => $value,
                     'status'    => 1,

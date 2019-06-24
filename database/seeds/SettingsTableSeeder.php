@@ -38,12 +38,32 @@ class SettingsTableSeeder extends Seeder
         ]);
 
         Setting::create([
-            'name' => 'default_vers_1',
+            'name' => 'default_vers_robot-1',
             'value' => 'Lorem ipsum dolor sit amet, consectetur',
         ]);
 
         Setting::create([
-            'name' => 'default_vers_2',
+            'name' => 'default_vers_robot-2',
+            'value' => 'Adipiscing elit. Duis aliquet, nisl',
+        ]);
+
+        Setting::create([
+            'name' => 'default_vers_cyborg-1',
+            'value' => 'Lorem ipsum dolor sit amet, consectetur',
+        ]);
+
+        Setting::create([
+            'name' => 'default_vers_cyborg-2',
+            'value' => 'Adipiscing elit. Duis aliquet, nisl',
+        ]);
+
+        Setting::create([
+            'name' => 'default_vers_ia-1',
+            'value' => 'Lorem ipsum dolor sit amet, consectetur',
+        ]);
+
+        Setting::create([
+            'name' => 'default_vers_ia-2',
             'value' => 'Adipiscing elit. Duis aliquet, nisl',
         ]);
         
