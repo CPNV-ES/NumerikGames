@@ -30,7 +30,6 @@
                         <div class="mx-auto d-none pb-3" id="count-syllable">Nombre de syllabes : <span></span></div>
                         <input class="form-control form-control-lg" name="content" id="verse" type="text" autofocus placeholder="Une souris verte..." autocomplete="off">
                     </div>
-                    Activer une aide ? <input type="checkbox" id="helperArray" name="helperArray">
                     <div>
                         <button class="btn btn-outline-success mx-auto d-block pl-5 pr-5" type="submit" name="addVerse" id="addVerse">Ajouter mon texte</button>
                     </div>
@@ -49,6 +48,19 @@
                         <span class="sw-inactive sw">Non</span>
                     </div>
                     <input id="sw-check" type="checkbox" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p> Activer une aide de mots ?</p>
+                </div>
+                <div class="col-md-6">
+                    <div id="switch-container2">
+                        <div id="switch-selector2"></div>
+                        <span class="sw-active sw-deactivated2 sw">Oui</span>
+                        <span class="sw-inactive2 sw">Non</span>
+                    </div>
+                    <input id="sw-check2" type="checkbox" />
                 </div>
             </div>
             <div id="helpers-words" class="row">

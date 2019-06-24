@@ -85,7 +85,7 @@ class VerseController extends Controller
 
                 Prose::setDefault($prose);
             }
-            $request->session()->flash('success', 'Votre élément à bien été ajouté, pour votre participation.');
+            $request->session()->flash('success', 'Votre élément a bien été ajouté, merci pour votre participation.');
         }
 
         /* Get the action for the correct button on the view */

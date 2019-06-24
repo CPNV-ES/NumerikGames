@@ -36986,13 +36986,15 @@ $(window).bind('load', function () {
 
   var totalSlideNumber2 = prosesProjector2.length; // Number of slides projector 2
 
-  var slideDurationSetting = 3000; // Amount of time for which a slide is "locked"
+  var slideDurationSetting = 30000; // Amount of time for which a slide is "locked"
 
   var speedSlides = 3000; // Speed animation between slides
 
-  var isoff = true; // Check switch button, true by default
+  var isoff = true; // Check switch button for syllable counting, true by default
 
-  var xhr = null; // Css function that switch from "Oui" to "Non"
+  var isoffHelper = true; // Check switch button for words helper, true by default
+
+  var xhr = null; // Switch for syllable counting
 
   $('#switch-container').click(function () {
     $('.sw').toggleClass('sw-deactivated');
@@ -37011,7 +37013,8 @@ $(window).bind('load', function () {
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           }
-        });
+        }); // Ajay request for syllable counting
+
         xhr = $.ajax({
           url: "../ajaxRequestPostVerse",
           type: "POST",
@@ -37061,6 +37064,8 @@ $(window).bind('load', function () {
     }
   });
   $('#unactive').css('display', 'none');
+  $('#helpers-words').css('display', 'none'); // Hide helper words
+
   $('input').on('click', function () {
     if ($('input').is(':checked')) {
       $('#unactive').css('display', 'inline-block');
@@ -37086,7 +37091,10 @@ $(window).bind('load', function () {
       $('html').animate({
         scrollTop: proseHeight
       }, speedSlides).delay(slideDurationSetting);
-      proseHeight = proseHeight + prosesProjector1.height(); // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+      proseHeight = proseHeight + prosesProjector1.height();
+      $('.content-wrapper').animate({
+        margin: "-320px"
+      }).delay(slideDurationSetting); // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
 
       if (index === totalSlideNumber - 2) {
         return false;
@@ -37107,7 +37115,8 @@ $(window).bind('load', function () {
     }
 
     setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting);
-  }
+  } // Seconde page
+
 
   function projectorsLoop2() {
     var proseHeight = prosesProjector2.height();
@@ -37123,7 +37132,7 @@ $(window).bind('load', function () {
       proseHeight = proseHeight + prosesProjector2.height();
       $(element).animate({
         zoom: "100%"
-      }, speedSlides).delay(slideDurationSetting); // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+      }, speedSlides).delay(slideDurationSetting);
     });
   } // Add the verse from the input to the modal if not empty
 
@@ -37157,27 +37166,33 @@ $(window).bind('load', function () {
 
   $('#addVerse').on('click', function () {
     modalOpen();
+  }); // Switch for words helper
+
+  $('#switch-container2').click(function () {
+    $('.sw').toggleClass('sw-deactivated2');
+    $('#sw-check2').trigger('click');
+
+    if (isoffHelper) {
+      $('#switch-selector2').animate({
+        opacity: 0.8,
+        left: "+=44px"
+      }, 100);
+      isoffHelper = false;
+      $('#helpers-words').css('display', 'flex');
+      $('#helpers-words').addClass('fadeIn');
+    } else {
+      $('#switch-selector2').animate({
+        opacity: 1,
+        left: "-=44px"
+      }, 100);
+      $('.container2').animate({
+        backgroundColor: '#222'
+      }, 400);
+      isoffHelper = true;
+      $('#helpers-words').removeClass('fadeIn');
+      $('#helpers-words').delay(1301).css('display', 'none');
+    }
   });
-  /* Check if we are in page with this id */
-
-  if ($("#prose-id").length > 0) {
-    helperArray();
-  }
-  /* This function will show helper if the user check the box */
-
-
-  function helperArray() {
-    $('#helpers-words').css('display', 'none');
-    $('#helperArray').change(function () {
-      if ($(this).prop('checked')) {
-        $('#helpers-words').css('display', 'flex');
-        $('#helpers-words').addClass('fadeIn');
-      } else {
-        $('#helpers-words').removeClass('fadeIn');
-        $('#helpers-words').delay(1301).css('display', 'none');
-      }
-    });
-  }
 });
 
 /***/ }),

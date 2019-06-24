@@ -30,11 +30,11 @@ class ThemeController extends Controller
         foreach ($themes as $theme) {
             $themesCollection->push($theme->proses->where('is_full', 0));
         }
-        
+
         $limit = Setting::where('name', 'home_limit_prose')->first()->value;
         $size_column = 12 / count($themes);
         return view('welcome')->with(compact('themes', 'size_column', 'themesCollection', 'limit'));
-        
+
     }
 
     /**
@@ -69,9 +69,9 @@ class ThemeController extends Controller
     public function show(Theme $theme)
     {
         $proses = Prose::with(['verse' => function ($query) {
-            $query->where('status', 1);     
+            $query->where('status', 1);
         }])->where('theme_id', $theme->id)->get();
-        
+
         return view('themes.show')->with(compact('proses'));
     }
 
@@ -114,7 +114,7 @@ class ThemeController extends Controller
             $request->session()->flash('bug', 'Ce thème contient des proses, supprimez les proses avant de recommencer.');
         } else {
             $theme->delete();
-            $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
+            $request->session()->flash('success', 'Vous avez bien supprimé '.$theme->name);
         }
         return redirect()->route('themes.index');
     }
