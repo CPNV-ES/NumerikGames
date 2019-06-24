@@ -10673,44 +10673,9 @@ h1 {
   overflow: hidden;
 }
 
-#projectors-index #title-projectors,
-#projectors2-index #title-projectors {
-  height: auto;
-  width: 100%;
-  opacity: 1;
-  display: block;
-  overflow: hidden;
-  background: #f8fafc;
-  z-index: 99999;
-}
-
-#projectors-index #title-projectors h1,
-#projectors2-index #title-projectors h1 {
-  font-size: 52px;
-}
-
-#projectors-index .proses,
-#projectors2-index .proses {
-  margin-bottom: 80px;
-  display: none;
-}
-
-#projectors-index .proses h2,
-#projectors2-index .proses h2 {
-  padding: 15px 0px;
-  font-size: 42px;
-}
-
-#projectors-index .proses p,
-#projectors2-index .proses p {
-  margin-bottom: 5px;
-  font-size: 29px;
-}
-
-#projectors-index .proses img,
-#projectors2-index .proses img {
-  width: 50%;
-  height: 50%;
+#projectors-index p,
+#projectors2-index p {
+  max-width: 100%;
 }
 
 #projectors-index .background,
@@ -10742,6 +10707,7 @@ h1 {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow-wrap: break-word;
 }
 
 #projectors-index .content-wrapper,
@@ -10751,7 +10717,6 @@ h1 {
   text-align: center;
   flex-flow: column nowrap;
   color: #fff;
-  font-family: Montserrat;
   text-transform: uppercase;
   -webkit-transform: translateY(40vh);
           transform: translateY(40vh);
@@ -10763,8 +10728,23 @@ h1 {
 
 #projectors-index .content-title,
 #projectors2-index .content-title {
-  font-size: 12vh;
-  line-height: 1.4;
+  font-size: 10vh;
+  line-height: 1;
+  font-weight: 300;
+  color: red;
+}
+
+#projectors-index .content-subtitle,
+#projectors2-index .content-subtitle {
+  font-size: 1.3em;
+  font-weight: 100;
+  overflow-wrap: break-word;
+}
+
+#projectors-index .content-subtitle .letter,
+#projectors2-index .content-subtitle .letter {
+  display: inline-block;
+  line-height: 0.5em;
 }
 
 #home a > img {
@@ -10781,8 +10761,8 @@ h1 {
 
 #home .prose {
   max-width: 300px;
-  max-height: 200px;
   height: 400px;
+  max-height: 380px;
   width: 480px;
   margin-bottom: 20px;
 }

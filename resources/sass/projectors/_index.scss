@@ -11,41 +11,8 @@
     $parallax-offset: 30vh;
     $content-offset: 40vh;
     $transition-speed: 1.2s;
-
-
-
-
-    #title-projectors {
-        height: auto;
-        width: 100%;
-        opacity: 1;
-        display: block;
-        overflow: hidden;
-        background: #f8fafc;
-        z-index: 99999;
-        h1 {
-            font-size: 52px;
-        }
-    }
-
-    .proses {
-
-        margin-bottom: 80px;
-        display: none;
-
-
-        h2 {
-            padding: 15px 0px;
-            font-size: 42px;
-        }
-        p {
-            margin-bottom: 5px;
-            font-size: 29px;
-        }
-        img {
-            width: 50%;
-            height:50%;;
-        }
+    p {
+        max-width: 100%;
     }
     .background, .background2 {
         background-size: cover;
@@ -67,6 +34,7 @@
           right: 0;
           bottom: 0;
           background-color: rgba(0,0,0,.5);
+          overflow-wrap: break-word;
         }
 
       }
@@ -78,7 +46,6 @@
         text-align: center;
         flex-flow: column nowrap;
         color: #fff;
-        font-family: Montserrat;
         text-transform: uppercase;
         transform: translateY($content-offset);
         will-change: transform;
@@ -86,8 +53,19 @@
         @include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
         }
         &-title {
-          font-size: 12vh;
-          line-height: 1.4;
+          font-size: 10vh;
+          line-height: 1;
+          font-weight: 300;
+          color: red;
         }
-      }
+        &-subtitle {
+            font-size: 1.3em;
+            font-weight: 100;
+            overflow-wrap: break-word;
+        }
+        &-subtitle .letter {
+            display: inline-block;
+            line-height: 0.5em;
+        }
+    }
 }

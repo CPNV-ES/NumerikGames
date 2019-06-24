@@ -36986,7 +36986,7 @@ $(window).bind('load', function () {
 
   var totalSlideNumber2 = prosesProjector2.length; // Number of slides projector 2
 
-  var slideDurationSetting = 3000; // Amount of time for which a slide is "locked"
+  var slideDurationSetting = 30000; // Amount of time for which a slide is "locked"
 
   var speedSlides = 3000; // Speed animation between slides
 
@@ -37086,7 +37086,10 @@ $(window).bind('load', function () {
       $('html').animate({
         scrollTop: proseHeight
       }, speedSlides).delay(slideDurationSetting);
-      proseHeight = proseHeight + prosesProjector1.height(); // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+      proseHeight = proseHeight + prosesProjector1.height();
+      $('.content-wrapper').animate({
+        margin: "-320px"
+      }).delay(slideDurationSetting); // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
 
       if (index === totalSlideNumber - 2) {
         return false;

@@ -6,7 +6,7 @@ $(window).bind('load', function() {
     var prosesProjector2 = $('.background2');
     var totalSlideNumber = prosesProjector1.length; // Number of slides projector 1
     var totalSlideNumber2 = prosesProjector2.length; // Number of slides projector 2
-    var slideDurationSetting = 3000; // Amount of time for which a slide is "locked"
+    var slideDurationSetting = 30000; // Amount of time for which a slide is "locked"
     var speedSlides = 3000; // Speed animation between slides
     var isoff = true; // Check switch button, true by default
     var xhr = null;
@@ -121,6 +121,7 @@ $(window).bind('load', function() {
         prosesProjector1.each(function(index) {
             $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
             proseHeight = proseHeight + prosesProjector1.height();
+            $('.content-wrapper').animate({margin: "-320px"}).delay(slideDurationSetting);
 
             // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
             if (index === totalSlideNumber-2) {
