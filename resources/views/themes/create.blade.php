@@ -1,3 +1,9 @@
+{{--
+  -- Create
+  -- Layout for themes create page
+  --
+  -- @author Nicolas Henry
+  --}}
 @extends('layouts.app')
 @section('content')
 <div class="container">

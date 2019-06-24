@@ -20,20 +20,27 @@ class ThemesTableSeeder extends Seeder
     {
 
         $themes = [
-            'amour',
-            'nature',
-            'robots',
-            'imaginaire',
-            'humour',
-            'mer',
-            'guerre',
+            'Robot',
+            'Cyborg',
+            'IA',
         ];
 
+        $slugs = [
+            'robot',
+            'cyborg',
+            'ia',
+        ];
+
+        $i = 0;
         foreach ($themes as $value) {
+
             $theme = Theme::create([
                 'name' => $value,
-            ]);
+                'color' => '#'.substr(md5(rand()), 0, 6),
+                'slug' => $slugs[$i],
+            ]);         
             $theme->save();
+            $i++;
         }
     }
 }

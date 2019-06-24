@@ -1,5 +1,5 @@
-<?php
 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,25 +11,27 @@
 |
 */
 
-
-/* Routes for admin only */
-Route::middleware(['auth'])->group(function () {
-    Route::resource('proses', 'ProseController');
-    Route::resource('verses', 'VerseController');
-    Route::resource('themes', 'ThemeController');
-});
-
-Route::middleware(['guest'])->group(function () {
-    /* Home link to theme */
-    Route::get('game', 'VerseController@create')->name('game.verse.create');
-    Route::post('game', 'VerseController@store')->name('game.verse.store');
-
-});
-/* Home link to theme */
-Route::get('/', 'ThemeController@index');
-
-/* Routes for standard user */
-Route::resource('verses', 'VerseController', ['only' => ['create']]);
-
 /* Auth routes */
 Auth::routes();
+
+// Admin resources
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+    Route::resource('settings', 'AdminSettingController');
+    Route::resource('themes', 'AdminThemeController');
+    Route::resource('themes.proses', 'AdminProseController');
+    Route::resource('themes.proses.verses', 'AdminVerseController');
+    Route::get('proses', 'AdminProseController@all')->name('proses');
+    Route::post('proses/reset', 'AdminProseController@reset')->name('proses.reset');
+});
+
+//Routes for standard user
+
+Route::get('/', 'WelcomeController@index')->name('home');
+Route::get('/choix', 'ThemeController@index')->name('choice');
+Route::get('/projectors', 'ProseController@projector')->name('projectors.index');
+Route::get('/projectors/2', 'ProseController@projector')->name('projectors.index2');
+Route::resource('verses', 'VerseController', ['only' => ['create','index','store']]);
+Route::resource('themes', 'ThemeController', ['only' => ['show']]);
+Route::resource('proses', 'ProseController');
+Route::post('/ajaxRequestPostVerse', 'VerseController@ajaxRequestPost');

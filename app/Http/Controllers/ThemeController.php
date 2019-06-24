@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Prose;
 use App\Theme;
-use App\Verse;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use App\Setting;
 
 /**
  * ThemeController
@@ -24,11 +23,17 @@ class ThemeController extends Controller
      */
     public function index(Request $request)
     {
-        $themes = Theme::all();
-        if (Auth::check()) {
-            return view('themes.index')->with(compact('themes'));
+        $themes = Theme::take(Setting::where('name', 'home_limit_theme')->first()->value)->get();
+        $themesCollection = collect([]);
+
+        /* Create a collection with is_full = 0 */
+        foreach ($themes as $theme) {
+            $themesCollection->push($theme->proses->where('is_full', 0));
         }
-        return view('welcome')->with(compact('themes'));
+        
+        $limit = Setting::where('name', 'home_limit_prose')->first()->value;
+        $size_column = 12 / count($themes);
+        return view('welcome')->with(compact('themes', 'size_column', 'themesCollection', 'limit'));
         
     }
 
@@ -63,7 +68,11 @@ class ThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        return view('themes.show')->with(compact('theme'));
+        $proses = Prose::with(['verse' => function ($query) {
+            $query->where('status', 1);     
+        }])->where('theme_id', $theme->id)->get();
+        
+        return view('themes.show')->with(compact('proses'));
     }
 
     /**
@@ -94,10 +103,11 @@ class ThemeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Theme  $theme
      * @return \Illuminate\Http\Response
      */
-    public function destroy( Request $request, Theme $theme)
+    public function destroy(Request $request, Theme $theme)
     {
         $prose = Prose::where('theme_id', $theme->id)->first();
         if ($prose) {
@@ -107,11 +117,5 @@ class ThemeController extends Controller
             $request->session()->flash('success', 'Vous avez bien supprimez '.$theme->name);
         }
         return redirect()->route('themes.index');
-    }
-
-    public function themes()
-    {
-        $themes = Theme::all();
-        return view('welcome')->with(compact('themes'));
     }
 }
