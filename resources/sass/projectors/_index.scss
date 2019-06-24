@@ -1,7 +1,7 @@
 .overflow {
     overflow: hidden;
 }
-#projectors-index {
+#projectors-index, #projectors2-index {
     // ------------- MIXINS ------------- //
     @mixin transition($time, $property: all, $easing: ease-in) {
         transition: $property $time $easing;
@@ -47,7 +47,7 @@
             height:50%;;
         }
     }
-    .background {
+    .background, .background2 {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;

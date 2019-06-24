@@ -2,12 +2,15 @@
 $(window).bind('load', function() {
 
     // ------------- VARIABLES ------------- //
-    var prose = $('.background');
-    var totalSlideNumber = prose.length; // Number of slides
+    var prosesProjector1 = $('.background');
+    var prosesProjector2 = $('.background2');
+    var totalSlideNumber = prosesProjector1.length; // Number of slides projector 1
+    var totalSlideNumber2 = prosesProjector2.length; // Number of slides projector 2
     var slideDurationSetting = 3000; // Amount of time for which a slide is "locked"
     var speedSlides = 3000; // Speed animation between slides
     var isoff = true; // Check switch button, true by default
     var xhr = null;
+
 
 
     // Css function that switch from "Oui" to "Non"
@@ -102,19 +105,22 @@ $(window).bind('load', function() {
         }
     });
 
-    // Calls the function only for the projectors page
-    if (!totalSlideNumber) {
-        projectorsLoop();
+    if($("#projectors-index").length > 0) {
+        // Calls the function only for the projectors page
+        if (totalSlideNumber != 0) {
+            projectorsLoop();
+        }
+        setInterval(projectorsLoop, totalSlideNumber * slideDurationSetting * 3);
     }
 
     // Function that move the proses and verses from bottom to top with an infinite loop
     function projectorsLoop() {
-        var proseHeight = prose.height();
+        var proseHeight = prosesProjector1.height();
 
         // Loop trough every prose
-        prose.each(function(index) {
+        prosesProjector1.each(function(index) {
             $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
-            proseHeight = proseHeight + prose.height();
+            proseHeight = proseHeight + prosesProjector1.height();
 
             // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
             if (index === totalSlideNumber-2) {
@@ -127,7 +133,27 @@ $(window).bind('load', function() {
 
     };
 
-    setInterval(projectorsLoop, totalSlideNumber * slideDurationSetting * 3);
+    if($("#projectors2-index").length > 0) {
+        // Calls the function only for the projectors page
+        if (totalSlideNumber2 != 0) {
+            projectorsLoop2();
+        }
+        setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting);
+    }
+
+    function projectorsLoop2() {
+        var proseHeight = prosesProjector2.height();
+        console.log(proseHeight/2.1)
+        // Loop trough every prose
+        prosesProjector2.each(function(index, element) {
+            $('html').animate({scrollTop: proseHeight /2}, speedSlides, "linear", "easein").delay(slideDurationSetting);
+            $(element).animate({zoom: "150%"}, speedSlides).delay(slideDurationSetting);
+            proseHeight = proseHeight + prosesProjector2.height();
+            $(element).animate({zoom: "100%"}, speedSlides).delay(slideDurationSetting);
+
+            // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+        });
+    }
 
     // Add the verse from the input to the modal if not empty
     function modalOpen() {
