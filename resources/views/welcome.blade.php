@@ -16,14 +16,14 @@
                     @endif
                 </div>
                 <div class="col-sm-12">
-                    <h4>Vous devez choisir l'un de nos thèmes ci-dessous pour commencer à écrire votre magnifique vers.</h4>
+                    <h4 class="mb-5 mt-3">Choisissez une thème et une image qui vous inspire et écrivez votre vers...</h4>
                 </div>
             </div> <!-- .row -->
 
             <div class="row">
                 @foreach ($themes as $theme)
                     <div class="col-md-{{$size_column}}">
-                        <h2>{{ $theme->name }}</h2>
+                        <h2 class="mb-3">{{ $theme->name }}</h2>
                     </div> <!-- .col-md- -->
                 @endforeach
             </div> <!-- .row -->
@@ -40,12 +40,6 @@
                         @endforeach
                     </div>
                 @endforeach
-            </div> <!-- .row -->
-
-            <div id="link-all-proses" class="row">
-                <div class="col-md-12">
-                    <a href="{{route('proses.index')}}" class="btn btn-outline-dark" role="button" aria-pressed="true">Voir toutes les proses</a>
-                </div>
             </div> <!-- .row -->
         </div>
     </div>

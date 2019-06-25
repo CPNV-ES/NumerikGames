@@ -14,7 +14,7 @@
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
         border: 2px solid rgba(81, 203, 238, 1);
     }
-    #switch-container{
+    #switch-container, #switch-container2{
         width:92px;
         height:26px;
         font-size:0.8rem;
@@ -29,10 +29,10 @@
         display:block;
         float: left;
       }
-      #sw-check{
+      #sw-check, #sw-check2{
         display:none;
       }
-      #switch-selector{
+      #switch-selector, #switch-selector2{
         background:#345D9D;
         margin:1px;
         height:24px;
@@ -42,7 +42,7 @@
         box-shadow:0px 1px 3px #333;
 
       }
-      .sw-active, .sw-inactive{
+      .sw-active, .sw-inactive, .sw-inactive2{
         position:absolute;
         line-height:24px;
         text-shadow:0px 0px 3px rgba(255,255,255,0.4);
@@ -52,11 +52,11 @@
       .sw-active{
         right:10px;
       }
-      .sw-inactive{
+      .sw-inactive, .sw-inactive2{
         left:10px;
 
       }
-      .sw-deactivated{
+      .sw-deactivated, .sw-deactivated2{
         color:rgba(0,0,0,0.3);
          text-shadow:0px 0px 1px rgba(0,0,0,0.2);
       }
