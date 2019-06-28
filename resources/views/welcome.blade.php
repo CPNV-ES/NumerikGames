@@ -16,7 +16,7 @@
                     @endif
                 </div>
                 <div class="col-sm-12">
-                    <h4 class="mb-5 mt-3">Choisissez une thème et une image qui vous inspire et écrivez votre vers...</h4>
+                    <h4 class="mb-5 mt-3">Choisissez un thème et une image qui vous inspire et écrivez votre vers...</h4>
                 </div>
             </div> <!-- .row -->
 
