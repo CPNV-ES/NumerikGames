@@ -12,6 +12,10 @@
 6. Use `php artisan key:generate`
 7. Launch your app
 
+## Documentation
+
+[Documentation Technique](https://github.com/CPNV-ES/NumerikGames/blob/feature/documentation/docs/Documentation_technique.md)
+
 ## Database
 We hesitate to use a simple .sql file or the migration offer by Laravel, but when the client say we are not sure about the database and we certainly need to update him later, at this moment we choose the migration for more scalability.
 
