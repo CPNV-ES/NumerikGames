@@ -36981,7 +36981,7 @@ if (token) {
 $(window).bind('load', function () {
   // ------------- VARIABLES ------------- //
   var prosesProjector1 = $('.background');
-  var prosesProjector2 = $('.background2');
+  var prosesProjector2 = $('.col-md-6');
   var totalSlideNumber = prosesProjector1.length; // Number of slides projector 1
 
   var totalSlideNumber2 = prosesProjector2.length; // Number of slides projector 2
@@ -37114,26 +37114,35 @@ $(window).bind('load', function () {
       projectorsLoop2();
     }
 
-    setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting);
+    setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting * 3);
   } // Seconde page
 
 
   function projectorsLoop2() {
-    var proseHeight = prosesProjector2.height();
-    console.log(proseHeight / 2.1); // Loop trough every prose
+    var proseHeight = prosesProjector2.height() + $('.col-md-12').height();
+    console.log(proseHeight);
+    console.log($('.col-md-12').height());
+    $('html').animate({
+      scrollTop: 0
+    }, speedSlides); // Loop trough every prose
 
     prosesProjector2.each(function (index, element) {
       $('html').animate({
-        scrollTop: proseHeight / 2
-      }, speedSlides, "linear", "easein").delay(slideDurationSetting);
-      $(element).animate({
-        zoom: "150%"
-      }, speedSlides).delay(slideDurationSetting);
-      proseHeight = proseHeight + prosesProjector2.height();
-      $(element).animate({
-        zoom: "100%"
-      }, speedSlides).delay(slideDurationSetting);
-    });
+        scrollTop: proseHeight
+      }, speedSlides).delay(slideDurationSetting); // $(element).animate({opacity: 2}, speedSlides).delay(slideDurationSetting);
+
+      proseHeight = proseHeight + prosesProjector2.height() + $('.col-md-12').height(); // $(element).animate({opacity: 1}, speedSlides).delay(slideDurationSetting);
+
+      console.log(index); // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+
+      if (index === totalSlideNumber2 - 2) {
+        return false;
+      }
+    }); // Return to the top page
+
+    $('html').animate({
+      scrollTop: 0
+    }, speedSlides);
   } // Add the verse from the input to the modal if not empty
 
 
@@ -37215,8 +37224,8 @@ $(window).bind('load', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Anel.MUMINOVIC\PhpstormProjects\NumerikGames\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Anel.MUMINOVIC\PhpstormProjects\NumerikGames\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Mumin\Projects\NumerikGames\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Mumin\Projects\NumerikGames\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

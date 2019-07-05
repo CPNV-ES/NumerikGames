@@ -3,7 +3,7 @@ $(window).bind('load', function() {
 
     // ------------- VARIABLES ------------- //
     var prosesProjector1 = $('.background');
-    var prosesProjector2 = $('.background2');
+    var prosesProjector2 = $('.col-md-6');
     var totalSlideNumber = prosesProjector1.length; // Number of slides projector 1
     var totalSlideNumber2 = prosesProjector2.length; // Number of slides projector 2
     var slideDurationSetting = 30000; // Amount of time for which a slide is "locked"
@@ -117,7 +117,6 @@ $(window).bind('load', function() {
     // Function that move the proses and verses from bottom to top with an infinite loop
     function projectorsLoop() {
         var proseHeight = prosesProjector1.height();
-
         // Loop trough every prose
         prosesProjector1.each(function(index) {
             $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
@@ -140,20 +139,28 @@ $(window).bind('load', function() {
         if (totalSlideNumber2 != 0) {
             projectorsLoop2();
         }
-        setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting);
+        setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting* 3);
     }
     // Seconde page
     function projectorsLoop2() {
-        var proseHeight = prosesProjector2.height();
-        console.log(proseHeight/2.1)
+        var proseHeight = prosesProjector2.height() + $('.col-md-12').height();
+        console.log(proseHeight)
+        console.log($('.col-md-12').height())
+        $('html').animate({scrollTop: 0}, speedSlides);
         // Loop trough every prose
         prosesProjector2.each(function(index, element) {
-            $('html').animate({scrollTop: proseHeight /2}, speedSlides, "linear", "easein").delay(slideDurationSetting);
-            $(element).animate({zoom: "150%"}, speedSlides).delay(slideDurationSetting);
-            proseHeight = proseHeight + prosesProjector2.height();
-            $(element).animate({zoom: "100%"}, speedSlides).delay(slideDurationSetting);
-
+            $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
+            // $(element).animate({opacity: 2}, speedSlides).delay(slideDurationSetting);
+            proseHeight = proseHeight + prosesProjector2.height() + $('.col-md-12').height();
+            // $(element).animate({opacity: 1}, speedSlides).delay(slideDurationSetting);
+            console.log(index)
+            // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+            if (index === totalSlideNumber2-2) {
+                return false;
+            }
         });
+        // Return to the top page
+        $('html').animate({scrollTop: 0}, speedSlides);
     }
 
     // Add the verse from the input to the modal if not empty
