@@ -10710,6 +10710,14 @@ h1 {
   overflow-wrap: break-word;
 }
 
+#projectors-index img,
+#projectors2-index img {
+  max-height: 1050px;
+  max-width: 900px;
+  width: 900px;
+  height: 1050px;
+}
+
 #projectors-index .content-wrapper,
 #projectors2-index .content-wrapper {
   display: flex;
@@ -10734,6 +10742,14 @@ h1 {
   color: red;
 }
 
+#projectors-index .content-title2,
+#projectors2-index .content-title2 {
+  font-size: 12vh;
+  line-height: 1;
+  font-weight: 300;
+  color: red;
+}
+
 #projectors-index .content-subtitle,
 #projectors2-index .content-subtitle {
   font-size: 1.3em;
@@ -10741,10 +10757,9 @@ h1 {
   overflow-wrap: break-word;
 }
 
-#projectors-index .content-subtitle .letter,
-#projectors2-index .content-subtitle .letter {
-  display: inline-block;
-  line-height: 0.5em;
+#projectors-index .content-subtitle2,
+#projectors2-index .content-subtitle2 {
+  font-size: 2.3em;
 }
 
 #home a > img {

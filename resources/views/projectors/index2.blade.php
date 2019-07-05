@@ -21,16 +21,19 @@
 
 </head>
     <body>
-    <div id="projectors2-index">
+    <div class="row" id="projectors2-index">
         @foreach ($proses as $key => $prose)
-            <section class="background2 {{$key}}" style="background-image: url(../{{$prose->path}});">
-                <div class="content-wrapper">
-                <p class="content-title">{{$prose->title}}</p>
-                @foreach ($prose->verse as $value)
-                    <p class="content-subtitle">{{$value->content}}</p>
-                @endforeach
-                </div>
-            </section>
+            <div class="col-md-12">
+                <p class="content-title2 text-center m-5">{{$prose->title}}</p>
+            </div>            
+            <div class="col-md-6">                 
+                <img class="responsive background2 pl-5 pb-5" src="../{{$prose->path}}" alt="{{$prose->title}}">
+            </div>
+            <div class="col-md-6">         
+            @foreach ($prose->verse as $value)
+                <p class="content-subtitle2">{{$value->content}}</p>
+            @endforeach
+            </div>
         @endforeach
     </div>
 </body>
