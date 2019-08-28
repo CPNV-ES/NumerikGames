@@ -38,6 +38,12 @@
         }
 
       }
+      img {
+        max-height:1050px; 
+        max-width:900px; 
+        width:900px; 
+        height: 1050px
+      }
 
       .content {
         &-wrapper {
@@ -58,14 +64,19 @@
           font-weight: 300;
           color: red;
         }
+        &-title2 {
+            font-size: 12vh;
+            line-height: 1;
+            font-weight: 300;
+            color: red;
+          }
         &-subtitle {
             font-size: 1.3em;
             font-weight: 100;
             overflow-wrap: break-word;
         }
-        &-subtitle .letter {
-            display: inline-block;
-            line-height: 0.5em;
+        &-subtitle2 {
+            font-size: 2.3em;
         }
     }
 }

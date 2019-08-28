@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'fakt pro';
+    src: url('../fonts/FaktPro-Normal.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/FaktPro-Normal.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/FaktPro-Normal.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+* {
+    font-family: 'fakt pro';
+}
