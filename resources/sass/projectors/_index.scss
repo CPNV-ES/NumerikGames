@@ -1,7 +1,7 @@
 .overflow {
     overflow: hidden;
 }
-#projectors-index, #projectors2-index {
+#projectors-index {
     // ------------- MIXINS ------------- //
     @mixin transition($time, $property: all, $easing: ease-in) {
         transition: $property $time $easing;
@@ -14,7 +14,7 @@
     p {
         max-width: 100%;
     }
-    .background, .background2 {
+    .background {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -39,9 +39,9 @@
 
       }
       img {
-        max-height:1050px; 
-        max-width:900px; 
-        width:900px; 
+        max-height:1050px;
+        max-width:900px;
+        width:900px;
         height: 1050px
       }
 
@@ -64,19 +64,83 @@
           font-weight: 300;
           color: red;
         }
-        &-title2 {
-            font-size: 12vh;
-            line-height: 1;
-            font-weight: 300;
-            color: red;
-          }
         &-subtitle {
             font-size: 1.3em;
             font-weight: 100;
             overflow-wrap: break-word;
         }
+    }
+}
+
+#projectors2-index {
+    // ------------- MIXINS ------------- //
+    @mixin transition($time, $property: all, $easing: ease-in) {
+        transition: $property $time $easing;
+    }
+
+    // ------------- VARIABLES ------------- //
+    $parallax-offset: 30vh;
+    $content-offset: 40vh;
+    $transition-speed: 1.2s;
+    p {
+        max-width: 100%;
+        margin-bottom: 10px;
+        margin-left: 25px;
+    }
+
+    img {
+        max-height:920px;
+        max-width:900px;
+        width:900px;
+        height: 750px
+    }
+
+    .background2 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+        will-change: transform;
+        backface-visibility: hidden;
+        height: 130vh;
+        width: 100%;
+        @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 4));
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,.5);
+          overflow-wrap: break-word;
+        }
+    }
+
+    .content {
+        &-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-flow: column nowrap;
+        color: #fff;
+        text-transform: uppercase;
+        transform: translateY($content-offset);
+        will-change: transform;
+        backface-visibility: hidden;
+        @include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
+        }
+        &-title2 {
+            font-size: 10vh;
+            line-height: 1;
+            font-weight: 300;
+            color: red;
+          }
         &-subtitle2 {
-            font-size: 2.3em;
+            font-size: 1.6em;
+            overflow-wrap: break-word;
         }
     }
 }
