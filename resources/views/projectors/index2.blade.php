@@ -17,7 +17,6 @@
     <title>{{ config('app.name', 'Numerik Games Festival') }}</title>
     <link href="/favicon.png" rel="icon" data-n-head="true" type="image/png">
     <link rel="stylesheet" href="/css/app.css">
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
 
 </head>
     <body>
@@ -25,11 +24,11 @@
         @foreach ($proses as $key => $prose)
             <div class="col-md-12">
                 <p class="content-title2 text-center m-5">{{$prose->title}}</p>
-            </div>            
-            <div class="col-md-6">                 
+            </div>
+            <div class="col-md-6">
                 <img class="responsive background2 pl-5 pb-5" src="../{{$prose->path}}" alt="{{$prose->title}}">
             </div>
-            <div class="col-md-6">         
+            <div class="col-md-6">
             @foreach ($prose->verse as $value)
                 <p class="content-subtitle2">{{$value->content}}</p>
             @endforeach
