@@ -5,14 +5,12 @@ $(window).bind('load', function() {
     var prosesProjector1 = $('.background');
     var prosesProjector2 = $('.col-md-6');
     var totalSlideNumber = prosesProjector1.length; // Number of slides projector 1
-    var totalSlideNumber2 = prosesProjector2.length; // Number of slides projector 2
+    var totalSlideNumber2 = $('#projectors2-index > .col-md-12').length; // Number of slides projector 2
     var slideDurationSetting = 30000; // Amount of time for which a slide is "locked"
     var speedSlides = 3000; // Speed animation between slides
     var isoff = true; // Check switch button for syllable counting, true by default
     var isoffHelper = true; // Check switch button for words helper, true by default
     var xhr = null;
-
-
 
     // Switch for syllable counting
     $('#switch-container').click(function(){
@@ -123,12 +121,11 @@ $(window).bind('load', function() {
             proseHeight = proseHeight + prosesProjector1.height();
             $('.content-wrapper').animate({margin: "-320px"}).delay(slideDurationSetting);
 
-            // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+            // Check if it's the last prose (-2 is for the 0 of the beginning and the first prose that is omitted from the loop)
             if (index === totalSlideNumber-2) {
                 return false;
             }
         });
-
         // Return to the top page
         $('html').animate({scrollTop: 0}, speedSlides);
 
@@ -139,26 +136,24 @@ $(window).bind('load', function() {
         if (totalSlideNumber2 != 0) {
             projectorsLoop2();
         }
-        setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting* 3);
+        setInterval(projectorsLoop2, totalSlideNumber2 * slideDurationSetting);
     }
     // Seconde page
     function projectorsLoop2() {
         var proseHeight = prosesProjector2.height() + $('.col-md-12').height();
-        console.log(proseHeight)
-        console.log($('.col-md-12').height())
-        $('html').animate({scrollTop: 0}, speedSlides);
+        console.log("loop")
         // Loop trough every prose
-        prosesProjector2.each(function(index, element) {
+        prosesProjector2.each(function(index) {
             $('html').animate({scrollTop: proseHeight}, speedSlides).delay(slideDurationSetting);
-            // $(element).animate({opacity: 2}, speedSlides).delay(slideDurationSetting);
             proseHeight = proseHeight + prosesProjector2.height() + $('.col-md-12').height();
-            // $(element).animate({opacity: 1}, speedSlides).delay(slideDurationSetting);
-            console.log(index)
-            // Check if it's the last prose (-2 is for the 0 of the begining and the first prose that is omitted from the loop)
+            console.log(totalSlideNumber2)
+            // Check if it's the last prose (-1 is for the 0 of the beginning of the array)
             if (index === totalSlideNumber2-2) {
+                console.log("hello")
                 return false;
             }
         });
+        console.log("gone")
         // Return to the top page
         $('html').animate({scrollTop: 0}, speedSlides);
     }
